@@ -1,0 +1,18 @@
+.button {
+    background: rgba(159, 22, 0, .6);
+    border-color: #ea3012;
+    border: 1px solid #c77e19;
+    position: relative;
+    z-index: 1;
+    width: 20%;
+    font-size: 20px;
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #9f1600;
+    cursor: pointer;
+    color: #ffd36b;
+}
