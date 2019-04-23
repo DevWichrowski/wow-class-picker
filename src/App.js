@@ -1,12 +1,17 @@
 import React from 'react';
 import './App.scss';
+import { connect } from 'react-redux';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <h1>Wow class picker</h1>
+      <h1>{props.classes}</h1>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+	classes: state.classes.name
+});
+
+export default connect(mapStateToProps)(App);
