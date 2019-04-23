@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.scss';
 import { connect } from 'react-redux';
+import MainContainer from './components/MainContainer/MainContainer';
 
 function App(props) {
-  return (
-    <div className="App">
-      <h1>{props.classes}</h1>
-    </div>
-  );
+	return (
+		<div className="App">
+			<MainContainer />
+		</div>
+	);
 }
 
 const mapStateToProps = (state) => ({
