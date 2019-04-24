@@ -9,19 +9,21 @@ export class MainContainer extends Component {
 		super(props);
 
 		this.state = {
-			// curentImageIndex: 0,
-			// timer: 5,
-			// selectedImage: this.props.classes[0].icon
+			intervals: 50,
 			currentIcon: this.props.classes[0].icon,
+			currentClassName: this.props.classes[0].icon
 		};
 	}
-	
-	rollIcons = (timer) => {
-		setInterval(() =>{
-			this.setState({currentIcon: this.props.classes[Math.floor((Math.random() * 11) + 1)].icon})
-			timer -= 1;
-			console.log(timer);
-		}, 150);	
+
+	rollIcons = () => {
+		const roller = setInterval(() => {
+			this.setState({ currentIcon: this.props.classes[Math.floor(Math.random() * 11 + 1)].icon });
+			this.setState({ intervals: this.state.intervals - 1 });
+
+			if (this.state.intervals <= 0) {
+				clearInterval(roller);
+			}
+		}, 80);
 	};
 
 	render() {
@@ -29,7 +31,7 @@ export class MainContainer extends Component {
 			<div className="main-container">
 				<p className="text">Wow random class picker</p>
 				<ClassIcon image={this.state.currentIcon} />
-				<Button roll={() => this.rollIcons(5)} />
+				<Button roll={() => this.rollIcons()} />
 			</div>
 		);
 	}
