@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.scss';
-import { connect } from 'react-redux';
 import MainContainer from './components/MainContainer/MainContainer';
 
 function App(props) {
@@ -11,8 +10,4 @@ function App(props) {
 	);
 }
 
-const mapStateToProps = (state) => ({
-	classes: state.classes.name
-});
-
-export default connect(mapStateToProps)(App);
+export default App;
