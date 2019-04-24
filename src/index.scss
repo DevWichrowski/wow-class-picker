@@ -8,12 +8,17 @@ html {
 
     linear-gradient(rgba(0, 0, 0, 0.4),
     rgba(0, 0, 0, 0.4)), url(./assets/background.jpg);
-  background-size: 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
 }
 
 * {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+}
+body{
+  height: 90%;
 }
 
 #root {
