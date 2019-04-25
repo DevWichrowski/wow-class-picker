@@ -4,6 +4,7 @@ import Button from './Button/Button';
 import ClassIcon from './ClassIcon/ClassIcon';
 import { connect } from 'react-redux';
 import FactionContainer from './FactionContainer/FactionContainer';
+import RolesContainer from './RolesContainer/RolesContainer';
 
 export class MainContainer extends Component {
 	constructor(props) {
@@ -43,7 +44,11 @@ export class MainContainer extends Component {
 		return (
 			<div className="main-container">
 				<h1 className="text">WoW random class picker</h1>
-				<FactionContainer />
+				<div className="faction-role-container">
+					<FactionContainer />
+					<RolesContainer />
+				</div>
+
 				<ClassIcon image={this.state.currentClassIcon} />
 				<h2 className="text">{this.state.currentClassName}</h2>
 				<Button roll={() => this.rollIcons()} />
