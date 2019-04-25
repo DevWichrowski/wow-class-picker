@@ -25,7 +25,8 @@ const initialState = {
 		{id: 'shaman', name: 'Shaman', icon: Shaman_icon},
 		{id: 'warlock', name: 'Warlock', icon: Warlock_icon},
 		{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
-	]
+	],
+
 };
 
 export function classesReducer(state = initialState, action) {
