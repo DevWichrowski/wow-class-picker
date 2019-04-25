@@ -1,0 +1,24 @@
+.faction-container{
+    width: 100%;
+
+    .factions{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .factions-image{
+            width: 100px;
+            height: 100px;
+            margin-left: 20px;
+            margin-right: 20px;
+            cursor: pointer;
+            opacity: 0.6;
+        }
+
+        .factions-image:hover{
+            opacity: 1;
+            border: 5px #f8b700 solid;
+            border-radius: 50%;
+        }
+    }
+}
