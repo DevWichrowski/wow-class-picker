@@ -107,6 +107,29 @@ const initialState = {
 			{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
 			{id: 'mage', name: 'Mage', icon: Mage_icon},
 			{id: 'shaman', name: 'Shaman', icon: Shaman_icon},
+		]},
+		// Horde
+		{id: 'orc', name: 'Orc', faction: 'Horde',
+	classes: [
+		{id: 'dk', name: 'Death Knight', icon: DK_icon},
+		{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
+		{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
+		{id: 'shaman', name: 'Shaman', icon: Shaman_icon},
+		{id: 'monk', name: 'Monk', icon: Monk_icon},
+		{id: 'mage', name: 'Mage', icon: Mage_icon},
+		{id: 'warlock', name: 'Warlock', icon: Warlock_icon},
+		{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
+	]},
+	{id: 'undead', name: 'Undead', faction: 'Horde',
+		classes: [
+			{id: 'dk', name: 'Death Knight', icon: DK_icon},
+			{id: 'mage', name: 'Mage', icon: Mage_icon},
+			{id: 'priest', name: 'Priest', icon: Priest_icon},
+			{id: 'warlock', name: 'Warlock', icon: Warlock_icon},
+			{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
+			{id: 'monk', name: 'Monk', icon: Monk_icon},
+			{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
+			{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
 		]}
 	],
 
