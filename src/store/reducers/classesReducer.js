@@ -27,8 +27,9 @@ const initialState = {
 		{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
 	],
 	races: [
+		// Alliance races
 		{id: 'human', name: 'Human', faction: 'Alliance',
-		 races: [
+		classes: [
 			{id: 'dk', name: 'Death Knight', icon: DK_icon},
 			{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
 			{id: 'mage', name: 'Mage', icon: Mage_icon},
@@ -40,7 +41,7 @@ const initialState = {
 			{id: 'paladin', name: 'Paladin', icon: Paladin_icon},
 		]},
 		{id: 'dwarf', name: 'Dwarf', faction: 'Alliance',
-			races:[
+		classes:[
 				{id: 'dk', name: 'Death Knight', icon: DK_icon},
 				{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
 				{id: 'mage', name: 'Mage', icon: Mage_icon},
@@ -52,6 +53,51 @@ const initialState = {
 				{id: 'paladin', name: 'Paladin', icon: Paladin_icon},
 				{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
 			]},
+		{id: 'night_elf', name: 'Night Elf', faction: 'Alliance',
+		classes:[
+			{id: 'dh', name: 'Demon Hunter', icon: DH_icon},
+			{id: 'druid', name: 'Druid', icon: Druid_icon},
+			{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
+			{id: 'mage', name: 'Mage', icon: Mage_icon},
+			{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
+			{id: 'dk', name: 'Death Knight', icon: DK_icon},
+			{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
+			{id: 'monk', name: 'Monk', icon: Monk_icon},
+			{id: 'priest', name: 'Priest', icon: Priest_icon},
+			]},
+		{id: 'gnome', name: 'Gnome', faction: 'Alliance',
+		classes: [
+			{id: 'dh', name: 'Demon Hunter', icon: DH_icon},
+			{id: 'monk', name: 'Monk', icon: Monk_icon},
+			{id: 'warlock', name: 'Warlock', icon: Warlock_icon},
+			{id: 'mage', name: 'Mage', icon: Mage_icon},
+			{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
+			{id: 'priest', name: 'Priest', icon: Priest_icon},
+			{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
+			{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
+		]},
+		{id: 'draenei', name: 'Draenei', faction: 'Alliance',
+	classes: [
+		{id: 'dk', name: 'Death Knight', icon: DK_icon},
+		{id: 'monk', name: 'Monk', icon: Monk_icon},
+		{id: 'priest', name: 'Priest', icon: Priest_icon},
+		{id: 'shaman', name: 'Shaman', icon: Shaman_icon},	
+		{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
+		{id: 'mage', name: 'Mage', icon: Mage_icon},
+		{id: 'paladin', name: 'Paladin', icon: Paladin_icon},
+		{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
+	]},
+	{id: 'worgen', name: 'Worgen', faction: 'Alliance', 
+	classes: [
+		{id: 'dk', name: 'Death Knight', icon: DK_icon},
+		{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
+		{id: 'mage', name: 'Mage', icon: Mage_icon},
+		{id: 'warlock', name: 'Warlock', icon: Warlock_icon},
+		{id: 'druid', name: 'Druid', icon: Druid_icon},
+		{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
+		{id: 'priest', name: 'Priest', icon: Priest_icon},
+		{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
+	]}
 	],
 
 };
