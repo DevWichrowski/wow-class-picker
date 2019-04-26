@@ -97,7 +97,17 @@ const initialState = {
 		{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
 		{id: 'priest', name: 'Priest', icon: Priest_icon},
 		{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
-	]}
+	]},
+	{id: 'pandaren', name: 'Pandaren', faction:['Alliance', 'Horde'], 
+		classes: [
+			{id: 'monk', name: 'Monk', icon: Monk_icon},
+			{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
+			{id: 'priest', name: 'Priest', icon: Priest_icon},
+			{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
+			{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
+			{id: 'mage', name: 'Mage', icon: Mage_icon},
+			{id: 'shaman', name: 'Shaman', icon: Shaman_icon},
+		]}
 	],
 
 };
