@@ -26,6 +26,33 @@ const initialState = {
 		{id: 'warlock', name: 'Warlock', icon: Warlock_icon},
 		{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
 	],
+	races: [
+		{id: 'human', name: 'Human', faction: 'Alliance',
+		 races: [
+			{id: 'dk', name: 'Death Knight', icon: DK_icon},
+			{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
+			{id: 'mage', name: 'Mage', icon: Mage_icon},
+			{id: 'priest', name: 'Priest', icon: Priest_icon},
+			{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
+			{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
+			{id: 'monk', name: 'Monk', icon: Monk_icon},
+			{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
+			{id: 'paladin', name: 'Paladin', icon: Paladin_icon},
+		]},
+		{id: 'dwarf', name: 'Dwarf', faction: 'Alliance',
+			races:[
+				{id: 'dk', name: 'Death Knight', icon: DK_icon},
+				{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
+				{id: 'mage', name: 'Mage', icon: Mage_icon},
+				{id: 'priest', name: 'Priest', icon: Priest_icon},
+				{id: 'shaman', name: 'Shaman', icon: Shaman_icon},
+				{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
+				{id: 'monk', name: 'Monk', icon: Monk_icon},
+				{id: 'warlock', name: 'Warlock', icon: Warlock_icon},
+				{id: 'paladin', name: 'Paladin', icon: Paladin_icon},
+				{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
+			]},
+	],
 
 };
 
