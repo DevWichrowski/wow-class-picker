@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import FactionContainer from './FactionContainer/FactionContainer';
 import RolesContainer from './RolesContainer/RolesContainer';
 import Horde_icon from '../../assets/faction_icons/Horde_icon.png';
+import SwitchMode from './SwitchMode/SwitchMode';
 
 export class MainContainer extends Component {
 	constructor(props) {
@@ -45,6 +46,7 @@ export class MainContainer extends Component {
 		return (
 			<div className="main-container">
 				<h2 className="text">WoW random class picker</h2>
+				<SwitchMode />
 				<div className="faction-role-container">
 					<FactionContainer />
 					<RolesContainer />

@@ -10,8 +10,12 @@ import Rogue_icon from '../../assets/classes_icons/Rogue_icon.png';
 import Shaman_icon from '../../assets/classes_icons/Shaman_icon.png';
 import Warlock_icon from '../../assets/classes_icons/Warlock_icon.png';
 import Warrior_icon from '../../assets/classes_icons/Warrior_icon.png';
+import * as RacesActions from '../actions/racesActions';
+import produce from 'immer';
 
 const initialState = {
+	advancedMode: true,
+
 	classes: [
 		{ id: 'dh', name: 'Demon Hunter', icon: DH_icon },
 		{ id: 'dk', name: 'Death Knight', icon: DK_icon },
@@ -358,6 +362,16 @@ const initialState = {
 	]
 };
 
-export function racesReducer(state = initialState, action) {
-	return state;
-}
+export const racesReducer = (state = initialState, action) =>
+	produce(state, (draft) =>
+		produce(state, (draft) => {
+			switch (action.type) {
+				case RacesActions.HANDLE_SWITCH: {
+					draft.advancedMode = !state.advancedMode;
+					break;
+				}
+				default:
+					return state;
+			}
+		})
+	);
