@@ -47,11 +47,13 @@ export class MainContainer extends Component {
 			<div className="main-container">
 				<h2 className="text">WoW random class picker</h2>
 				<SwitchMode />
+				<div className={`${this.props.advancedMode ? 'test' : 'hide-items'}`}>
 				<div className="faction-role-container">
 					<FactionContainer />
 					<RolesContainer />
 				</div>
 				<img className="race-icon" src={Horde_icon} />
+				</div>
 				<ClassIcon image={this.state.currentClassIcon} />
 				<h2 className="text">{this.state.currentClassName}</h2>
 				<Button roll={() => this.rollIcons()} />
@@ -61,7 +63,8 @@ export class MainContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	classes: state.races.classes
+	classes: state.races.classes,
+	advancedMode: state.races.advancedMode
 });
 
 export default connect(mapStateToProps)(MainContainer);

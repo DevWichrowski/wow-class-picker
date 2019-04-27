@@ -14,7 +14,7 @@ import * as RacesActions from '../actions/racesActions';
 import produce from 'immer';
 
 const initialState = {
-	advancedMode: true,
+	advancedMode: false,
 
 	classes: [
 		{ id: 'dh', name: 'Demon Hunter', icon: DH_icon },
