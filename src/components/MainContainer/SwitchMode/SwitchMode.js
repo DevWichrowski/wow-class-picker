@@ -9,7 +9,7 @@ const SwitchMode = (props) =>{
     <div className="switch-mode">
       <p className="text">Advanced mode: </p>
       <br />
-      <Switch checked={props.advancedMode} onChange={() => props.handleSwitch()}/>
+      <Switch checked={props.advancedMode} onChange={() => props.handleSwitch()} onColor='#e2a233'/>
       {console.log(props)}
     </div>
   )
