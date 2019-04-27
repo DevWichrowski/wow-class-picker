@@ -52,7 +52,7 @@ export class MainContainer extends Component {
 					<FactionContainer />
 					<RolesContainer />
 				</div>
-				<img className="race-icon" src={Horde_icon} />
+				{this.props.advancedMode === true ? <img className="race-icon" src={Horde_icon} /> : null}
 				</div>
 				<ClassIcon image={this.state.currentClassIcon} />
 				<h2 className="text">{this.state.currentClassName}</h2>
