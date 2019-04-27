@@ -232,19 +232,68 @@ const initialState = {
 			]
 		},
 
-		// Alliance allied races 
-		{id: 'dark_iron_dwarf', name: 'Dark Iron Dwarf', faction: 'Alliance', alliedRace: true, 
-	classes: [
-		{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-		{ id: 'mage', name: 'Mage', icon: Mage_icon },
-		{ id: 'monk', name: 'Monk', icon: Monk_icon },
-		{ id: 'paladin', name: 'Paladin', icon: Paladin_icon },
-		{ id: 'priest', name: 'Priest', icon: Priest_icon },
-		{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
-		{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
-		{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
-		{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
-	]}
+		// Alliance allied races
+		{
+			id: 'dark_iron_dwarf',
+			name: 'Dark Iron Dwarf',
+			faction: 'Alliance',
+			alliedRace: true,
+			classes: [
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'paladin', name: 'Paladin', icon: Paladin_icon },
+				{ id: 'priest', name: 'Priest', icon: Priest_icon },
+				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
+				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
+				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+			]
+		},
+		{
+			id: 'kul_tiran',
+			name: 'Kul Tiran',
+			faction: 'Alliance',
+			alliedRace: true,
+			classes: [
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon },
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
+				{ id: 'priest', name: 'Priest', icon: Priest_icon },
+				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'druid', name: 'Druid', icon: Druid_icon }
+			]
+		},
+		{
+			id: 'lighforged_draenei',
+			name: 'Lightforged Draenei',
+			faction: 'Alliance',
+			alliedRace: true,
+			classes: [
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'paladin', name: 'Paladin', icon: Paladin_icon },
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+			]
+		},
+		{
+			id: 'void_elf',
+			name: 'Void Elf',
+			faction: 'Alliance',
+			alliedRace: true,
+			classes: [
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'priest', name: 'Priest', icon: Priest_icon },
+				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
+				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+			]
+		}
 	]
 };
 
