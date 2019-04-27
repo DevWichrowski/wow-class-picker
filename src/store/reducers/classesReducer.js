@@ -13,150 +13,239 @@ import Warrior_icon from '../../assets/classes_icons/Warrior_icon.png';
 
 const initialState = {
 	classes: [
-		{id: 'dh', name: 'Demon Hunter', icon: DH_icon},
-		{id: 'dk', name: 'Death Knight', icon: DK_icon},
-		{id: 'druid', name: 'Druid', icon: Druid_icon},
-		{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
-		{id: 'mage', name: 'Mage', icon: Mage_icon},
-		{id: 'monk', name: 'Monk', icon: Monk_icon},
-		{id: 'paladin', name: 'Paladin', icon: Paladin_icon},
-		{id: 'priest', name: 'Priest', icon: Priest_icon},
-		{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
-		{id: 'shaman', name: 'Shaman', icon: Shaman_icon},
-		{id: 'warlock', name: 'Warlock', icon: Warlock_icon},
-		{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
+		{ id: 'dh', name: 'Demon Hunter', icon: DH_icon },
+		{ id: 'dk', name: 'Death Knight', icon: DK_icon },
+		{ id: 'druid', name: 'Druid', icon: Druid_icon },
+		{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+		{ id: 'mage', name: 'Mage', icon: Mage_icon },
+		{ id: 'monk', name: 'Monk', icon: Monk_icon },
+		{ id: 'paladin', name: 'Paladin', icon: Paladin_icon },
+		{ id: 'priest', name: 'Priest', icon: Priest_icon },
+		{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
+		{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
+		{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
+		{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
 	],
 	races: [
 		// Alliance races
-		{id: 'human', name: 'Human', faction: 'Alliance',
-		classes: [
-			{id: 'dk', name: 'Death Knight', icon: DK_icon},
-			{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
-			{id: 'mage', name: 'Mage', icon: Mage_icon},
-			{id: 'priest', name: 'Priest', icon: Priest_icon},
-			{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
-			{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
-			{id: 'monk', name: 'Monk', icon: Monk_icon},
-			{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
-			{id: 'paladin', name: 'Paladin', icon: Paladin_icon},
-		]},
-		{id: 'dwarf', name: 'Dwarf', faction: 'Alliance',
-		classes:[
-				{id: 'dk', name: 'Death Knight', icon: DK_icon},
-				{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
-				{id: 'mage', name: 'Mage', icon: Mage_icon},
-				{id: 'priest', name: 'Priest', icon: Priest_icon},
-				{id: 'shaman', name: 'Shaman', icon: Shaman_icon},
-				{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
-				{id: 'monk', name: 'Monk', icon: Monk_icon},
-				{id: 'warlock', name: 'Warlock', icon: Warlock_icon},
-				{id: 'paladin', name: 'Paladin', icon: Paladin_icon},
-				{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
-			]},
-		{id: 'night_elf', name: 'Night Elf', faction: 'Alliance',
-		classes:[
-			{id: 'dh', name: 'Demon Hunter', icon: DH_icon},
-			{id: 'druid', name: 'Druid', icon: Druid_icon},
-			{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
-			{id: 'mage', name: 'Mage', icon: Mage_icon},
-			{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
-			{id: 'dk', name: 'Death Knight', icon: DK_icon},
-			{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
-			{id: 'monk', name: 'Monk', icon: Monk_icon},
-			{id: 'priest', name: 'Priest', icon: Priest_icon},
-			]},
-		{id: 'gnome', name: 'Gnome', faction: 'Alliance',
-		classes: [
-			{id: 'dh', name: 'Demon Hunter', icon: DH_icon},
-			{id: 'monk', name: 'Monk', icon: Monk_icon},
-			{id: 'warlock', name: 'Warlock', icon: Warlock_icon},
-			{id: 'mage', name: 'Mage', icon: Mage_icon},
-			{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
-			{id: 'priest', name: 'Priest', icon: Priest_icon},
-			{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
-			{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
-		]},
-		{id: 'draenei', name: 'Draenei', faction: 'Alliance',
-	classes: [
-		{id: 'dk', name: 'Death Knight', icon: DK_icon},
-		{id: 'monk', name: 'Monk', icon: Monk_icon},
-		{id: 'priest', name: 'Priest', icon: Priest_icon},
-		{id: 'shaman', name: 'Shaman', icon: Shaman_icon},	
-		{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
-		{id: 'mage', name: 'Mage', icon: Mage_icon},
-		{id: 'paladin', name: 'Paladin', icon: Paladin_icon},
-		{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
-	]},
-	{id: 'worgen', name: 'Worgen', faction: 'Alliance', 
-	classes: [
-		{id: 'dk', name: 'Death Knight', icon: DK_icon},
-		{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
-		{id: 'mage', name: 'Mage', icon: Mage_icon},
-		{id: 'warlock', name: 'Warlock', icon: Warlock_icon},
-		{id: 'druid', name: 'Druid', icon: Druid_icon},
-		{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
-		{id: 'priest', name: 'Priest', icon: Priest_icon},
-		{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
-	]},
-	{id: 'pandaren', name: 'Pandaren', faction:['Alliance', 'Horde'], 
-		classes: [
-			{id: 'monk', name: 'Monk', icon: Monk_icon},
-			{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
-			{id: 'priest', name: 'Priest', icon: Priest_icon},
-			{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
-			{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
-			{id: 'mage', name: 'Mage', icon: Mage_icon},
-			{id: 'shaman', name: 'Shaman', icon: Shaman_icon},
-		]},
-		// Horde
-		{id: 'orc', name: 'Orc', faction: 'Horde',
-	classes: [
-		{id: 'dk', name: 'Death Knight', icon: DK_icon},
-		{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
-		{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
-		{id: 'shaman', name: 'Shaman', icon: Shaman_icon},
-		{id: 'monk', name: 'Monk', icon: Monk_icon},
-		{id: 'mage', name: 'Mage', icon: Mage_icon},
-		{id: 'warlock', name: 'Warlock', icon: Warlock_icon},
-		{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
-	]},
-	{id: 'undead', name: 'Undead', faction: 'Horde',
-		classes: [
-			{id: 'dk', name: 'Death Knight', icon: DK_icon},
-			{id: 'mage', name: 'Mage', icon: Mage_icon},
-			{id: 'priest', name: 'Priest', icon: Priest_icon},
-			{id: 'warlock', name: 'Warlock', icon: Warlock_icon},
-			{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
-			{id: 'monk', name: 'Monk', icon: Monk_icon},
-			{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
-			{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
-		]},
-	{id: 'tauren', name: 'Tauren', faction: 'Horde',
-		classess:[
-			{id: 'dk', name: 'Death Knight', icon: DK_icon},
-			{id: 'druid', name: 'Druid', icon: Druid_icon},
-			{id: 'priest', name: 'Priest', icon: Priest_icon},
-			{id: 'shaman', name: 'Shaman', icon: Shaman_icon},
-			{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
-			{id: 'monk', name: 'Monk', icon: Monk_icon},
-			{id: 'paladin', name: 'Paladin', icon: Paladin_icon},
-			{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
-		]},
-	{id: 'troll', name: 'Troll', faction: 'Horde',
-		classes: [
-			{id: 'dk', name: 'Death Knight', icon: DK_icon},
-			{id: 'hunter', name: 'Hunter', icon: Hunter_icon},
-			{id: 'mage', name: 'Mage', icon: Mage_icon},
-			{id: 'rogue', name: 'Rogue', icon: Rogue_icon},
-			{id: 'shaman', name: 'Shaman', icon: Shaman_icon},
-			{id: 'monk', name: 'Monk', icon: Monk_icon},
-			{id: 'druid', name: 'Druid', icon: Druid_icon},
-			{id: 'priest', name: 'Priest', icon: Priest_icon},
-			{id: 'warlock', name: 'Warlock', icon: Warlock_icon},
-			{id: 'warrior', name: 'Warrior', icon: Warrior_icon},
-		]}
-	],
+		{
+			id: 'human',
+			name: 'Human',
+			faction: 'Alliance',
+			classes: [
+				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
+				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'priest', name: 'Priest', icon: Priest_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon },
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon },
+				{ id: 'paladin', name: 'Paladin', icon: Paladin_icon }
+			]
+		},
+		{
+			id: 'dwarf',
+			name: 'Dwarf',
+			faction: 'Alliance',
+			classes: [
+				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'priest', name: 'Priest', icon: Priest_icon },
+				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
+				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
+				{ id: 'paladin', name: 'Paladin', icon: Paladin_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+			]
+		},
+		{
+			id: 'night_elf',
+			name: 'Night Elf',
+			faction: 'Alliance',
+			classes: [
+				{ id: 'dh', name: 'Demon Hunter', icon: DH_icon },
+				{ id: 'druid', name: 'Druid', icon: Druid_icon },
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon },
+				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
+				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'priest', name: 'Priest', icon: Priest_icon }
+			]
+		},
+		{
+			id: 'gnome',
+			name: 'Gnome',
+			faction: 'Alliance',
+			classes: [
+				{ id: 'dh', name: 'Demon Hunter', icon: DH_icon },
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'priest', name: 'Priest', icon: Priest_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon },
+				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon }
+			]
+		},
+		{
+			id: 'draenei',
+			name: 'Draenei',
+			faction: 'Alliance',
+			classes: [
+				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'priest', name: 'Priest', icon: Priest_icon },
+				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'paladin', name: 'Paladin', icon: Paladin_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+			]
+		},
+		{
+			id: 'worgen',
+			name: 'Worgen',
+			faction: 'Alliance',
+			classes: [
+				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
+				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
+				{ id: 'druid', name: 'Druid', icon: Druid_icon },
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'priest', name: 'Priest', icon: Priest_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+			]
+		},
+		{
+			id: 'pandaren',
+			name: 'Pandaren',
+			faction: [ 'Alliance', 'Horde' ],
+			classes: [
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'priest', name: 'Priest', icon: Priest_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon },
+				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon }
+			]
+		},
+		// Horde races
+		{
+			id: 'orc',
+			name: 'Orc',
+			faction: 'Horde',
+			classes: [
+				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
+				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+			]
+		},
+		{
+			id: 'undead',
+			name: 'Undead',
+			faction: 'Horde',
+			classes: [
+				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'priest', name: 'Priest', icon: Priest_icon },
+				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+			]
+		},
+		{
+			id: 'tauren',
+			name: 'Tauren',
+			faction: 'Horde',
+			classess: [
+				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
+				{ id: 'druid', name: 'Druid', icon: Druid_icon },
+				{ id: 'priest', name: 'Priest', icon: Priest_icon },
+				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'paladin', name: 'Paladin', icon: Paladin_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+			]
+		},
+		{
+			id: 'troll',
+			name: 'Troll',
+			faction: 'Horde',
+			classes: [
+				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
+				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'druid', name: 'Druid', icon: Druid_icon },
+				{ id: 'priest', name: 'Priest', icon: Priest_icon },
+				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+			]
+		},
+		{
+			id: 'blood_elf',
+			name: 'Blood Elf',
+			faction: 'Horde',
+			classes: [
+				{ id: 'dh', name: 'Demon Hunter', icon: DH_icon },
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'priest', name: 'Priest', icon: Priest_icon },
+				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
+				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'paladin', name: 'Paladin', icon: Paladin_icon },
+				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+			]
+		},
+		{
+			id: 'goblic',
+			name: 'Goblin',
+			faction: 'Horde',
+			classes: [
+				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
+				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'priest', name: 'Priest', icon: Priest_icon },
+				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+			]
+		},
 
+		// Alliance allied races 
+		{id: 'dark_iron_dwarf', name: 'Dark Iron Dwarf', faction: 'Alliance', alliedRace: true, 
+	classes: [
+		{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+		{ id: 'mage', name: 'Mage', icon: Mage_icon },
+		{ id: 'monk', name: 'Monk', icon: Monk_icon },
+		{ id: 'paladin', name: 'Paladin', icon: Paladin_icon },
+		{ id: 'priest', name: 'Priest', icon: Priest_icon },
+		{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
+		{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
+		{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
+		{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+	]}
+	]
 };
 
 export function classesReducer(state = initialState, action) {
