@@ -293,6 +293,67 @@ const initialState = {
 				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
 				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
 			]
+		},
+		// Horde allied races
+		{
+			id: 'highmountatin_tauren',
+			name: 'Highmountain Tauren',
+			faction: 'Horde',
+			alliedRace: true,
+			classes: [
+				{ id: 'druid', name: 'Druid', icon: Druid_icon },
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+			]
+		},
+		{
+			id: 'maghar_orc',
+			name: 'Maghar Orc',
+			faction: 'Horde',
+			alliedRace: true,
+			classes: [
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'priest', name: 'Priest', icon: Priest_icon },
+				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
+				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+			]
+		},
+		{
+			id: 'nightborn',
+			name: 'Nightborn',
+			faction: 'Horde',
+			alliedRace: true,
+			classes: [
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'priest', name: 'Priest', icon: Priest_icon },
+				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
+				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+			]
+		},
+		{
+			id: 'zandalari_troll',
+			name: 'Zandalari Troll',
+			faction: 'Horde',
+			alliedRace: true,
+			classes: [
+				{ id: 'druid', name: 'Druid', icon: Druid_icon },
+				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'paladin', name: 'Paladin', icon: Paladin_icon },
+				{ id: 'priest', name: 'Priest', icon: Priest_icon },
+				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
+				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
+				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+			]
 		}
 	]
 };
