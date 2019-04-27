@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { classesReducer } from "./classesReducer";
+import { racesReducer } from './racesReducer';
 
 export const rootReducer = combineReducers({
-	classes: classesReducer,
+	races: racesReducer
 });

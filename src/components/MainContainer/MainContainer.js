@@ -49,7 +49,7 @@ export class MainContainer extends Component {
 					<FactionContainer />
 					<RolesContainer />
 				</div>
-				<img className="race-icon" src={Horde_icon}/>
+				<img className="race-icon" src={Horde_icon} />
 				<ClassIcon image={this.state.currentClassIcon} />
 				<h2 className="text">{this.state.currentClassName}</h2>
 				<Button roll={() => this.rollIcons()} />
@@ -59,7 +59,7 @@ export class MainContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	classes: state.classes.classes
+	classes: state.races.classes
 });
 
 export default connect(mapStateToProps)(MainContainer);

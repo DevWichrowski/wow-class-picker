@@ -358,6 +358,6 @@ const initialState = {
 	]
 };
 
-export function classesReducer(state = initialState, action) {
+export function racesReducer(state = initialState, action) {
 	return state;
 }
