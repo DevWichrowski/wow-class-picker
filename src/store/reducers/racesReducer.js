@@ -24,6 +24,10 @@ export const racesReducer = (state = initialState, action) =>
 					draft.advancedMode = !state.advancedMode;
 					break;
 				}
+				case RacesActions.HANDLE_ALLIANCE: {
+                    draft.factionAlliance = !state.factionAlliance;
+                }
+                
 				default:
 					return state;
 			}
