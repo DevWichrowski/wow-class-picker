@@ -63,7 +63,7 @@ export class MainContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-	classes: state.races.classes,
+	classes: state.classes.classes,
 	advancedMode: state.races.advancedMode
 });
 
