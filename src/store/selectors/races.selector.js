@@ -12,3 +12,13 @@ export const getAdvancedModeSelector = createSelector(
     selectRaces,
     state => state.advancedMode
 );
+
+export const getFactionHordeSelector = createSelector(
+    selectRaces,
+    state => state.factionHorde
+);
+
+export const getFactionAllianceSelector = createSelector(
+    selectRaces,
+    state => state.factionAlliance
+);
