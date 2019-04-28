@@ -16,7 +16,6 @@ const SwitchMode = (props) =>{
 }
 
 const mapStateToProps = (state) => ({
-    classes: state.races.classes,
     advancedMode: state.races.advancedMode
 });
 

@@ -28,7 +28,6 @@ export class FactionContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    classes: state.races.classes,
     advancedMode: state.races.advancedMode
 });
 
