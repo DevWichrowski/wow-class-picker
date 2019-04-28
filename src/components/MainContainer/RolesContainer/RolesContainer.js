@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './RolesContainer.scss';
-import Horde_icon from '../../../assets/faction_icons/Horde_icon.png';
 import Tank_icon from '../../../assets/roles_icons/Tank_icon.jpg';
 import Ranged_icon from '../../../assets/roles_icons/Ranged_icon.jpg';
 import Melee_icon from '../../../assets/roles_icons/Melee_icon.jpg';

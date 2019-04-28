@@ -14,10 +14,11 @@
         margin-right: 20px;
         cursor: pointer;
         opacity: 0.6;
+        border-radius: 50%;
     }
     .role-image:hover{
         opacity: 1;
-        border: 5px #f8b700 solid;
+        border: 3px #f8b700 solid;
         border-radius: 50%;
     }
 }

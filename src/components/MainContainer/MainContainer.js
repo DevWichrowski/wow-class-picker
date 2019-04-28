@@ -5,7 +5,6 @@ import ClassIcon from './ClassIcon/ClassIcon';
 import { connect } from 'react-redux';
 import FactionContainer from './FactionContainer/FactionContainer';
 import RolesContainer from './RolesContainer/RolesContainer';
-import Horde_icon from '../../assets/faction_icons/Horde_icon.png';
 import Human_icon from '../../assets/races_icons/Human_icon.png';
 import SwitchMode from './SwitchMode/SwitchMode';
 
