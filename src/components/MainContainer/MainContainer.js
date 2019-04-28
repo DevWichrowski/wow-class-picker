@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import FactionContainer from './FactionContainer/FactionContainer';
 import RolesContainer from './RolesContainer/RolesContainer';
 import Horde_icon from '../../assets/faction_icons/Horde_icon.png';
+import Human_icon from '../../assets/races_icons/Human_icon.png';
 import SwitchMode from './SwitchMode/SwitchMode';
 
 export class MainContainer extends Component {
@@ -52,7 +53,7 @@ export class MainContainer extends Component {
 					<FactionContainer />
 					<RolesContainer />
 				</div>
-				{this.props.advancedMode === true ? <img className="race-icon" src={Horde_icon} /> : null}
+				{this.props.advancedMode === true ? <img className="race-icon" src={Human_icon} /> : null}
 				</div>
 				<ClassIcon image={this.state.currentClassIcon} />
 				<h2 className="text">{this.state.currentClassName}</h2>

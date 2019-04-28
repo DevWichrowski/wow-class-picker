@@ -28,7 +28,7 @@ const initialState = {
 					roles: [ 'tank', 'melee dps' ],
 					icon: DK_icon
 				},
-				{ id: 'rogue', name: 'Rogue', roles: [ 'tank' ], roles: [ 'melee dps' ], icon: Rogue_icon },
+				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
 				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
 				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
 				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon },
