@@ -88,7 +88,7 @@ const initialState = {
 				{ id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
 				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
 				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
-				{ id: 'priest', name: 'Priest', icon: Priest_icon }
+				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon }
 			]
 		},
 		{
@@ -103,7 +103,7 @@ const initialState = {
 				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
 				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
 				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon },
-				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon }
+				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon }
 			]
 		},
 		{
@@ -152,7 +152,7 @@ const initialState = {
 				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon },
 				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
 				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
-				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon }
+				{ id: 'shaman', name: 'Shaman', roles: [ 'ranged dps', 'melee dps', 'healer' ], icon: Shaman_icon }
 			]
 		},
 		// Horde races
@@ -292,7 +292,7 @@ const initialState = {
 				{ id: 'shaman', name: 'Shaman', roles: [ 'ranged dps', 'melee dps', 'healer' ], icon: Shaman_icon },
 				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
 				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
-				{ id: 'druid', name: 'Druid', icon: Druid_icon }
+				{ id: 'druid', name: 'Druid', roles: [ 'tank', 'ranged dps', 'melee dps', 'healer' ], icon: Druid_icon }
 			]
 		},
 		{
