@@ -8,6 +8,7 @@ import RolesContainer from './RolesContainer/RolesContainer';
 import Human_icon from '../../assets/races_icons/Human_icon.png';
 import SwitchMode from './SwitchMode/SwitchMode';
 import {getClassesSelector} from "../../store/selectors/classes.selector";
+import {getAdvancedModeSelector} from "../../store/selectors/races.selector";
 
 export class MainContainer extends Component {
 	constructor(props) {
@@ -65,7 +66,7 @@ export class MainContainer extends Component {
 
 const mapStateToProps = (state) => ({
 	classes: getClassesSelector(state),
-	advancedMode: state.races.advancedMode
+	advancedMode: getAdvancedModeSelector(state),
 });
 
 export default connect(mapStateToProps)(MainContainer);

@@ -1,9 +1,9 @@
 
 import { createSelector } from 'reselect';
 
-const selectRaces = state => state.classes;
+const selectClasses = state => state.classes;
 
 export const getClassesSelector = createSelector(
-    selectRaces,
+    selectClasses,
     state => state.classes
 );
