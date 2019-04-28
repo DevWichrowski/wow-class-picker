@@ -17,18 +17,18 @@ const initialState = {
 	advancedMode: false,
 
 	classes: [
-		{ id: 'dh', name: 'Demon Hunter', icon: DH_icon },
-		{ id: 'dk', name: 'Death Knight', icon: DK_icon },
-		{ id: 'druid', name: 'Druid', icon: Druid_icon },
-		{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-		{ id: 'mage', name: 'Mage', icon: Mage_icon },
-		{ id: 'monk', name: 'Monk', icon: Monk_icon },
-		{ id: 'paladin', name: 'Paladin', icon: Paladin_icon },
-		{ id: 'priest', name: 'Priest', icon: Priest_icon },
-		{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
-		{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
-		{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
-		{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+		{ id: 'dh', name: 'Demon Hunter', roles: [ 'tank', 'melee dps' ], icon: DH_icon },
+		{ id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
+		{ id: 'druid', name: 'Druid', roles: [ 'tank', 'ranged dps', 'melee dps', 'healer' ], icon: Druid_icon },
+		{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+		{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+		{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
+		{ id: 'paladin', name: 'Paladin', roles: [ 'tank', 'melee dps', 'healer' ], icon: Paladin_icon },
+		{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
+		{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
+		{ id: 'shaman', name: 'Shaman', roles: [ 'ranged dps', 'melee dps', 'healer' ], icon: Shaman_icon },
+		{ id: 'warlock', name: 'Warlock', roles: [ 'ranged dps' ], icon: Warlock_icon },
+		{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon }
 	],
 	races: [
 		// Alliance races
@@ -37,15 +37,20 @@ const initialState = {
 			name: 'Human',
 			faction: 'Alliance',
 			classes: [
-				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
-				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
-				{ id: 'priest', name: 'Priest', icon: Priest_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon },
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon },
-				{ id: 'paladin', name: 'Paladin', icon: Paladin_icon }
+				{
+					id: 'dk',
+					name: 'Death Knight',
+					roles: [ 'tank', 'melee dps' ],
+					icon: DK_icon
+				},
+				{ id: 'rogue', name: 'Rogue', roles: [ 'tank' ], roles: [ 'melee dps' ], icon: Rogue_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon },
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon },
+				{ id: 'paladin', name: 'Paladin', roles: [ 'tank', 'melee dps', 'healer' ], icon: Paladin_icon }
 			]
 		},
 		{
@@ -53,16 +58,16 @@ const initialState = {
 			name: 'Dwarf',
 			faction: 'Alliance',
 			classes: [
-				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
-				{ id: 'priest', name: 'Priest', icon: Priest_icon },
-				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
-				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
-				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
-				{ id: 'paladin', name: 'Paladin', icon: Paladin_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+				{ id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
+				{ id: 'shaman', name: 'Shaman', roles: [ 'ranged dps', 'melee dps', 'healer' ], icon: Shaman_icon },
+				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
+				{ id: 'warlock', name: 'Warlock', roles: [ 'ranged dps' ], icon: Warlock_icon },
+				{ id: 'paladin', name: 'Paladin', roles: [ 'tank', 'melee dps', 'healer' ], icon: Paladin_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon }
 			]
 		},
 		{
@@ -70,14 +75,19 @@ const initialState = {
 			name: 'Night Elf',
 			faction: 'Alliance',
 			classes: [
-				{ id: 'dh', name: 'Demon Hunter', icon: DH_icon },
-				{ id: 'druid', name: 'Druid', icon: Druid_icon },
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon },
-				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
-				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'dh', name: 'Demon Hunter', roles: [ 'tank', 'melee dps' ], icon: DH_icon },
+				{
+					id: 'druid',
+					name: 'Druid',
+					roles: [ 'tank', 'ranged dps', 'melee dps', 'healer' ],
+					icon: Druid_icon
+				},
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon },
+				{ id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
+				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
 				{ id: 'priest', name: 'Priest', icon: Priest_icon }
 			]
 		},
@@ -86,13 +96,13 @@ const initialState = {
 			name: 'Gnome',
 			faction: 'Alliance',
 			classes: [
-				{ id: 'dh', name: 'Demon Hunter', icon: DH_icon },
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
-				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'priest', name: 'Priest', icon: Priest_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon },
+				{ id: 'dh', name: 'Demon Hunter', roles: [ 'tank', 'melee dps' ], icon: DH_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
+				{ id: 'warlock', name: 'Warlock', roles: [ 'ranged dps' ], icon: Warlock_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon },
 				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon }
 			]
 		},
@@ -101,14 +111,14 @@ const initialState = {
 			name: 'Draenei',
 			faction: 'Alliance',
 			classes: [
-				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
-				{ id: 'priest', name: 'Priest', icon: Priest_icon },
-				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
-				{ id: 'paladin', name: 'Paladin', icon: Paladin_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+				{ id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
+				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
+				{ id: 'shaman', name: 'Shaman', roles: [ 'ranged dps', 'melee dps', 'healer' ], icon: Shaman_icon },
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+				{ id: 'paladin', name: 'Paladin', roles: [ 'tank', 'melee dps', 'healer' ], icon: Paladin_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon }
 			]
 		},
 		{
@@ -116,14 +126,19 @@ const initialState = {
 			name: 'Worgen',
 			faction: 'Alliance',
 			classes: [
-				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
-				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
-				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
-				{ id: 'druid', name: 'Druid', icon: Druid_icon },
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'priest', name: 'Priest', icon: Priest_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+				{ id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
+				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+				{ id: 'warlock', name: 'Warlock', roles: [ 'ranged dps' ], icon: Warlock_icon },
+				{
+					id: 'druid',
+					name: 'Druid',
+					roles: [ 'tank', 'ranged dps', 'melee dps', 'healer' ],
+					icon: Druid_icon
+				},
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon }
 			]
 		},
 		{
@@ -131,12 +146,12 @@ const initialState = {
 			name: 'Pandaren',
 			faction: [ 'Alliance', 'Horde' ],
 			classes: [
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'priest', name: 'Priest', icon: Priest_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon },
-				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon },
+				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
 				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon }
 			]
 		},
@@ -146,14 +161,14 @@ const initialState = {
 			name: 'Orc',
 			faction: 'Horde',
 			classes: [
-				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
-				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
-				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+				{ id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
+				{ id: 'shaman', name: 'Shaman', roles: [ 'ranged dps', 'melee dps', 'healer' ], icon: Shaman_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+				{ id: 'warlock', name: 'Warlock', roles: [ 'ranged dps' ], icon: Warlock_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon }
 			]
 		},
 		{
@@ -161,14 +176,14 @@ const initialState = {
 			name: 'Undead',
 			faction: 'Horde',
 			classes: [
-				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
-				{ id: 'priest', name: 'Priest', icon: Priest_icon },
-				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
-				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+				{ id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
+				{ id: 'warlock', name: 'Warlock', roles: [ 'ranged dps' ], icon: Warlock_icon },
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
+				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon }
 			]
 		},
 		{
@@ -176,14 +191,19 @@ const initialState = {
 			name: 'Tauren',
 			faction: 'Horde',
 			classess: [
-				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
-				{ id: 'druid', name: 'Druid', icon: Druid_icon },
-				{ id: 'priest', name: 'Priest', icon: Priest_icon },
-				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
-				{ id: 'paladin', name: 'Paladin', icon: Paladin_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+				{ id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
+				{
+					id: 'druid',
+					name: 'Druid',
+					roles: [ 'tank', 'ranged dps', 'melee dps', 'healer' ],
+					icon: Druid_icon
+				},
+				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
+				{ id: 'shaman', name: 'Shaman', roles: [ 'ranged dps', 'melee dps', 'healer' ], icon: Shaman_icon },
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
+				{ id: 'paladin', name: 'Paladin', roles: [ 'tank', 'melee dps', 'healer' ], icon: Paladin_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon }
 			]
 		},
 		{
@@ -191,16 +211,21 @@ const initialState = {
 			name: 'Troll',
 			faction: 'Horde',
 			classes: [
-				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
-				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
-				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
-				{ id: 'druid', name: 'Druid', icon: Druid_icon },
-				{ id: 'priest', name: 'Priest', icon: Priest_icon },
-				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+				{ id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
+				{ id: 'shaman', name: 'Shaman', roles: [ 'ranged dps', 'melee dps', 'healer' ], icon: Shaman_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
+				{
+					id: 'druid',
+					name: 'Druid',
+					roles: [ 'tank', 'ranged dps', 'melee dps', 'healer' ],
+					icon: Druid_icon
+				},
+				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
+				{ id: 'warlock', name: 'Warlock', roles: [ 'ranged dps' ], icon: Warlock_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon }
 			]
 		},
 		{
@@ -208,16 +233,16 @@ const initialState = {
 			name: 'Blood Elf',
 			faction: 'Horde',
 			classes: [
-				{ id: 'dh', name: 'Demon Hunter', icon: DH_icon },
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
-				{ id: 'priest', name: 'Priest', icon: Priest_icon },
-				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
-				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
-				{ id: 'paladin', name: 'Paladin', icon: Paladin_icon },
-				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+				{ id: 'dh', name: 'Demon Hunter', roles: [ 'tank', 'melee dps' ], icon: DH_icon },
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
+				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
+				{ id: 'warlock', name: 'Warlock', roles: [ 'ranged dps' ], icon: Warlock_icon },
+				{ id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+				{ id: 'paladin', name: 'Paladin', roles: [ 'tank', 'melee dps', 'healer' ], icon: Paladin_icon },
+				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon }
 			]
 		},
 		{
@@ -225,14 +250,14 @@ const initialState = {
 			name: 'Goblin',
 			faction: 'Horde',
 			classes: [
-				{ id: 'dk', name: 'Death Knight', icon: DK_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
-				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
-				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'priest', name: 'Priest', icon: Priest_icon },
-				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+				{ id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
+				{ id: 'shaman', name: 'Shaman', roles: [ 'ranged dps', 'melee dps', 'healer' ], icon: Shaman_icon },
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
+				{ id: 'warlock', name: 'Warlock', roles: [ 'ranged dps' ], icon: Warlock_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon }
 			]
 		},
 
@@ -243,15 +268,15 @@ const initialState = {
 			faction: 'Alliance',
 			alliedRace: true,
 			classes: [
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
-				{ id: 'paladin', name: 'Paladin', icon: Paladin_icon },
-				{ id: 'priest', name: 'Priest', icon: Priest_icon },
-				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
-				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
-				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
+				{ id: 'paladin', name: 'Paladin', roles: [ 'tank', 'melee dps', 'healer' ], icon: Paladin_icon },
+				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
+				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
+				{ id: 'shaman', name: 'Shaman', roles: [ 'ranged dps', 'melee dps', 'healer' ], icon: Shaman_icon },
+				{ id: 'warlock', name: 'Warlock', roles: [ 'ranged dps' ], icon: Warlock_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon }
 			]
 		},
 		{
@@ -260,13 +285,13 @@ const initialState = {
 			faction: 'Alliance',
 			alliedRace: true,
 			classes: [
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon },
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
-				{ id: 'priest', name: 'Priest', icon: Priest_icon },
-				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon },
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
+				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
+				{ id: 'shaman', name: 'Shaman', roles: [ 'ranged dps', 'melee dps', 'healer' ], icon: Shaman_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
 				{ id: 'druid', name: 'Druid', icon: Druid_icon }
 			]
 		},
@@ -276,11 +301,11 @@ const initialState = {
 			faction: 'Alliance',
 			alliedRace: true,
 			classes: [
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
-				{ id: 'paladin', name: 'Paladin', icon: Paladin_icon },
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+				{ id: 'paladin', name: 'Paladin', roles: [ 'tank', 'melee dps', 'healer' ], icon: Paladin_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon }
 			]
 		},
 		{
@@ -289,13 +314,13 @@ const initialState = {
 			faction: 'Alliance',
 			alliedRace: true,
 			classes: [
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
-				{ id: 'priest', name: 'Priest', icon: Priest_icon },
-				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
-				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
+				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
+				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
+				{ id: 'warlock', name: 'Warlock', roles: [ 'ranged dps' ], icon: Warlock_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon }
 			]
 		},
 		// Horde allied races
@@ -305,11 +330,16 @@ const initialState = {
 			faction: 'Horde',
 			alliedRace: true,
 			classes: [
-				{ id: 'druid', name: 'Druid', icon: Druid_icon },
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
-				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+				{
+					id: 'druid',
+					name: 'Druid',
+					roles: [ 'tank', 'ranged dps', 'melee dps', 'healer' ],
+					icon: Druid_icon
+				},
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
+				{ id: 'shaman', name: 'Shaman', roles: [ 'ranged dps', 'melee dps', 'healer' ], icon: Shaman_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon }
 			]
 		},
 		{
@@ -318,13 +348,13 @@ const initialState = {
 			faction: 'Horde',
 			alliedRace: true,
 			classes: [
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
-				{ id: 'priest', name: 'Priest', icon: Priest_icon },
-				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
-				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
+				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
+				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
+				{ id: 'shaman', name: 'Shaman', roles: [ 'ranged dps', 'melee dps', 'healer' ], icon: Shaman_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon }
 			]
 		},
 		{
@@ -333,13 +363,13 @@ const initialState = {
 			faction: 'Horde',
 			alliedRace: true,
 			classes: [
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
-				{ id: 'priest', name: 'Priest', icon: Priest_icon },
-				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
-				{ id: 'warlock', name: 'Warlock', icon: Warlock_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
+				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
+				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
+				{ id: 'warlock', name: 'Warlock', roles: [ 'ranged dps' ], icon: Warlock_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon }
 			]
 		},
 		{
@@ -348,15 +378,20 @@ const initialState = {
 			faction: 'Horde',
 			alliedRace: true,
 			classes: [
-				{ id: 'druid', name: 'Druid', icon: Druid_icon },
-				{ id: 'hunter', name: 'Hunter', icon: Hunter_icon },
-				{ id: 'mage', name: 'Mage', icon: Mage_icon },
-				{ id: 'monk', name: 'Monk', icon: Monk_icon },
-				{ id: 'paladin', name: 'Paladin', icon: Paladin_icon },
-				{ id: 'priest', name: 'Priest', icon: Priest_icon },
-				{ id: 'rogue', name: 'Rogue', icon: Rogue_icon },
-				{ id: 'shaman', name: 'Shaman', icon: Shaman_icon },
-				{ id: 'warrior', name: 'Warrior', icon: Warrior_icon }
+				{
+					id: 'druid',
+					name: 'Druid',
+					roles: [ 'tank', 'ranged dps', 'melee dps', 'healer' ],
+					icon: Druid_icon
+				},
+				{ id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
+				{ id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
+				{ id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
+				{ id: 'paladin', name: 'Paladin', roles: [ 'tank', 'melee dps', 'healer' ], icon: Paladin_icon },
+				{ id: 'priest', name: 'Priest', roles: [ 'ranged dps', 'healer' ], icon: Priest_icon },
+				{ id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
+				{ id: 'shaman', name: 'Shaman', roles: [ 'ranged dps', 'melee dps', 'healer' ], icon: Shaman_icon },
+				{ id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon }
 			]
 		}
 	]
