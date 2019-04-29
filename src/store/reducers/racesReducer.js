@@ -10,9 +10,6 @@ const initialState = {
     isRangedDps: false,
     isMeleeDps: false,
     isHealer: false,
-
-    filteredRaces: [],
-
     races: racesData,
 };
 

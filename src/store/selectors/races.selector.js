@@ -1,7 +1,55 @@
-
-import { createSelector } from 'reselect';
+import {createSelector} from 'reselect';
 
 const selectRaces = state => state.races;
+const getFilterAdvancedMode = state => state.races.advancedMode;
+const getFilterAlliance = state => state.races.factionAlliance;
+const getFilterHorde = state => state.races.factionHorde;
+const getFilterTank = state => state.races.isTank;
+const getFilterRangedDps = state => state.races.isRangedDps;
+const getFilterMeleeDps = state => state.races.isMeleeDps;
+const getFilterHealer = state => state.races.isHealer;
+// const getFilteredRaces = state => state.filteredRaces;
+const getRaces = state => state.races.races;
+
+export const getFilteredRaces = createSelector(
+    [
+        getFilterAdvancedMode,
+        getFilterAlliance,
+        getFilterHorde,
+        getFilterTank,
+        getFilterRangedDps,
+        getFilterMeleeDps,
+        getFilterHealer,
+        getRaces,
+    ],
+    (advancedMode, alliance, horde, tank, rangedDps, meleeDps, healer, races) => {
+        if (
+            alliance === false &&
+            horde === false &&
+            tank === false &&
+            rangedDps === false &&
+            meleeDps === false &&
+            healer === false
+        ) {
+            return races;
+        }
+
+        if(alliance === true && horde === false){
+            return races = races.filter(race => race.faction == 'Alliance');
+        }
+
+        if(horde === true && alliance === false){
+            return races = races.filter(race => race.faction == 'Horde');
+        }
+
+        if(horde === true && alliance === true){
+            return races;
+        }
+
+    }
+
+
+    );
 
 export const getRacesSelector = createSelector(
     selectRaces,

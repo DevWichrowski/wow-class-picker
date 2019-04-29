@@ -8,7 +8,7 @@ import RolesContainer from './RolesContainer/RolesContainer';
 import Human_icon from '../../assets/races_icons/Human_icon.png';
 import SwitchMode from './SwitchMode/SwitchMode';
 import {getClassesSelector} from "../../store/selectors/classes.selector";
-import {getAdvancedModeSelector} from "../../store/selectors/races.selector";
+import {getAdvancedModeSelector, getFilteredRaces} from "../../store/selectors/races.selector";
 
 export class MainContainer extends Component {
 	constructor(props) {
@@ -59,6 +59,7 @@ export class MainContainer extends Component {
 				<ClassIcon image={this.state.currentClassIcon} />
 				<h2 className="text">{this.state.currentClassName}</h2>
 				<Button roll={() => this.rollIcons()} />
+				{console.log('Filtered races:', this.props.filteredRaces)}
 			</div>
 		);
 	}
@@ -67,6 +68,7 @@ export class MainContainer extends Component {
 const mapStateToProps = (state) => ({
 	classes: getClassesSelector(state),
 	advancedMode: getAdvancedModeSelector(state),
+	filteredRaces: getFilteredRaces(state),
 });
 
 export default connect(mapStateToProps)(MainContainer);
