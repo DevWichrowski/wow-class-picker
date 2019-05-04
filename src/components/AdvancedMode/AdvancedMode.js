@@ -1,12 +1,25 @@
 import React, {Component} from 'react';
 import ButtonMode from "../ButtonMode/ButtonMode";
 import './AdvancedMode.scss';
-import {FactionContainer} from "./FactionContainer/FactionContainer";
 import RolesContainer from "./RolesContainer/RolesContainer";
 import Button from "../Button/Button";
 import ClassIcon from "../ClassIcon/ClassIcon";
+import {getClassesSelector} from "../../store/selectors/classes.selector";
+import connect from "react-redux/es/connect/connect";
+import FactionContainer from "./FactionContainer/FactionContainer";
+import {getFilteredRaces} from "../../store/selectors/races.selector";
 
 class AdvancedMode extends Component {
+    constructor(props){
+        super(props);
+
+        this.state = {
+            intervals: 30,
+            currentClassIcon: this.props.classes[0].icon,
+            currentClassName: null
+        };
+    }
+
     render() {
         return (
             <div className="advanced-mode">
@@ -16,11 +29,17 @@ class AdvancedMode extends Component {
                     <FactionContainer/>
                     <RolesContainer/>
                 </div>
-                <ClassIcon/>
+                <ClassIcon image={this.state.currentClassIcon}/>
                 <Button/>
+                {console.log(this.props.filteredRaces)}
             </div>
         );
     }
 }
 
-export default AdvancedMode;
+const mapStateToProps = (state) => ({
+    classes: getClassesSelector(state),
+    filteredRaces: getFilteredRaces(state),
+});
+
+export default connect(mapStateToProps)(AdvancedMode);

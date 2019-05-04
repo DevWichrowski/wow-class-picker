@@ -10,7 +10,7 @@ import {
     getRacesSelector
 } from "../../../store/selectors/races.selector";
 
-export class FactionContainer extends Component {
+class FactionContainer extends Component {
     constructor(props) {
         super(props);
     }
