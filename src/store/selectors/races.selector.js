@@ -34,22 +34,49 @@ export const getFilteredRaces = createSelector(
             return races;
         }
 
-        if(alliance === true && horde === false){
-            return races = races.filter(race => race.faction == 'Alliance');
+        if (alliance === true && horde === false) {
+            races = races.filter(race => race.faction == 'Alliance');
         }
 
-        if(horde === true && alliance === false){
-            return races = races.filter(race => race.faction == 'Horde');
+        if (horde === true && alliance === false) {
+            races = races.filter(race => race.faction == 'Horde');
         }
 
-        if(horde === true && alliance === true){
-            return races;
+        if (tank === true) {
+            races = races.map(race => {
+                race.classes = race.classes.filter(clas => clas.roles.includes('tank'));
+
+                return race;
+            });
         }
 
+        if (healer === true) {
+            races = races.map(race => {
+                race.classes = race.classes.filter(clas => clas.roles.includes('healer'));
+
+                return race;
+            });
+        }
+
+        if (rangedDps === true) {
+            races = races.map(race => {
+                race.classes = race.classes.filter(clas => clas.roles.includes('ranged dps'));
+
+                return race;
+            });
+        }
+
+        if (meleeDps === true) {
+            races = races.map(race => {
+                race.classes = race.classes.filter(clas => clas.roles.includes('melee dps'));
+
+                return race;
+            });
+        }
+
+        return races;
     }
-
-
-    );
+);
 
 export const getRacesSelector = createSelector(
     selectRaces,

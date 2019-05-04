@@ -171,7 +171,7 @@ export const racesData = [
         id: 'tauren',
         name: 'Tauren',
         faction: 'Horde',
-        classess: [
+        classes: [
             { id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
             {
                 id: 'druid',
