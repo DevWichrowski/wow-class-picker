@@ -1,0 +1,37 @@
+.advanced-mode{
+  color: white !important;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 75%;
+  height: 100%;
+  margin: 50px auto;
+  text-align: center;
+
+  .text {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(top, #efd100 0, #e2a233 38%, #f0c328 60%, #fff1a3 86%, #ffe13e 100%);
+    background-size: 1em 1em;
+    color: #f8b700;
+    display: inline-block;
+    position: relative;
+    z-index: auto;
+  }
+
+  .faction-role-container{
+    display: flex;
+  }
+
+  .race-icon{
+    width: 75px;
+    height: 75px;
+    margin-left: 20px;
+    margin-right: 20px;
+    opacity: 0.6;
+    margin-top: 80px;
+  }
+
+  .hide-items{
+    display: none;
+  }
+}
