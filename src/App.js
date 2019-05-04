@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.scss';
-import MainContainer from './components/MainContainer/MainContainer';
+import BasicMode from "./components/BasicMode/BasicMode";
 
 function App(props) {
 	return (
 		<div className="App">
-			<MainContainer />
+			<BasicMode/>
 		</div>
 	);
 }

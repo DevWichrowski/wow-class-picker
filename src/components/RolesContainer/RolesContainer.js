@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
 import './RolesContainer.scss';
-import Tank_icon from '../../../assets/roles_icons/Tank_icon.jpg';
-import Ranged_icon from '../../../assets/roles_icons/Ranged_icon.jpg';
-import Melee_icon from '../../../assets/roles_icons/Melee_icon.jpg';
-import Healer_icon from '../../../assets/roles_icons/Healer_icon.jpg';
+import Tank_icon from '../../assets/roles_icons/Tank_icon.jpg';
+import Ranged_icon from '../../assets/roles_icons/Ranged_icon.jpg';
+import Melee_icon from '../../assets/roles_icons/Melee_icon.jpg';
+import Healer_icon from '../../assets/roles_icons/Healer_icon.jpg';
 import connect from "react-redux/es/connect/connect";
-import {getIsHealer, getIsMeleeDps, getIsRangedDps, getIsTankSelector} from "../../../store/selectors/races.selector";
+import {getIsHealer, getIsMeleeDps, getIsRangedDps, getIsTankSelector} from "../../store/selectors/races.selector";
 import {
     handleHealer,
     handleMeleeDps,
     handleRangedDps,
     handleTank
-} from "../../../store/actions/racesActions";
+} from "../../store/actions/racesActions";
 
 class RolesContainer extends Component {
     constructor(props) {

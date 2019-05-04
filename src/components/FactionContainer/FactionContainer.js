@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
-import Horde_icon from '../../../assets/faction_icons/Horde_icon.png';
-import Alliance_icon from '../../../assets/faction_icons/Alliance_icon.png';
+import Horde_icon from '../../assets/faction_icons/Horde_icon.png';
+import Alliance_icon from '../../assets/faction_icons/Alliance_icon.png';
 import './FactionContainer.scss';
 import connect from "react-redux/es/connect/connect";
-import {handleAlliance, handleHorde} from "../../../store/actions/racesActions";
+import {handleAlliance, handleHorde} from "../../store/actions/racesActions";
 import {
     getAdvancedModeSelector, getFactionAllianceSelector,
     getFactionHordeSelector,
     getRacesSelector
-} from "../../../store/selectors/races.selector";
+} from "../../store/selectors/races.selector";
 
 export class FactionContainer extends Component {
     constructor(props) {
