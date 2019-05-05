@@ -227,7 +227,7 @@ export const racesData = [
             ]
     },
     {
-        id: 'goblic',
+        id: 'goblin',
         name: 'Goblin',
         faction: 'Horde',
         classes: [
