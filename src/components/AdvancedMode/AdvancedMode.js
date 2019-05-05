@@ -40,6 +40,14 @@ class AdvancedMode extends Component {
                 console.log(this.props.filteredRaces[randomRaces], 'object');
 
                 clearInterval(roller);
+
+                let filteredRandomClasses = this.props.filteredRaces[randomRaces].classes[randomClasses];
+
+                if(filteredRandomClasses === undefined){
+                    this.rollIcons();
+                    return;
+                }
+
                 this.setState({
                     currentClassName: this.props.filteredRaces[randomRaces].name + ' ' + this.props.filteredRaces[randomRaces].classes[randomClasses].name,
                     currentClassIcon: this.props.filteredRaces[randomRaces].classes[randomClasses].icon,
