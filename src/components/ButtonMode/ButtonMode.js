@@ -12,12 +12,12 @@ class ButtonMode extends Component {
                 {this.props.advancedMode ?
                     (<NavLink to="/">
                         <div className="button" onClick={this.props.handleAdvancedMode}>
-                            <p className="text">Go to Baisc mode</p>
+                            <p className="text">Advanced Mode</p>
                         </div>
                     </NavLink>) :
                     (<NavLink to="/advanced-mode">
                         <div className="button" onClick={this.props.handleAdvancedMode}>
-                            <p className="text">Go to advanced mode</p>
+                            <p className="text">Basic Mode</p>
                         </div>
                     </NavLink>)
                 }
