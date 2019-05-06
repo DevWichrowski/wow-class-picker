@@ -17,6 +17,7 @@ class AdvancedMode extends Component {
         this.state = {
             // intervals: 30,
             currentClassIcon: this.props.classes[0].icon,
+            currentRaceIcon: Human_icon,
             currentClassName: null,
             currentRaceName: null,
         };
@@ -32,10 +33,11 @@ class AdvancedMode extends Component {
         this.clearState();
         const randomRaces = Math.floor(Math.random() * this.props.filteredRaces.length);
         const randomClasses = Math.floor(Math.random() * this.props.filteredRaces[randomRaces].classes.length);
-        console.log('dupa', randomRaces);
+        // console.log('dupa', randomRaces);
 
         const roller = setInterval(() => {
             this.setState({currentClassIcon: this.props.classes[Math.floor(Math.random() * 11 + 1)].icon});
+            this.setState({currentRaceIcon: this.props.filteredRaces[Math.floor(Math.random() * randomRaces)].race_icon});
             this.setState({intervals: this.state.intervals - 1});
 
             if (this.state.intervals <= 0) {
@@ -50,11 +52,12 @@ class AdvancedMode extends Component {
                     this.rollIcons();
                     return;
                 }
-
+                    console.log('test', randomRaces);
                 this.setState({
                     currentClassName: this.props.filteredRaces[randomRaces].classes[randomClasses].name,
                     currentRaceName: this.props.filteredRaces[randomRaces].name,
                     currentClassIcon: this.props.filteredRaces[randomRaces].classes[randomClasses].icon,
+                    currentRaceIcon: this.props.filteredRaces[randomRaces].race_icon
                 });
             }
         }, 100);
@@ -69,7 +72,7 @@ class AdvancedMode extends Component {
                     <FactionContainer/>
                     <RolesContainer/>
                 </div>
-                <img className="race-icon" src={Human_icon} />
+                <img className="race-icon" src={this.state.currentRaceIcon} />
                 <ClassIcon image={this.state.currentClassIcon}/>
                 <div className="races-classes">
                     <h3 className="text">{this.state.currentRaceName}</h3>
