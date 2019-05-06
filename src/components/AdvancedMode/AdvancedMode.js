@@ -52,7 +52,7 @@ class AdvancedMode extends Component {
                     this.rollIcons();
                     return;
                 }
-                    console.log('test', randomRaces);
+                console.log('test', randomRaces);
                 this.setState({
                     currentClassName: this.props.filteredRaces[randomRaces].classes[randomClasses].name,
                     currentRaceName: this.props.filteredRaces[randomRaces].name,
@@ -72,7 +72,7 @@ class AdvancedMode extends Component {
                     <FactionContainer/>
                     <RolesContainer/>
                 </div>
-                <img className="race-icon" src={this.state.currentRaceIcon} />
+                <img className="race-icon" src={this.state.currentRaceIcon}/>
                 <ClassIcon image={this.state.currentClassIcon}/>
                 <div className="races-classes">
                     <h3 className="text">{this.state.currentRaceName}</h3>
