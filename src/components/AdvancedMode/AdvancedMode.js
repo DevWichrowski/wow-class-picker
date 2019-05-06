@@ -8,6 +8,7 @@ import {getClassesSelector} from "../../store/selectors/classes.selector";
 import connect from "react-redux/es/connect/connect";
 import FactionContainer from "./FactionContainer/FactionContainer";
 import {getFilteredRaces} from "../../store/selectors/races.selector";
+import Human_icon from '../../assets/races_icons/Human_icon.png';
 
 class AdvancedMode extends Component {
     constructor(props) {
@@ -45,7 +46,7 @@ class AdvancedMode extends Component {
 
                 let filteredRandomClasses = this.props.filteredRaces[randomRaces].classes[randomClasses];
 
-                if(filteredRandomClasses === undefined){
+                if (filteredRandomClasses === undefined) {
                     this.rollIcons();
                     return;
                 }
@@ -68,11 +69,12 @@ class AdvancedMode extends Component {
                     <FactionContainer/>
                     <RolesContainer/>
                 </div>
+                <img className="race-icon" src={Human_icon} />
                 <ClassIcon image={this.state.currentClassIcon}/>
                 <div className="races-classes">
-                <h3 className="text">{this.state.currentRaceName}</h3>
-                <br />
-                <h1 className="text">{this.state.currentClassName}</h1>
+                    <h3 className="text">{this.state.currentRaceName}</h3>
+                    <br/>
+                    <h1 className="text">{this.state.currentClassName}</h1>
                 </div>
                 <Button roll={this.rollIcons}/>
                 {/*{console.log('filteredRaces', this.props.filteredRaces)}*/}
