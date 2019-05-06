@@ -86,6 +86,7 @@ export const racesData = [
         id: 'night_elf',
         name: 'Night Elf',
         faction: 'Alliance',
+        race_icon: NightElf_icon,
         classes: [
             { id: 'dh', name: 'Demon Hunter', roles: [ 'tank', 'melee dps' ], icon: DH_icon },
             {
@@ -107,6 +108,7 @@ export const racesData = [
         id: 'gnome',
         name: 'Gnome',
         faction: 'Alliance',
+        race_icon: Gnome_icon,
         classes: [
             { id: 'dh', name: 'Demon Hunter', roles: [ 'tank', 'melee dps' ], icon: DH_icon },
             { id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
@@ -122,6 +124,7 @@ export const racesData = [
         id: 'draenei',
         name: 'Draenei',
         faction: 'Alliance',
+        race_icon: Draenei_icon,
         classes: [
             { id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
             { id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
@@ -137,6 +140,7 @@ export const racesData = [
         id: 'worgen',
         name: 'Worgen',
         faction: 'Alliance',
+        race_icon: Worgen_icon,
         classes: [
             { id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
             { id: 'rogue', name: 'Rogue', roles: [ 'melee dps' ], icon: Rogue_icon },
@@ -157,6 +161,7 @@ export const racesData = [
         id: 'pandaren',
         name: 'Pandaren',
         faction: [ 'Alliance', 'Horde' ],
+        race_icon: Pandaren_icon,
         classes: [
             { id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
             { id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
@@ -172,6 +177,7 @@ export const racesData = [
         id: 'orc',
         name: 'Orc',
         faction: 'Horde',
+        race_icon: Orc_icon,
         classes: [
             { id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
             { id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
@@ -187,6 +193,7 @@ export const racesData = [
         id: 'undead',
         name: 'Undead',
         faction: 'Horde',
+        race_icon: Undead_icon,
         classes: [
             { id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
             { id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
@@ -202,6 +209,7 @@ export const racesData = [
         id: 'tauren',
         name: 'Tauren',
         faction: 'Horde',
+        race_icon: Tauren_icon,
         classes: [
             { id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
             {
@@ -222,6 +230,7 @@ export const racesData = [
         id: 'troll',
         name: 'Troll',
         faction: 'Horde',
+        race_icon: Troll_icon,
         classes: [
             { id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
             { id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
@@ -244,6 +253,7 @@ export const racesData = [
         id: 'blood_elf',
         name: 'Blood Elf',
         faction: 'Horde',
+        race_icon: BloodElf_icon,
         classes: [
             { id: 'dh', name: 'Demon Hunter', roles: [ 'tank', 'melee dps' ], icon: DH_icon },
             { id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
@@ -261,6 +271,7 @@ export const racesData = [
         id: 'goblin',
         name: 'Goblin',
         faction: 'Horde',
+        race_icon: Goblin_icon,
         classes: [
             { id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
             { id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
@@ -279,6 +290,7 @@ export const racesData = [
         name: 'Dark Iron Dwarf',
         faction: 'Alliance',
         alliedRace: true,
+        race_icon: DarkIronDwarf_icon,
         classes: [
             { id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
             { id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
@@ -296,6 +308,7 @@ export const racesData = [
         name: 'Kul Tiran',
         faction: 'Alliance',
         alliedRace: true,
+        race_icon: KulTiran_icon,
         classes: [
             { id: 'warrior', name: 'Warrior', roles: [ 'tank', 'melee dps' ], icon: Warrior_icon },
             { id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
@@ -312,6 +325,7 @@ export const racesData = [
         name: 'Lightforged Draenei',
         faction: 'Alliance',
         alliedRace: true,
+        race_icon: LightforgedDraenei_icon,
         classes: [
             { id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
             { id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
@@ -325,6 +339,7 @@ export const racesData = [
         name: 'Void Elf',
         faction: 'Alliance',
         alliedRace: true,
+        race_icon: VoidElf_icon,
         classes: [
             { id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
             { id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
@@ -341,6 +356,7 @@ export const racesData = [
         name: 'Highmountain Tauren',
         faction: 'Horde',
         alliedRace: true,
+        race_icon: HighmountainTauren_icon,
         classes: [
             {
                 id: 'druid',
@@ -359,6 +375,7 @@ export const racesData = [
         name: 'Maghar Orc',
         faction: 'Horde',
         alliedRace: true,
+        race_icon: MagharOrc_icon,
         classes: [
             { id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
             { id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
@@ -374,6 +391,7 @@ export const racesData = [
         name: 'Nightborn',
         faction: 'Horde',
         alliedRace: true,
+        race_icon: Nightborn_icon,
         classes: [
             { id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
             { id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },
@@ -389,6 +407,7 @@ export const racesData = [
         name: 'Zandalari Troll',
         faction: 'Horde',
         alliedRace: true,
+        race_icon: ZandalariTroll_icon,
         classes: [
             {
                 id: 'druid',
