@@ -21,7 +21,7 @@ class RolesContainer extends Component {
     render() {
         return (
             <div className="roles-container">
-                <h4 className="text">Choose yor role</h4>
+                <h4 className="text-roller">Choose yor role</h4>
                 <div className="roles">
                     <div className="roles">
                         <div className="role-row" onClick={this.props.handleTank}>

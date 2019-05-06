@@ -66,7 +66,7 @@ class AdvancedMode extends Component {
     render() {
         return (
             <div className="advanced-mode">
-                <h2 className="text">WoW random class picker</h2>
+                <h2 className="text-roller">WoW random class picker</h2>
                 <ButtonMode/>
                 <div className="faction-role-container">
                     <FactionContainer/>
@@ -75,9 +75,9 @@ class AdvancedMode extends Component {
                 <img className="race-icon" src={this.state.currentRaceIcon}/>
                 <ClassIcon image={this.state.currentClassIcon}/>
                 <div className="races-classes">
-                    <h3 className="text">{this.state.currentRaceName}</h3>
+                    <h3 className="text-roller">{this.state.currentRaceName}</h3>
                     <br/>
-                    <h1 className="text">{this.state.currentClassName}</h1>
+                    <h1 className="text-roller">{this.state.currentClassName}</h1>
                 </div>
                 <Button roll={this.rollIcons}/>
                 {/*{console.log('filteredRaces', this.props.filteredRaces)}*/}

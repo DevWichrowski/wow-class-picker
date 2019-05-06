@@ -44,10 +44,10 @@ class BasicMode extends Component {
     render() {
         return (
             <div className="basic-mode">
-                <h2 className="text">WoW random class picker</h2>
+                <h2 className="text-roller">WoW random class picker</h2>
                 <ButtonMode/>
                 <ClassIcon image={this.state.currentClassIcon}/>
-                <h2 className="text">{this.state.currentClassName}</h2>
+                <h2 className="text-roller">{this.state.currentClassName}</h2>
                 <Button roll={() => this.rollIcons()}/>
             </div>
         );

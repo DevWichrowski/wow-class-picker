@@ -18,7 +18,7 @@ class FactionContainer extends Component {
     render() {
         return (
             <div className="faction-container">
-                <h4 className="text">Choose your faction</h4>
+                <h4 className="text-roller">Choose your faction</h4>
                 <div className="factions">
                     <div className="alliance-row" onClick={this.props.handleAlliance}>
                         <img className={`faction-image ${this.props.factionAlliance ? 'selected' : null}`}
