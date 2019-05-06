@@ -11,12 +11,31 @@ import Warlock_icon from "../assets/classes_icons/Warlock_icon.png";
 import DH_icon from "../assets/classes_icons/DH_icon.png";
 import Druid_icon from "../assets/classes_icons/Druid_icon.png";
 
+import Human_icon from "../assets/races_icons/Human_icon.png";
+import Dwarf_icon from "../assets/races_icons/Dwarf_icon.png";
+import NightElf_icon from "../assets/races_icons/NightElf_icon.png";
+import Gnome_icon from "../assets/races_icons/Gnome_icon.png";
+import Draenei_icon from "../assets/races_icons/Draenei_icon.png";
+import Worgen_icon from "../assets/races_icons/Worgen_icon.png";
+import Pandaren_icon from "../assets/races_icons/Pandaren_icon.png";
+
+import Orc_icon from '../assets/races_icons/Orc_icon.png';
+import Undead_icon from '../assets/races_icons/Undead_icon.png';
+import Tauren_icon from '../assets/races_icons/Tauren_icon.png';
+import Troll_icon from '../assets/races_icons/Troll_icon.png';
+import Goblin_icon from '../assets/races_icons/Goblin_icon.png';
+import BloodElf_icon from '../assets/races_icons/BloodElf_icon.png';
+
+
+
+
 export const racesData = [
     // Alliance races
     {
         id: 'human',
         name: 'Human',
         faction: 'Alliance',
+        race_icon: Human_icon,
         classes: [
             {
                 id: 'dk',
@@ -38,6 +57,7 @@ export const racesData = [
         id: 'dwarf',
         name: 'Dwarf',
         faction: 'Alliance',
+        race_icon: Dwarf_icon,
         classes: [
             { id: 'dk', name: 'Death Knight', roles: [ 'tank', 'melee dps' ], icon: DK_icon },
             { id: 'hunter', name: 'Hunter', roles: [ 'ranged dps', 'melee dps' ], icon: Hunter_icon },
