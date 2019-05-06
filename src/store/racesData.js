@@ -26,6 +26,17 @@ import Troll_icon from '../assets/races_icons/Troll_icon.png';
 import Goblin_icon from '../assets/races_icons/Goblin_icon.png';
 import BloodElf_icon from '../assets/races_icons/BloodElf_icon.png';
 
+import DarkIronDwarf_icon from '../assets/races_icons/DarkIronDwarf_icon.png';
+import KulTiran_icon from '../assets/races_icons/KulTiran_icon.png';
+import LightforgedDraenei_icon from '../assets/races_icons/LightforgedDraenei_icon.png';
+import VoidElf_icon from '../assets/races_icons/VoidElf_icon.png';
+
+import HighmountainTauren_icon from '../assets/races_icons/HighmountainTauren_icon.png';
+import MagharOrc_icon from '../assets/races_icons/MagharOrc_icon.png';
+import Nightborn_icon from '../assets/races_icons/Nightborn_icon.png';
+import ZandalariTroll_icon from '../assets/races_icons/ZandalariTroll_icon.png';
+
+
 
 
 
