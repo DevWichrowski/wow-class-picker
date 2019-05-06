@@ -16,13 +16,15 @@ class AdvancedMode extends Component {
         this.state = {
             // intervals: 30,
             currentClassIcon: this.props.classes[0].icon,
-            currentClassName: null
+            currentClassName: null,
+            currentRaceName: null,
         };
     }
 
     clearState = () => {
         this.setState({intervals: 30});
         this.setState({currentClassName: null});
+        this.setState({currentRaceName: null});
     };
 
     rollIcons = () => {
@@ -49,7 +51,8 @@ class AdvancedMode extends Component {
                 }
 
                 this.setState({
-                    currentClassName: this.props.filteredRaces[randomRaces].name + ' ' + this.props.filteredRaces[randomRaces].classes[randomClasses].name,
+                    currentClassName: this.props.filteredRaces[randomRaces].classes[randomClasses].name,
+                    currentRaceName: this.props.filteredRaces[randomRaces].name,
                     currentClassIcon: this.props.filteredRaces[randomRaces].classes[randomClasses].icon,
                 });
             }
@@ -66,7 +69,11 @@ class AdvancedMode extends Component {
                     <RolesContainer/>
                 </div>
                 <ClassIcon image={this.state.currentClassIcon}/>
-                <h2 className="text">{this.state.currentClassName}</h2>
+                <div className="races-classes">
+                <h3 className="text">{this.state.currentRaceName}</h3>
+                <br />
+                <h1 className="text">{this.state.currentClassName}</h1>
+                </div>
                 <Button roll={this.rollIcons}/>
                 {/*{console.log('filteredRaces', this.props.filteredRaces)}*/}
             </div>

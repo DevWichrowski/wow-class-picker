@@ -1,4 +1,4 @@
-.advanced-mode{
+.advanced-mode {
   color: white !important;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.7);
@@ -16,13 +16,15 @@
     display: inline-block;
     position: relative;
     z-index: auto;
+
+
   }
 
-  .faction-role-container{
+  .faction-role-container {
     display: flex;
   }
 
-  .race-icon{
+  .race-icon {
     width: 75px;
     height: 75px;
     margin-left: 20px;
@@ -31,7 +33,18 @@
     margin-top: 80px;
   }
 
-  .hide-items{
+  .hide-items {
     display: none;
   }
+
+  .races-classes {
+    h3 {
+      margin: 5px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+  }
+
 }
