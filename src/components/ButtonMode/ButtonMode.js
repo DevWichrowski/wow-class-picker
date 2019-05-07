@@ -8,16 +8,16 @@ import {NavLink} from "react-router-dom";
 class ButtonMode extends Component {
     render() {
         return (
-            <div className="button-mode">
+            <div>
                 {this.props.advancedMode ?
                     (<NavLink to="/">
-                        <div className="button" onClick={this.props.handleAdvancedMode}>
-                            <p className="text-roller">Advanced Mode</p>
+                        <div className="button-mode" onClick={this.props.handleAdvancedMode}>
+                            <p className="text-roller">Go to Basic Mode</p>
                         </div>
                     </NavLink>) :
                     (<NavLink to="/advanced-mode">
-                        <div className="button" onClick={this.props.handleAdvancedMode}>
-                            <p className="text-roller">Basic Mode</p>
+                        <div className="button-mode" onClick={this.props.handleAdvancedMode}>
+                            <p className="text-roller">Go to Advanced Mode</p>
                         </div>
                     </NavLink>)
                 }
