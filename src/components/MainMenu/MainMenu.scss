@@ -1,10 +1,28 @@
-.main-menu{
-
+.main-menu {
+  .disabled-navlink{
+    opacity: 0.5!important;
+    cursor: not-allowed!important;
+  }
 }
 
 .bg-dark {
-  background-color: #211510!important;
+  background-color: #211510 !important;
   background-size: auto 100%;
-  -webkit-box-shadow: 0 0 10px rgba(0,0,0,.6);
-  box-shadow: 0 0 10px rgba(0,0,0,.6);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+}
+
+.nav-link {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(top, #efd100 0, #e2a233 38%, #f0c328 60%, #fff1a3 86%, #ffe13e 100%);
+  background-size: 1em 1em;
+  color: #f8b700;
+  display: inline-block;
+  position: relative;
+  z-index: auto;
+}
+
+.navbar-brand {
+  @extend .nav-link;
 }
