@@ -5,14 +5,20 @@ function AboutProject(props) {
         <div className="about-container">
             <h3 className="text-roller">Project and Future Updates</h3>
             <hr/>
-            <p className="text-roller font-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                elementum aliquet tincidunt. Aenean nec nulla purus. Praesent nec augue neque. Praesent eget gravida
-                augue. Integer porttitor, velit ac efficitur posuere, metus orci sagittis ipsum, vitae pharetra enim dui
-                eget risus. Donec dui ipsum, finibus id ipsum et, luctus venenatis lectus. Phasellus suscipit fermentum
-                metus, eu lobortis enim gravida non. Nam suscipit tellus sem, non iaculis enim eleifend a. Pellentesque
-                bibendum nulla sed nisl aliquet, et rutrum nisl lobortis. Morbi vel faucibus ante. Cras convallis odio
-                ut egestas varius. Nullam sed consectetur diam, ut tincidunt dolor. Phasellus at eleifend diam. Sed quis
-                turpis id turpis commodo viverra. Aliquam vel varius enim, at volutpat ipsum.</p>
+            <p className="text-roller font-about">The project arises because his original died several years ago, I
+                remember that a lot of people was using it, accualy I think that many people also looked for class
+                generator. <br/>It's a improved class generator becouse you can filter by roles etc.. Currently I
+                working on another improvments like adding better quality images, better UI, specs :) <br />
+                <br />
+                List of future update:<br />
+                1. World of Warcraft Classic - basic generator<br />
+                2. World of Warcraft Classic - advanced generator with filters <br />
+                3. Name generator - based on classes, races and gender. <br />
+                4. DUO maching - find a friend to play with<br />
+
+
+
+            </p>
         </div>
     );
 }

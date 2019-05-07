@@ -5,14 +5,10 @@ function AboutAuthor(props) {
         <div className="about-container">
             <h3 className="text-roller">Author</h3>
             <hr/>
-            <p className="text-roller font-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                elementum aliquet tincidunt. Aenean nec nulla purus. Praesent nec augue neque. Praesent eget gravida
-                augue. Integer porttitor, velit ac efficitur posuere, metus orci sagittis ipsum, vitae pharetra enim dui
-                eget risus. Donec dui ipsum, finibus id ipsum et, luctus venenatis lectus. Phasellus suscipit fermentum
-                metus, eu lobortis enim gravida non. Nam suscipit tellus sem, non iaculis enim eleifend a. Pellentesque
-                bibendum nulla sed nisl aliquet, et rutrum nisl lobortis. Morbi vel faucibus ante. Cras convallis odio
-                ut egestas varius. Nullam sed consectetur diam, ut tincidunt dolor. Phasellus at eleifend diam. Sed quis
-                turpis id turpis commodo viverra. Aliquam vel varius enim, at volutpat ipsum.</p>
+            <p className="text-roller font-about">Hi, my name is Patrick, I playing World of Warcraft since late
+                Vanilla (hit 58 lvl when TBC came out). My first server was Argent Dawn and class was Hunter, atm I
+                playing GOBLIN Warlock on Burning Legion-EU.
+            </p>
         </div>
     );
 }
