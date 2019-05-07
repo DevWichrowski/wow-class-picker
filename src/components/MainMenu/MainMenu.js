@@ -12,6 +12,7 @@ function MainMenu(props) {
                 <Nav className="mr-auto">
                     <Nav.Link className="text-roller" href="#home">Class generator</Nav.Link>
                     <Nav.Link href="#features">Advanced generator</Nav.Link>
+                    <Nav.Link className="disabled-navlink" href="#pricing" disabled>Classic generator</Nav.Link>
                     <Nav.Link className="disabled-navlink" href="#pricing" disabled>Name generator</Nav.Link>
                 </Nav>
             </Navbar>

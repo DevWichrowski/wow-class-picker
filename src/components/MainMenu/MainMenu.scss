@@ -10,6 +10,10 @@
   background-size: auto 100%;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .6);
   box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+  border-bottom: 1px solid rgba(68,47,38,.5);
+  margin-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .nav-link {
@@ -21,8 +25,19 @@
   display: inline-block;
   position: relative;
   z-index: auto;
+  border-left: 1px solid rgba(68,47,38,.5);
+  border-right: 1px solid rgba(68,47,38,.5);
+  //padding-top: 10px;
 }
 
 .navbar-brand {
-  @extend .nav-link;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(top, #efd100 0, #e2a233 38%, #f0c328 60%, #fff1a3 86%, #ffe13e 100%);
+  background-size: 1em 1em;
+  color: #f8b700;
+  display: inline-block;
+  position: relative;
+  z-index: auto;
+  padding-left: 10px;
 }
