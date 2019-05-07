@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './BasicMode.scss';
-import Button from '../Button/Button';
+import ButtonRoller from '../ButtonRoller/ButtonRoller';
 import ClassIcon from '../ClassIcon/ClassIcon';
 import {connect} from 'react-redux';
 import {getClassesSelector} from "../../store/selectors/classes.selector";
@@ -48,7 +48,7 @@ class BasicMode extends Component {
                 <ButtonMode/>
                 <ClassIcon image={this.state.currentClassIcon}/>
                 <h2 className="text-roller">{this.state.currentClassName}</h2>
-                <Button roll={() => this.rollIcons()}/>
+                <ButtonRoller roll={() => this.rollIcons()}/>
             </div>
         );
     }

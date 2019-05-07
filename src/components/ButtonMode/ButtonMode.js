@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../Button/Button.scss';
+import '../ButtonRoller/ButtonRoller.scss';
 import {getAdvancedModeSelector} from "../../store/selectors/races.selector";
 import connect from "react-redux/es/connect/connect";
 import {handleAlliance, handleHorde, handleSwitch} from "../../store/actions/racesActions";
@@ -11,12 +11,12 @@ class ButtonMode extends Component {
             <div>
                 {this.props.advancedMode ?
                     (<NavLink to="/">
-                        <div className="button-mode" onClick={this.props.handleAdvancedMode}>
+                        <div className="button-mode-wow" onClick={this.props.handleAdvancedMode}>
                             <p className="text-roller">Go to Basic Mode</p>
                         </div>
                     </NavLink>) :
                     (<NavLink to="/advanced-mode">
-                        <div className="button-mode" onClick={this.props.handleAdvancedMode}>
+                        <div className="button-mode-wow" onClick={this.props.handleAdvancedMode}>
                             <p className="text-roller">Go to Advanced Mode</p>
                         </div>
                     </NavLink>)

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import ButtonMode from "../ButtonMode/ButtonMode";
 import './AdvancedMode.scss';
 import RolesContainer from "./RolesContainer/RolesContainer";
-import Button from "../Button/Button";
+import ButtonRoller from "../ButtonRoller/ButtonRoller";
 import ClassIcon from "../ClassIcon/ClassIcon";
 import {getClassesSelector} from "../../store/selectors/classes.selector";
 import connect from "react-redux/es/connect/connect";
@@ -76,7 +76,7 @@ class AdvancedMode extends Component {
                     <br/>
                     <h1 className="text-roller">{this.state.currentClassName}</h1>
                 </div>
-                <Button roll={this.rollIcons}/>
+                <ButtonRoller roll={this.rollIcons}/>
             </div>
         );
     }
