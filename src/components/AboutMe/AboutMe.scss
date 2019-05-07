@@ -8,8 +8,7 @@
   text-align: center;
   border: 2px solid black;
   border-radius: 5px;
-  //padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 20px;
 
   .text-roller {
     -webkit-background-clip: text;
@@ -22,9 +21,15 @@
     z-index: auto;
   }
 
-  .text-about{
-    color: #f8b700;
+  .font-about{
+    font-size: 14px;
+    text-align: justify;
   }
+
+  .about-container{
+    margin-bottom: 50px;
+  }
+
   hr{
     background-image: -webkit-linear-gradient(top, #efd100 0, #e2a233 38%, #f0c328 60%, #fff1a3 86%, #ffe13e 100%);
     background-size: 1em 1em;

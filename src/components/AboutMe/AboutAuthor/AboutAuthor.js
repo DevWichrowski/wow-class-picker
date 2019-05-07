@@ -1,9 +1,9 @@
 import React from 'react';
 
-function AboutProject(props) {
+function AboutAuthor(props) {
     return (
         <div className="about-container">
-            <h3 className="text-roller">Project and Future Updates</h3>
+            <h3 className="text-roller">Author</h3>
             <hr/>
             <p className="text-roller font-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                 elementum aliquet tincidunt. Aenean nec nulla purus. Praesent nec augue neque. Praesent eget gravida
@@ -17,4 +17,4 @@ function AboutProject(props) {
     );
 }
 
-export default AboutProject;
+export default AboutAuthor;
