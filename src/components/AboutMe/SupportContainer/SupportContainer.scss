@@ -1,0 +1,36 @@
+.support-container{
+
+  .support-button{
+
+  }
+
+  .support-button {
+    //background: rgba(159, 22, 0, .8);
+    background: #6C0300;
+    border: 1px solid #c77e19;
+    position: relative;
+    z-index: 1;
+    width: 15%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    display: block;
+    margin: 15px auto;
+    cursor: pointer;
+  }
+
+  .support-button:active {
+    background: #A50600;
+    cursor: pointer;
+    color: #ffd36b;
+  }
+
+  .text-roller {
+    margin-bottom: 0;
+  }
+
+  a{
+    color: white;
+    font-size: 14px;
+  }
+}

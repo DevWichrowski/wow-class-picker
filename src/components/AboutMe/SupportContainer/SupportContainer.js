@@ -1,18 +1,25 @@
 import React from 'react';
+import '../SupportContainer/SupportContainer.scss';
 
 function SupportContainer(props) {
     return (
-        <div>
+        <div className="support-container">
             <h3 className="text-roller">Support</h3>
             <hr/>
-            <p className="text-roller font-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                elementum aliquet tincidunt. Aenean nec nulla purus. Praesent nec augue neque. Praesent eget gravida
-                augue. Integer porttitor, velit ac efficitur posuere, metus orci sagittis ipsum, vitae pharetra enim dui
-                eget risus. Donec dui ipsum, finibus id ipsum et, luctus venenatis lectus. Phasellus suscipit fermentum
-                metus, eu lobortis enim gravida non. Nam suscipit tellus sem, non iaculis enim eleifend a. Pellentesque
-                bibendum nulla sed nisl aliquet, et rutrum nisl lobortis. Morbi vel faucibus ante. Cras convallis odio
-                ut egestas varius. Nullam sed consectetur diam, ut tincidunt dolor. Phasellus at eleifend diam. Sed quis
-                turpis id turpis commodo viverra. Aliquam vel varius enim, at volutpat ipsum.</p>
+            <p className="text-roller font-about">And what with supporting me?</p>
+            <p className="text-roller font-about">I will work on project alone, so it will definitely take some time</p>
+            <p className="text-roller font-about">You can help me giving additional ideas and advices about how to
+                improve project and also reporting bugs on my mail below:</p>
+            <br/>
+            <div className="support-button">
+                wowrng@gmail.com
+            </div>
+            <br/>
+            <p className="text-roller font-about">If you want you can also give me some money for subscription and
+                coffee</p>
+            <div className="support-button">
+                <a href="#">DONATE</a>
+            </div>
         </div>
     );
 }

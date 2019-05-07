@@ -15,9 +15,6 @@ function AboutProject(props) {
                 2. World of Warcraft Classic - advanced generator with filters <br />
                 3. Name generator - based on classes, races and gender. <br />
                 4. DUO maching - find a friend to play with<br />
-
-
-
             </p>
         </div>
     );
