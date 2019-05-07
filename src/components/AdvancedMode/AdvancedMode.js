@@ -14,7 +14,7 @@ class AdvancedMode extends Component {
         super(props);
 
         this.state = {
-            intervals: 30,
+            intervals: 15,
             currentClassIcon: this.props.classes[0].icon,
             currentRaceIcon: Human_icon,
             currentRaceName: 'Choose filters and click the button below',
@@ -23,7 +23,7 @@ class AdvancedMode extends Component {
     }
 
     clearState = () => {
-        this.setState({intervals: 30});
+        this.setState({intervals: 15});
         this.setState({currentRaceName: '...'});
         this.setState({currentClassName: '...'});
     };
@@ -63,7 +63,7 @@ class AdvancedMode extends Component {
         return (
             <div className="advanced-mode">
                 <h1 className="text-roller">World of Warcraft</h1>
-                <br />
+                <br/>
                 <h2 className="text-roller h2-font">Advanced class generator</h2>
                 <div className="faction-role-container">
                     <FactionContainer/>
