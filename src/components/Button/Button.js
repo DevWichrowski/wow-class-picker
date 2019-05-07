@@ -3,7 +3,7 @@ import './Button.scss';
 
 export default function Button(props) {
 	return (
-		<div className="button" onClick={props.roll}>
+		<div className="button-mode" onClick={props.roll}>
 			<p className="text-roller">Roll da class</p>
 		</div>
 	);
