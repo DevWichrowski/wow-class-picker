@@ -15,6 +15,13 @@ function MainMenu(props) {
                     <Nav.Link className="disabled-navlink" href="#pricing" disabled>Classic generator</Nav.Link>
                     <Nav.Link className="disabled-navlink" href="#pricing" disabled>Name generator</Nav.Link>
                 </Nav>
+
+                <Nav>
+                    <Nav.Link href="#deets">Roadmap</Nav.Link>
+                    <Nav.Link eventKey={2} href="#memes">
+                        About me
+                    </Nav.Link>
+                </Nav>
             </Navbar>
         </div>
     );
