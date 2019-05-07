@@ -5,7 +5,6 @@ import ClassIcon from '../ClassIcon/ClassIcon';
 import {connect} from 'react-redux';
 import {getClassesSelector} from "../../store/selectors/classes.selector";
 import {getAdvancedModeSelector, getFilteredRaces} from "../../store/selectors/races.selector";
-import ButtonMode from "../ButtonMode/ButtonMode";
 
 class BasicMode extends Component {
     constructor(props) {
@@ -14,20 +13,23 @@ class BasicMode extends Component {
         this.state = {
             intervals: 30,
             currentClassIcon: this.props.classes[0].icon,
-            currentClassName: '    '
+            currentClassName: 'Click button'
         };
     }
 
     clearState = () => {
         this.setState({intervals: 30});
-        this.setState({currentClassName: null});
+        this.setState({currentClassName: 'Murloc :)'});
     };
 
     rollIcons = () => {
         this.clearState();
 
         const roller = setInterval(() => {
-            this.setState({currentClassIcon: this.props.classes[Math.floor(Math.random() * 11 + 1)].icon});
+            let rolledAnimationNumber = Math.floor(Math.random() * 11 + 1);
+
+            this.setState({currentClassIcon: this.props.classes[rolledAnimationNumber].icon});
+            this.setState({currentClassName: this.props.classes[rolledAnimationNumber].name});
             this.setState({intervals: this.state.intervals - 1});
 
             if (this.state.intervals <= 0) {
@@ -45,7 +47,7 @@ class BasicMode extends Component {
         return (
             <div className="basic-mode">
                 <h1 className="text-roller">World of Warcraft</h1>
-                <br />
+                <br/>
                 <h2 className="text-roller">Random class picker</h2>
                 <ClassIcon image={this.state.currentClassIcon}/>
                 <h2 className="text-roller class-text">{this.state.currentClassName}</h2>

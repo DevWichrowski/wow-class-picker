@@ -8,17 +8,17 @@ function MainMenu(props) {
     return (
         <div className="main-menu">
             <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="#home">WOW-RNG</Navbar.Brand>
+                <Navbar.Brand href="/">WOW-RNG</Navbar.Brand>
                 <Nav className="mr-auto">
-                    <Nav.Link className="text-roller" href="#home">Class generator</Nav.Link>
-                    <Nav.Link href="#features">Advanced generator</Nav.Link>
-                    <Nav.Link className="disabled-navlink" href="#pricing" disabled>Classic generator</Nav.Link>
-                    <Nav.Link className="disabled-navlink" href="#pricing" disabled>Name generator</Nav.Link>
+                    <Nav.Link className="text-roller" href="/">Class generator</Nav.Link>
+                    <Nav.Link href="/advanced-mode">Advanced generator</Nav.Link>
+                    <Nav.Link className="disabled-navlink" disabled>Classic generator</Nav.Link>
+                    <Nav.Link className="disabled-navlink" disabled>Name generator</Nav.Link>
                 </Nav>
 
                 <Nav>
                     <Nav.Link href="#deets">Roadmap</Nav.Link>
-                    <Nav.Link eventKey={2} href="#memes">
+                    <Nav.Link eventKey={2} href="#ImMeme">
                         About me
                     </Nav.Link>
                 </Nav>

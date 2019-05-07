@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ButtonMode from "../ButtonMode/ButtonMode";
 import './AdvancedMode.scss';
 import RolesContainer from "./RolesContainer/RolesContainer";
 import ButtonRoller from "../ButtonRoller/ButtonRoller";
@@ -18,15 +17,15 @@ class AdvancedMode extends Component {
             intervals: 30,
             currentClassIcon: this.props.classes[0].icon,
             currentRaceIcon: Human_icon,
-            currentClassName: null,
-            currentRaceName: null,
+            currentRaceName: 'Choose filters and click the button below',
+            currentClassName: '',
         };
     }
 
     clearState = () => {
         this.setState({intervals: 30});
-        this.setState({currentClassName: null});
-        this.setState({currentRaceName: null});
+        this.setState({currentRaceName: '...'});
+        this.setState({currentClassName: '...'});
     };
 
     rollIcons = () => {
@@ -63,7 +62,9 @@ class AdvancedMode extends Component {
     render() {
         return (
             <div className="advanced-mode">
-                <h2 className="text-roller">WoW random class picker</h2>
+                <h1 className="text-roller">World of Warcraft</h1>
+                <br />
+                <h2 className="text-roller h2-font">Advanced class generator</h2>
                 <div className="faction-role-container">
                     <FactionContainer/>
                     <RolesContainer/>
