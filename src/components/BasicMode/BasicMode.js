@@ -48,7 +48,7 @@ class BasicMode extends Component {
             <div className="basic-mode">
                 <h1 className="text-roller">World of Warcraft</h1>
                 <br/>
-                <h2 className="text-roller">Random class picker</h2>
+                <h2 className="text-roller">Random class generator</h2>
                 <ClassIcon image={this.state.currentClassIcon}/>
                 <h2 className="text-roller class-text">{this.state.currentClassName}</h2>
                 <ButtonRoller roll={() => this.rollIcons()}/>

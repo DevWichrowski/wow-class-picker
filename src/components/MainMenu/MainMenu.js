@@ -17,9 +17,8 @@ function MainMenu(props) {
                 </Nav>
 
                 <Nav>
-                    <Nav.Link href="#deets">Roadmap</Nav.Link>
-                    <Nav.Link eventKey={2} href="#ImMeme">
-                        About me
+                    <Nav.Link href="/about">
+                        About
                     </Nav.Link>
                 </Nav>
             </Navbar>

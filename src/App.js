@@ -5,6 +5,8 @@ import {BrowserRouter} from "react-router-dom";
 import AdvancedMode from "./components/AdvancedMode/AdvancedMode";
 import {Route} from "react-router";
 import MainMenu from "./components/MainMenu/MainMenu";
+import InfoFooter from "./components/InfoFooter/InfoFooter";
+import AboutMe from "./components/AboutMe/AboutMe";
 
 function App(props) {
     return (
@@ -13,6 +15,8 @@ function App(props) {
                 <MainMenu/>
                 <Route exact path="/" component={BasicMode}/>
                 <Route path="/advanced-mode" component={AdvancedMode}/>
+                <Route path="/about" component={AboutMe}/>
+                <InfoFooter/>
             </BrowserRouter>
         </div>
     );
