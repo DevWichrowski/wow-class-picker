@@ -64,7 +64,6 @@ class AdvancedMode extends Component {
         return (
             <div className="advanced-mode">
                 <h2 className="text-roller">WoW random class picker</h2>
-                <ButtonMode/>
                 <div className="faction-role-container">
                     <FactionContainer/>
                     <RolesContainer/>

@@ -14,7 +14,7 @@ class BasicMode extends Component {
         this.state = {
             intervals: 30,
             currentClassIcon: this.props.classes[0].icon,
-            currentClassName: null
+            currentClassName: '    '
         };
     }
 
@@ -44,10 +44,11 @@ class BasicMode extends Component {
     render() {
         return (
             <div className="basic-mode">
-                <h2 className="text-roller">WoW random class picker</h2>
-                <ButtonMode/>
+                <h1 className="text-roller">World of Warcraft</h1>
+                <br />
+                <h2 className="text-roller">Random class picker</h2>
                 <ClassIcon image={this.state.currentClassIcon}/>
-                <h2 className="text-roller">{this.state.currentClassName}</h2>
+                <h2 className="text-roller class-text">{this.state.currentClassName}</h2>
                 <ButtonRoller roll={() => this.rollIcons()}/>
             </div>
         );
