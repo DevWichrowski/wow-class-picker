@@ -7,6 +7,7 @@ import {Route} from "react-router";
 import MainMenu from "./components/MainMenu/MainMenu";
 import InfoFooter from "./components/InfoFooter/InfoFooter";
 import AboutMe from "./components/AboutMe/AboutMe";
+import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 
 function App(props) {
     return (
@@ -16,6 +17,7 @@ function App(props) {
                 <Route exact path="/basic-mode" component={BasicMode}/>
                 <Route path="/advanced-mode" component={AdvancedMode}/>
                 <Route path="/about" component={AboutMe}/>
+                <Route path="/privacy-policy" component={PrivacyPolicy}/>
                 <InfoFooter/>
             </BrowserRouter>
         </div>
