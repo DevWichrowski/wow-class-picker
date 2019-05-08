@@ -13,7 +13,7 @@ function App(props) {
         <div className="App">
             <BrowserRouter>
                 <MainMenu/>
-                <Route exact path="/" component={BasicMode}/>
+                <Route exact path="/basic-mode" component={BasicMode}/>
                 <Route path="/advanced-mode" component={AdvancedMode}/>
                 <Route path="/about" component={AboutMe}/>
                 <InfoFooter/>

@@ -3,6 +3,7 @@ import '../MainMenu/MainMenu.scss';
 import '../AdvancedMode/AdvancedMode.scss';
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { NavLink } from "react-router-dom";
 
 function MainMenu(props) {
     return (
@@ -10,16 +11,16 @@ function MainMenu(props) {
             <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="/">WOW-RNG</Navbar.Brand>
                 <Nav className="mr-auto">
-                    <Nav.Link className="text-roller" href="/">Class generator</Nav.Link>
-                    <Nav.Link href="/advanced-mode">Advanced generator</Nav.Link>
+                    <NavLink className="text-roller" to="/basic-mode" activeClassName="active-page" onlyActiveOnIndex className="nav-link">Class generator</NavLink>
+                    <NavLink to="/advanced-mode" activeClassName="active-page" onlyActiveOnIndex className="nav-link">Advanced generator</NavLink>
                     <Nav.Link className="disabled-navlink" disabled>Classic generator</Nav.Link>
                     <Nav.Link className="disabled-navlink" disabled>Name generator</Nav.Link>
                 </Nav>
 
                 <Nav>
-                    <Nav.Link href="/about">
+                    <NavLink to="/about" className="nav-link" activeClassName="active-page" onlyActiveOnIndex>
                         About
-                    </Nav.Link>
+                    </NavLink>
                 </Nav>
             </Navbar>
         </div>
