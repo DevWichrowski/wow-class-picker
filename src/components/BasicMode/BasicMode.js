@@ -5,6 +5,7 @@ import ClassIcon from '../ClassIcon/ClassIcon';
 import {connect} from 'react-redux';
 import {getClassesSelector} from "../../store/selectors/classes.selector";
 import {getAdvancedModeSelector, getFilteredRaces} from "../../store/selectors/races.selector";
+import QuestionMark from '../../assets/QuestionMark.gif';
 
 class BasicMode extends Component {
     constructor(props) {
@@ -12,7 +13,8 @@ class BasicMode extends Component {
 
         this.state = {
             intervals: 30,
-            currentClassIcon: this.props.classes[0].icon,
+            // currentClassIcon: this.props.classes[0].icon,
+            currentClassIcon: QuestionMark,
             currentClassName: 'Click button'
         };
     }
