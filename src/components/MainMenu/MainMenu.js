@@ -18,7 +18,7 @@ function MainMenu(props) {
                 </Nav>
 
                 <Nav>
-                    <NavLink to="/about" activeClassName="active-page" onlyActiveOnIndex>
+                    <NavLink to="/about" className="nav-link" activeClassName="active-page" onlyActiveOnIndex>
                         About
                     </NavLink>
                 </Nav>
