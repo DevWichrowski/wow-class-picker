@@ -14,9 +14,6 @@ import {
 } from "../../../store/actions/racesActions";
 
 class RolesContainer extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (
@@ -25,18 +22,19 @@ class RolesContainer extends Component {
                 <div className="roles">
                     <div className="roles">
                         <div className="role-row" onClick={this.props.handleTank}>
-                            <img className={`role-image ${this.props.isTank ? 'selected' : null}`} src={Tank_icon}/>
+                            <img className={`role-image ${this.props.isTank ? 'selected' : null}`} src={Tank_icon}
+                                 alt="World of Warcraft tank icon"/>
                         </div>
                         <div className="role-row" onClick={this.props.handleRangedDps}>
                             <img className={`role-image ${this.props.isRangedDps ? 'selected' : null}`}
-                                 src={Ranged_icon}/>
+                                 src={Ranged_icon} alt="World of Warcraft ranged dps icon"/>
                         </div>
                         <div className="role-row" onClick={this.props.handleMeleeDps}>
                             <img className={`role-image ${this.props.isMeleeDps ? 'selected' : null}`}
-                                 src={Melee_icon}/>
+                                 src={Melee_icon} alt="World of Warcraft melee dps icon"/>
                         </div>
                         <div className="role-row" onClick={this.props.handleHealer}>
-                            <img className={`role-image ${this.props.isHealer ? 'selected' : null}`} src={Healer_icon}/>
+                            <img className={`role-image ${this.props.isHealer ? 'selected' : null}`} src={Healer_icon} alt="World of Warcraft healer icon"/>
                         </div>
                     </div>
                 </div>

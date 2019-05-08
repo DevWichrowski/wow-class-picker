@@ -7,7 +7,7 @@ function InfoFooter(props) {
         <div className="info-footer">
             <p id="current-version" className="text-roller">Version: 0.6 beta</p>
             <NavLink to="/privacy-policy">
-                <a id="privcy-policy" className="text-roller">Privacy policy and informations</a>
+                <p id="privcy-policy" className="text-roller">Privacy policy and informations</p>
             </NavLink>
         </div>
     );

@@ -7,13 +7,9 @@ import {handleAlliance, handleHorde} from "../../../store/actions/racesActions";
 import {
     getAdvancedModeSelector, getFactionAllianceSelector,
     getFactionHordeSelector,
-    getRacesSelector
 } from "../../../store/selectors/races.selector";
 
 class FactionContainer extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (
@@ -22,11 +18,11 @@ class FactionContainer extends Component {
                 <div className="factions">
                     <div className="alliance-row" onClick={this.props.handleAlliance}>
                         <img className={`faction-image ${this.props.factionAlliance ? 'selected' : null}`}
-                             src={Alliance_icon}/>
+                             src={Alliance_icon} alt="World of Warcraft Alliance icon"/>
                     </div>
                     <div className="horde-row">
                         <img className={`faction-image ${this.props.factionHorde ? 'selected' : null}`} src={Horde_icon}
-                             onClick={this.props.handleHorde}/>
+                             onClick={this.props.handleHorde} alt="World of Warcraft Horde icon"/>
                     </div>
                 </div>
             </div>

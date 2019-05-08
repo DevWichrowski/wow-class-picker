@@ -1,19 +1,13 @@
-import React, {Component} from 'react'
+import React from 'react';
 import './ClassIcon.scss';
 
-export class ClassIcon extends Component {
-    constructor(props) {
-        super(props);
 
-    }
+const ClassIcon = (props) => {
+    return (
+        <div className="class-icon">
+            <img src={props.image} id="image" alt="World of Warcraft class icon"/>
+        </div>
+    );
+};
 
-    render() {
-        return (
-            <div className="class-icon">
-                <img src={this.props.image} id="image"/>
-            </div>
-        )
-    }
-}
-
-export default ClassIcon
+export default ClassIcon;

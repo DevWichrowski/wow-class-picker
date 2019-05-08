@@ -7,7 +7,6 @@ import {getClassesSelector} from "../../store/selectors/classes.selector";
 import connect from "react-redux/es/connect/connect";
 import FactionContainer from "./FactionContainer/FactionContainer";
 import {getFilteredRaces} from "../../store/selectors/races.selector";
-import Human_icon from '../../assets/races_icons/Human_icon.png';
 import QuestionMark_icon from '../../assets/QuestionMark_icon.gif'
 
 class AdvancedMode extends Component {
@@ -70,7 +69,9 @@ class AdvancedMode extends Component {
                     <FactionContainer/>
                     <RolesContainer/>
                 </div>
-                {this.state.currentRaceIcon != null ? <img className="race-icon" src={this.state.currentRaceIcon}/> : <div className="race-icon" />}
+                {this.state.currentRaceIcon != null ?
+                    <img className="race-icon" src={this.state.currentRaceIcon} alt="World of Warcraft Race icon"/> :
+                    <div className="race-icon"/>}
                 <ClassIcon image={this.state.currentClassIcon}/>
                 <div className="races-classes">
                     <h3 className="text-roller">{this.state.currentRaceName}</h3>
@@ -78,7 +79,6 @@ class AdvancedMode extends Component {
                     <h1 className="text-roller">{this.state.currentClassName}</h1>
                 </div>
                 <ButtonRoller roll={this.rollIcons}/>
-                {console.log(this.props.filteredRaces)}
             </div>
         );
     }

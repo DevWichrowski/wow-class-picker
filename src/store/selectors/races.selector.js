@@ -35,11 +35,11 @@ export const getFilteredRaces = createSelector(
         }
 
         if (alliance === true && horde === false) {
-            races = races.filter(race => race.faction == 'Alliance');
+            races = races.filter(race => race.faction === 'Alliance');
         }
 
         if (horde === true && alliance === false) {
-            races = races.filter(race => race.faction == 'Horde');
+            races = races.filter(race => race.faction === 'Horde');
         }
 
         if (tank === true) {
