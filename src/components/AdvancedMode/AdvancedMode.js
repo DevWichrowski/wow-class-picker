@@ -8,6 +8,7 @@ import connect from "react-redux/es/connect/connect";
 import FactionContainer from "./FactionContainer/FactionContainer";
 import {getFilteredRaces} from "../../store/selectors/races.selector";
 import Human_icon from '../../assets/races_icons/Human_icon.png';
+import QuestionMark_icon from '../../assets/QuestionMark_icon.gif'
 
 class AdvancedMode extends Component {
     constructor(props) {

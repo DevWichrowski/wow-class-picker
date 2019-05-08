@@ -5,7 +5,7 @@ import ClassIcon from '../ClassIcon/ClassIcon';
 import {connect} from 'react-redux';
 import {getClassesSelector} from "../../store/selectors/classes.selector";
 import {getAdvancedModeSelector, getFilteredRaces} from "../../store/selectors/races.selector";
-import QuestionMark from '../../assets/QuestionMark.gif';
+import QuestionMark from '../../assets/QuestionMark_icon.gif';
 
 class BasicMode extends Component {
     constructor(props) {
