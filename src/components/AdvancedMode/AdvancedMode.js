@@ -15,7 +15,7 @@ class AdvancedMode extends Component {
         super(props);
 
         this.state = {
-            intervals: 15,
+            intervals: 25,
             currentClassIcon: QuestionMark_icon,
             currentRaceIcon: null,
             currentRaceName: 'Choose filters and click the button below',
@@ -24,9 +24,9 @@ class AdvancedMode extends Component {
     }
 
     clearState = () => {
-        this.setState({intervals: 15});
-        this.setState({currentRaceName: '...'});
-        this.setState({currentClassName: '...'});
+        this.setState({intervals: 25});
+        this.setState({currentRaceName: 'Rolling...'});
+        this.setState({currentClassName: null});
     };
 
     rollIcons = () => {
@@ -78,6 +78,7 @@ class AdvancedMode extends Component {
                     <h1 className="text-roller">{this.state.currentClassName}</h1>
                 </div>
                 <ButtonRoller roll={this.rollIcons}/>
+                {console.log(this.props.filteredRaces)}
             </div>
         );
     }

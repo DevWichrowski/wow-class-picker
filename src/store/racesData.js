@@ -110,7 +110,6 @@ export const racesData = [
         faction: 'Alliance',
         race_icon: Gnome_icon,
         classes: [
-            { id: 'dh', name: 'Demon Hunter', roles: [ 'tank', 'melee dps' ], icon: DH_icon },
             { id: 'monk', name: 'Monk', roles: [ 'tank', 'melee dps', 'healer' ], icon: Monk_icon },
             { id: 'warlock', name: 'Warlock', roles: [ 'ranged dps' ], icon: Warlock_icon },
             { id: 'mage', name: 'Mage', roles: [ 'ranged dps' ], icon: Mage_icon },

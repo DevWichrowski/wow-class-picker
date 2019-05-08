@@ -21,7 +21,7 @@ class BasicMode extends Component {
 
     clearState = () => {
         this.setState({intervals: 30});
-        this.setState({currentClassName: 'Murloc :)'});
+        this.setState({currentClassName: 'Rolling...'});
     };
 
     rollIcons = () => {
@@ -31,7 +31,7 @@ class BasicMode extends Component {
             let rolledAnimationNumber = Math.floor(Math.random() * 11 + 1);
 
             this.setState({currentClassIcon: this.props.classes[rolledAnimationNumber].icon});
-            this.setState({currentClassName: this.props.classes[rolledAnimationNumber].name});
+            this.setState({currentClassName: 'Rolling...'});
             this.setState({intervals: this.state.intervals - 1});
 
             if (this.state.intervals <= 0) {
