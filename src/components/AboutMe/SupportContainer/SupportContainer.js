@@ -12,14 +12,14 @@ function SupportContainer(props) {
                 improve project and also reporting bugs on my mail below:</p>
             <br/>
             <div className="support-button">
-                wowrng@gmail.com
+                <a href="mail:to wicherwowuszek@gmail.com">Wicherwowuszek@gmail.com</a>
             </div>
             <br/>
-            <p className="text-roller font-about">If you want you can also give me some money for subscription and
-                coffee</p>
-            <div className="support-button">
-                <a href="#">DONATE</a>
-            </div>
+            {/*<p className="text-roller font-about">If you want you can also give me some money for subscription and*/}
+            {/*    coffee</p>*/}
+            {/*<div className="support-button">*/}
+            {/*    <a href="#">DONATE</a>*/}
+            {/*</div>*/}
         </div>
     );
 }
