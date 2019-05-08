@@ -16,8 +16,8 @@ class AdvancedMode extends Component {
 
         this.state = {
             intervals: 15,
-            currentClassIcon: this.props.classes[0].icon,
-            currentRaceIcon: Human_icon,
+            currentClassIcon: QuestionMark_icon,
+            currentRaceIcon: null,
             currentRaceName: 'Choose filters and click the button below',
             currentClassName: '',
         };
@@ -70,7 +70,7 @@ class AdvancedMode extends Component {
                     <FactionContainer/>
                     <RolesContainer/>
                 </div>
-                <img className="race-icon" src={this.state.currentRaceIcon}/>
+                {this.state.currentRaceIcon != null ? <img className="race-icon" src={this.state.currentRaceIcon}/> : <div className="race-icon" />}
                 <ClassIcon image={this.state.currentClassIcon}/>
                 <div className="races-classes">
                     <h3 className="text-roller">{this.state.currentRaceName}</h3>
