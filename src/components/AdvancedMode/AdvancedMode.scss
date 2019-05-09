@@ -113,6 +113,8 @@
   }
 
   .race-icon {
-    height: 150px !important;
+    max-height: 150px !important;
+    max-width: 150px;
+    height: unset !important;
   }
 }
