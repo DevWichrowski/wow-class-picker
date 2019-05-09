@@ -47,14 +47,17 @@ class BasicMode extends Component {
 
     render() {
         return (
-            <div className="basic-mode">
-                <h1 className="text-roller">World of Warcraft</h1>
-                <br/>
-                <h2 className="text-roller">Random class generator</h2>
-                <ClassIcon image={this.state.currentClassIcon}/>
-                <h2 className="text-roller class-text">{this.state.currentClassName}</h2>
+            <div>
+                <div className="basic-mode">
+                    <ClassIcon image={this.state.currentClassIcon}/>
+                    <div className="races-classes">
+                        <h2 className="text-roller class-text">{this.state.currentClassName}</h2>
+                    </div>
+                </div>
                 <ButtonRoller roll={() => this.rollIcons()}/>
             </div>
+
+
         );
     }
 }
