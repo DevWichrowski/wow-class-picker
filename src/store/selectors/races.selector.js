@@ -8,7 +8,6 @@ const getFilterTank = state => state.races.isTank;
 const getFilterRangedDps = state => state.races.isRangedDps;
 const getFilterMeleeDps = state => state.races.isMeleeDps;
 const getFilterHealer = state => state.races.isHealer;
-// const getFilteredRaces = state => state.filteredRaces;
 const getRaces = state => state.races.races;
 
 export const getFilteredRaces = createSelector(
