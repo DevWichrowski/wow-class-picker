@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './AdvancedMode.scss';
 import RolesContainer from "./RolesContainer/RolesContainer";
 import ButtonRoller from "../ButtonRoller/ButtonRoller";
 import ClassIcon from "../ClassIcon/ClassIcon";
-import {getClassesSelector} from "../../store/selectors/classes.selector";
+import { getClassesSelector } from "../../store/selectors/classes.selector";
 import connect from "react-redux/es/connect/connect";
 import FactionContainer from "./FactionContainer/FactionContainer";
-import {getFilteredRaces} from "../../store/selectors/races.selector";
+import { getFilteredRaces } from "../../store/selectors/races.selector";
 import QuestionMark_icon from '../../assets/QuestionMark_icon.gif'
 
 class AdvancedMode extends Component {
@@ -23,9 +23,9 @@ class AdvancedMode extends Component {
     }
 
     clearState = () => {
-        this.setState({intervals: 25});
-        this.setState({currentRaceName: 'Rolling...'});
-        this.setState({currentClassName: null});
+        this.setState({ intervals: 25 });
+        this.setState({ currentRaceName: 'Rolling...' });
+        this.setState({ currentClassName: null });
     };
 
     rollIcons = () => {
@@ -36,9 +36,9 @@ class AdvancedMode extends Component {
         const roller = setInterval(() => {
             let filteredRandomClasses = this.props.filteredRaces[randomRaces].classes[randomClasses];
 
-            this.setState({currentClassIcon: this.props.classes[Math.floor(Math.random() * 11 + 1)].icon});
-            this.setState({currentRaceIcon: this.props.filteredRaces[Math.floor(Math.random() * randomRaces)].race_icon});
-            this.setState({intervals: this.state.intervals - 1});
+            this.setState({ currentClassIcon: this.props.classes[Math.floor(Math.random() * 11 + 1)].icon });
+            this.setState({ currentRaceIcon: this.props.filteredRaces[Math.floor(Math.random() * randomRaces)].race_icon });
+            this.setState({ intervals: this.state.intervals - 1 });
 
             if (this.state.intervals <= 0) {
 
@@ -62,23 +62,27 @@ class AdvancedMode extends Component {
     render() {
         return (
             <div className="advanced-mode">
-                <h1 className="text-roller">World of Warcraft</h1>
+                {/* <h1 className="text-roller">World of Warcraft</h1>
                 <br/>
-                <h2 className="text-roller h2-font">Advanced class generator</h2>
+                <h2 className="text-roller h2-font">Advanced class generator</h2> */}
                 <div className="faction-role-container">
-                    <FactionContainer/>
-                    <RolesContainer/>
+                    <FactionContainer />
+                    <RolesContainer />
                 </div>
-                {this.state.currentRaceIcon != null ?
-                    <img className="race-icon" src={this.state.currentRaceIcon} alt="World of Warcraft Race icon"/> :
-                    <div className="race-icon"/>}
-                <ClassIcon image={this.state.currentClassIcon}/>
+                <div className="images-container">
+                    {this.state.currentRaceIcon != null ?
+                        <img className="race-icon" src={this.state.currentRaceIcon} alt="World of Warcraft Race icon" /> :
+                        <div className="race-icon" />}
+                    <ClassIcon image={this.state.currentClassIcon} />
+                </div>
+
+
                 <div className="races-classes">
                     <h3 className="text-roller">{this.state.currentRaceName}</h3>
-                    <br/>
+                    <br />
                     <h1 className="text-roller">{this.state.currentClassName}</h1>
                 </div>
-                <ButtonRoller roll={this.rollIcons}/>
+                <ButtonRoller roll={this.rollIcons} />
             </div>
         );
     }

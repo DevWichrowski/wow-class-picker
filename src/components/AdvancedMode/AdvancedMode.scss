@@ -4,7 +4,7 @@
   background-color: rgba(0, 0, 0, 0.7);
   width: 60%;
   height: 90%;
-  margin: 10px auto;
+  margin: 70px auto 10px auto;
   text-align: center;
   border: 2px solid black;
   border-radius: 5px;
@@ -22,12 +22,19 @@
     z-index: auto;
   }
 
+  .images-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
   .faction-role-container {
     display: flex;
   }
 
   .race-icon {
-    height: 90px;
+    height: 200px;
     margin-left: 20px;
     margin-right: 20px;
     opacity: 0.6;
@@ -54,5 +61,13 @@
     h3 {
       margin: 5px;
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .advanced-mode {
+    width: 90%;
+    overflow: auto;
+    height: calc(100vh - 100px);
   }
 }

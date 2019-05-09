@@ -23,6 +23,13 @@
   color: white !important;
 }
 
+.nav-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
 .nav-link {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -46,4 +53,12 @@
   position: relative;
   z-index: auto;
   padding-left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
