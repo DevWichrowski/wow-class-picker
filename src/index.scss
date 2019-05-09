@@ -4,14 +4,16 @@ html {
 	height: 100%;
 	width: 100vw;
 
-	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./assets/background.jpg);
+
+	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(./assets/background.jpg);
 	//background-repeat: no-repeat;
 	background-position: left top;
 }
 
 * {
 	box-sizing: border-box;
-	font-family: 'Roboto', sans-serif;
+  font-family: "Semplicita Pro","Open Sans",Arial,Helvetica,sans-serif;
+  font-weight: 700;
 }
 
 body {

@@ -23,3 +23,10 @@
 .text-roller {
     margin-bottom: 0;
 }
+
+@media screen and (max-width: 600px){
+    .button-mode-wow {
+        width: 90% !important;
+    }
+
+}

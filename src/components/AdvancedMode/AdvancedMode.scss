@@ -1,12 +1,10 @@
 .advanced-mode {
   color: white !important;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.7);
-  width: 60%;
+  width: 80%;
   height: 90%;
-  margin: 70px auto 10px auto;
+  margin: 100px auto 10px auto;
   text-align: center;
-  border: 2px solid black;
   border-radius: 5px;
   padding-top: 25px;
   padding-bottom: 30px;
@@ -24,7 +22,19 @@
 
   .images-container {
     display: flex;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .images-container-main {
+    display: flex;
     flex-direction: row;
+    width: 100%;
     justify-content: center;
     align-items: center;
   }
@@ -32,15 +42,17 @@
   .faction-role-container {
     display: flex;
     flex-direction: row;
+    width: 80%;
+    border-radius: 10px;
+    margin: 10px auto;
+    background-color: #211510;
   }
 
   .race-icon {
-    height: 200px;
+    height: 300px;
     margin-left: 20px;
     margin-right: 20px;
     opacity: 0.6;
-    margin-top: 10px;
-    //margin-top: 80px;
     border-radius: 50% !important;
   }
 
@@ -54,13 +66,21 @@
   }
 
   .races-classes {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #211510;
 
     h1 {
       margin: 0;
-    }
 
-    h3 {
-      margin: 5px;
+      &:first-child {
+        margin-right: 10px;
+      }
     }
   }
 }
@@ -68,7 +88,31 @@
 @media screen and (max-width: 600px) {
   .advanced-mode {
     width: 90%;
+    margin-top: 50px;
     overflow: auto;
     height: calc(100vh - 100px);
+  }
+
+  .faction-role-container {
+    width: 90% !important;
+  }
+
+  .images-container {
+    width: 100% !important;
+    height: 70%;
+    position: relative;
+  }
+
+  .races-classes {
+    position: absolute;
+    bottom: 0;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+
+  .race-icon {
+    height: 150px !important;
   }
 }

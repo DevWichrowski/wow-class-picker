@@ -30,7 +30,7 @@ function MainMenu(props) {
                      </>
                 }
                 {window.innerWidth <= 600 && 
-                    <DropdownButton id="dropdown-basic-button" title="Menu" drop="left">
+                    <DropdownButton id="dropdown-basic-button" title="Menu" className="dropdown-but" alignRight>
                     <Dropdown.Item href="/basic-mode">Class generator</Dropdown.Item>
                     <Dropdown.Item href="/advanced-mode">Advanced generator</Dropdown.Item>
                     <Dropdown.Item href="/about">About</Dropdown.Item>

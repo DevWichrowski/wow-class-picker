@@ -70,18 +70,22 @@ class AdvancedMode extends Component {
                     <RolesContainer />
                 </div>
                 <div className="images-container">
-                    {this.state.currentRaceIcon != null ?
-                        <img className="race-icon" src={this.state.currentRaceIcon} alt="World of Warcraft Race icon" /> :
-                        <div className="race-icon" />}
-                    <ClassIcon image={this.state.currentClassIcon} />
+                    <div class="images-container-main">
+                        {this.state.currentRaceIcon != null ?
+                            <img className="race-icon" src={this.state.currentRaceIcon} alt="World of Warcraft Race icon" /> :
+                            null}
+                        <ClassIcon image={this.state.currentClassIcon} />
+                    </div>
+
+                    <div className="races-classes">
+                        <h1 className="text-roller">{this.state.currentRaceName}</h1>
+                        <br />
+                        <h1 className="text-roller"> {this.state.currentClassName}</h1>
+                    </div>
                 </div>
 
 
-                <div className="races-classes">
-                    <h3 className="text-roller">{this.state.currentRaceName}</h3>
-                    <br />
-                    <h1 className="text-roller">{this.state.currentClassName}</h1>
-                </div>
+
                 <ButtonRoller roll={this.rollIcons} />
             </div>
         );

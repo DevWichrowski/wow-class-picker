@@ -1,14 +1,35 @@
 .faction-container{
     width: 100%;
 
+    .choose-header {
+        padding: 10px 0 10px 0 ;
+        //border-bottom: 1px solid white;
+    }
+
+    h4 {
+        font-weight: 700;
+    }
+
     .factions{
         display: flex;
         flex-direction: row;
         justify-content: center;
 
+        .alliance-row {
+            background-image: url("../../../assets/faction_icons/Pane-leather-blue.jpg");
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .horde-row {
+            width: 50%;
+            box-sizing: border-box;
+            background-image: url("../../../assets/faction_icons/Pane-leather-red.jpg");
+        }
+
         .faction-image{
-            width: 50px;
-            height: 50px;
+            padding: 10px 0;
+            height: 100px;
             margin-left: 20px;
             margin-right: 20px;
             cursor: pointer;
@@ -17,14 +38,24 @@
 
         .faction-image:hover{
             opacity: 1;
-            border: 3px #e0e0d1 solid;
-            border-radius: 50%;
         }
 
         .selected{
+
+            .faction-image {
+                opacity: 1;
+            }
             opacity: 1;
-            border: 3px #f8b700 solid!important;
-            border-radius: 50%;
+            box-shadow: 0 0 5px #f8b700 inset;
         }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h4 {
+        font-size: 16px;
+    }
+    .faction-image {
+        height: 50px !important;
     }
 }

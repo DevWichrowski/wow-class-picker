@@ -14,15 +14,16 @@ class FactionContainer extends Component {
     render() {
         return (
             <div className="faction-container">
-                <h4 className="text-roller">Choose your faction</h4>
+                <div className="choose-header">
+                    <h4 className="text-roller">CHOOSE YOUR FACTION</h4>
+                </div>
                 <div className="factions">
-                    <div className="alliance-row" onClick={this.props.handleAlliance}>
-                        <img className={`faction-image ${this.props.factionAlliance ? 'selected' : null}`}
+                    <div className={`alliance-row ${this.props.factionAlliance ? 'selected' : null}`} onClick={this.props.handleAlliance}>
+                        <img className="faction-image"
                              src={Alliance_icon} alt="World of Warcraft Alliance icon"/>
                     </div>
-                    <div className="horde-row">
-                        <img className={`faction-image ${this.props.factionHorde ? 'selected' : null}`} src={Horde_icon}
-                             onClick={this.props.handleHorde} alt="World of Warcraft Horde icon"/>
+                    <div className={`horde-row ${this.props.factionHorde ? 'selected' : null}`} onClick={this.props.handleHorde}>
+                        <img className="faction-image" src={Horde_icon} alt="World of Warcraft Horde icon"/>
                     </div>
                 </div>
             </div>
