@@ -1,7 +1,7 @@
 import React from 'react';
 import '../PrivacyPolicy/PrivacyPolicy.scss';
 
-function PrivacyPolicy(props) {
+function PrivacyPolicy() {
     return (
         <div className="privacy-policy">
             <h1> Privacy policy and informations</h1>
@@ -13,7 +13,7 @@ function PrivacyPolicy(props) {
                 <a href="https://worldofwarcraft.com">worldofwarcraft.com</a>
                 <br/>
                 <a href="https://www.wowhead.com">wowhead.com</a>
-                <br />
+                <br/>
                 <a href="http://clipartmag.com">clipartmag.com</a>
                 <h1 className="center-headings">What Data is Used?</h1>
                 <h2 className="center-headings">Google Analytics</h2>

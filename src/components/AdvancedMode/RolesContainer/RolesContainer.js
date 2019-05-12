@@ -36,7 +36,8 @@ class RolesContainer extends Component {
                                  src={Melee_icon} alt="World of Warcraft melee dps icon"/>
                         </div>
                         <div className="role-row" onClick={this.props.handleHealer}>
-                            <img className={`role-image ${this.props.isHealer ? 'selected' : null}`} src={Healer_icon} alt="World of Warcraft healer icon"/>
+                            <img className={`role-image ${this.props.isHealer ? 'selected' : null}`} src={Healer_icon}
+                                 alt="World of Warcraft healer icon"/>
                         </div>
                     </div>
                 </div>

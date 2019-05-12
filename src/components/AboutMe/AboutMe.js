@@ -4,7 +4,7 @@ import AboutProject from "./AboutProject/AboutProject";
 import AboutAuthor from "./AboutAuthor/AboutAuthor";
 import SupportContainer from "./SupportContainer/SupportContainer";
 
-function AboutMe(props) {
+function AboutMe() {
     return (
         <div className="about-me">
             <AboutAuthor/>

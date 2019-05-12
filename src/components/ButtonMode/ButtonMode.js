@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import '../ButtonRoller/ButtonRoller.scss';
 import {getAdvancedModeSelector} from "../../store/selectors/races.selector";
 import connect from "react-redux/es/connect/connect";
 import {handleAlliance, handleHorde, handleSwitch} from "../../store/actions/racesActions";

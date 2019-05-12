@@ -9,17 +9,6 @@
     border-radius: 10px;
     padding-bottom: 50px;
 
-    .text-roller {
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-image: -webkit-linear-gradient(top, #efd100 0, #e2a233 38%, #f0c328 60%, #fff1a3 86%, #ffe13e 100%);
-        background-size: 1em 1em;
-        color: #f8b700;
-        display: inline-block;
-        position: relative;
-        z-index: auto;
-    }
-
     .faction-role-container{
         display: flex;
     }
@@ -67,17 +56,6 @@
             }
         }
     }
-}
-
-.text-roller {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: -webkit-linear-gradient(top, #efd100 0, #e2a233 38%, #f0c328 60%, #fff1a3 86%, #ffe13e 100%);
-    background-size: 1em 1em;
-    color: #f8b700;
-    display: inline-block;
-    position: relative;
-    z-index: auto;
 }
 
 @media screen and (max-width: 600px) {

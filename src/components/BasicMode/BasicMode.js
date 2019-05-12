@@ -20,8 +20,7 @@ class BasicMode extends Component {
     }
 
     clearState = () => {
-        this.setState({intervals: 30});
-        this.setState({currentClassName: 'Rolling...'});
+        this.setState({intervals: 30, currentClassName: 'Rolling...'});
     };
 
     rollIcons = () => {

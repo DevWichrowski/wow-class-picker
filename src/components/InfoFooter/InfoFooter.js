@@ -2,7 +2,7 @@ import React from 'react';
 import '../InfoFooter/InfoFooter.scss';
 import {NavLink} from "react-router-dom";
 
-function InfoFooter(props) {
+function InfoFooter() {
     return (
         <div className="info-footer">
             <p id="current-version" className="text-roller">Version: 0.6 beta</p>

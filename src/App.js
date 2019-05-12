@@ -9,7 +9,7 @@ import InfoFooter from "./components/InfoFooter/InfoFooter";
 import AboutMe from "./components/AboutMe/AboutMe";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 
-function App(props) {
+function App() {
     return (
         <div className="App">
             <BrowserRouter>

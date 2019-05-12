@@ -23,9 +23,7 @@ class AdvancedMode extends Component {
     }
 
     clearState = () => {
-        this.setState({intervals: 25});
-        this.setState({currentRaceName: 'Rolling...'});
-        this.setState({currentClassName: null});
+        this.setState({intervals: 25, currentRaceName: 'Rolling...', currentClassName: null});
     };
 
     rollIcons = () => {
@@ -34,7 +32,6 @@ class AdvancedMode extends Component {
         const randomClasses = Math.floor(Math.random() * this.props.filteredRaces[randomRaces].classes.length);
 
         const roller = setInterval(() => {
-            let filteredRandomClasses = this.props.filteredRaces[randomRaces].classes[randomClasses];
 
             this.setState({currentClassIcon: this.props.classes[Math.floor(Math.random() * 11 + 1)].icon});
             this.setState({currentRaceIcon: this.props.filteredRaces[Math.floor(Math.random() * randomRaces)].race_icon});

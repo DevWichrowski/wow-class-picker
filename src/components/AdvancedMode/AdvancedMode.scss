@@ -9,17 +9,6 @@
   padding-top: 25px;
   padding-bottom: 30px;
 
-  .text-roller {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: -webkit-linear-gradient(top, #efd100 0, #e2a233 38%, #f0c328 60%, #fff1a3 86%, #ffe13e 100%);
-    background-size: 1em 1em;
-    color: #f8b700;
-    display: inline-block;
-    position: relative;
-    z-index: auto;
-  }
-
   .images-container {
     display: flex;
     width: 80%;
@@ -60,7 +49,7 @@
     display: none;
   }
 
-  h2{
+  h2 {
     font-size: 20px;
     margin-bottom: 50px;
   }
