@@ -1,4 +1,5 @@
 import {createSelector} from 'reselect';
+import { cloneDeep } from 'lodash';
 
 const selectRaces = state => state.races;
 const getFilterAdvancedMode = state => state.races.advancedMode;
@@ -33,16 +34,18 @@ export const getFilteredRaces = createSelector(
             return races;
         }
 
+        let _races = cloneDeep(races);
+
         if (alliance === true && horde === false) {
-            races = races.filter(race => race.faction === 'Alliance');
+            _races = _races.filter(race => race.faction === 'Alliance');
         }
 
         if (horde === true && alliance === false) {
-            races = races.filter(race => race.faction === 'Horde');
+            _races = _races.filter(race => race.faction === 'Horde');
         }
 
         if (tank === true) {
-            races = races.map(race => {
+            _races = _races.map(race => {
                 race.classes = race.classes.filter(clas => clas.roles.includes('tank'));
 
                 return race;
@@ -50,7 +53,7 @@ export const getFilteredRaces = createSelector(
         }
 
         if (healer === true) {
-            races = races.map(race => {
+            _races = _races.map(race => {
                 race.classes = race.classes.filter(clas => clas.roles.includes('healer'));
 
                 return race;
@@ -58,7 +61,7 @@ export const getFilteredRaces = createSelector(
         }
 
         if (rangedDps === true) {
-            races = races.map(race => {
+            _races = _races.map(race => {
                 race.classes = race.classes.filter(clas => clas.roles.includes('ranged dps'));
 
                 return race;
@@ -66,14 +69,14 @@ export const getFilteredRaces = createSelector(
         }
 
         if (meleeDps === true) {
-            races = races.map(race => {
+            _races = _races.map(race => {
                 race.classes = race.classes.filter(clas => clas.roles.includes('melee dps'));
 
                 return race;
             });
         }
 
-        return races;
+        return _races;
     }
 );
 
