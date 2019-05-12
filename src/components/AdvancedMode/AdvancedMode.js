@@ -17,7 +17,7 @@ class AdvancedMode extends Component {
             intervals: 25,
             currentClassIcon: QuestionMark_icon,
             currentRaceIcon: null,
-            currentRaceName: 'Choose filters and click the button below',
+            currentRaceName: 'Click button below',
             currentClassName: '',
         };
     }
@@ -64,9 +64,6 @@ class AdvancedMode extends Component {
     render() {
         return (
             <div className="advanced-mode">
-                {/* <h1 className="text-roller">World of Warcraft</h1>
-                <br/>
-                <h2 className="text-roller h2-font">Advanced class generator</h2> */}
                 <div className="faction-role-container">
                     <FactionContainer/>
                     <RolesContainer/>
@@ -87,7 +84,6 @@ class AdvancedMode extends Component {
                     </div>
                 </div>
                 <ButtonRoller roll={this.rollIcons}/>
-                {console.log('filtered races', this.props.filteredRaces)}
             </div>
         );
     }
