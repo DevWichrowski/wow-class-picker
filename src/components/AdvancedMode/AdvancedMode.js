@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './AdvancedMode.scss';
+import '../../styles/styles.scss';
 import RolesContainer from "./RolesContainer/RolesContainer";
 import ButtonRoller from "../ButtonRoller/ButtonRoller";
 import ClassIcon from "../ClassIcon/ClassIcon";
