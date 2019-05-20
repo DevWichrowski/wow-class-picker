@@ -8,8 +8,11 @@ import MainMenu from "./components/MainMenu/MainMenu";
 import InfoFooter from "./components/InfoFooter/InfoFooter";
 import AboutMe from "./components/AboutMe/AboutMe";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
+import ReactGA from 'react-ga';
 
 function App() {
+    ReactGA.initialize('UA-140528693-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
     return (
         <div className="App">
             <BrowserRouter>
