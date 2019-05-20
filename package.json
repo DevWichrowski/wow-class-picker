@@ -1,5 +1,6 @@
 {
   "name": "wow-class-picker",
+  "homepage": "http://wowrng.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
