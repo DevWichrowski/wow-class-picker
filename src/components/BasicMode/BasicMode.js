@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import {getClassesSelector} from "../../store/selectors/classes.selector";
 import {getAdvancedModeSelector, getFilteredRaces} from "../../store/selectors/races.selector";
 import QuestionMark from '../../assets/QuestionMark_icon.gif';
+import classesGif from "../../assets/gifs/classes-gif.gif";
 
 class BasicMode extends Component {
     constructor(props) {
@@ -29,7 +30,7 @@ class BasicMode extends Component {
         const roller = setInterval(() => {
             let rolledAnimationNumber = Math.floor(Math.random() * 11 + 1);
 
-            this.setState({currentClassIcon: this.props.classes[rolledAnimationNumber].icon});
+            this.setState({currentClassIcon: classesGif});
             this.setState({currentClassName: 'Rolling...'});
             this.setState({intervals: this.state.intervals - 1});
 
