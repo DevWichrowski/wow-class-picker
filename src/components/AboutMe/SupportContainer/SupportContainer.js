@@ -7,7 +7,8 @@ function SupportContainer() {
             <h3 className="text-roller">Support</h3>
             <hr/>
             <p className="text-roller font-about">And what with supporting me?</p>
-            <p className="text-roller font-about">I will work on project alone, so it will definitely take some time</p>
+            <br />
+            <p className="text-roller font-about">I will work on project alone, so it will definitely take some time.</p>
             <p className="text-roller font-about">You can help me giving additional ideas and advices about how to
                 improve project and also reporting bugs on my mail below:</p>
             <br/>
