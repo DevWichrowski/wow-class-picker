@@ -1,4 +1,30 @@
 .main-menu {
+
+  .main-menu-bar {
+    background-color: #1e1e1e;
+
+    .wow-rng-logo {
+      height: 65px;
+      margin-bottom: 5px;
+      //width: 100px;
+    }
+
+    .nav-link {
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: -webkit-linear-gradient(top, #F5F5F5 0, #cbcbcb 38%, #F5F5F5 60%, #9c9c9c 86%, #F5F5F5 100%);
+      background-size: 1em 1em;
+      color: #e5f3ff;
+      display: inline-block;
+      position: relative;
+      text-transform: uppercase;
+
+      z-index: auto;
+      border-left: 1px solid rgba(68, 47, 38, .5);
+      border-right: 1px solid rgba(68, 47, 38, .5);
+    }
+  }
+
   .disabled-navlink {
     opacity: 0.5 !important;
     cursor: not-allowed !important;
@@ -86,20 +112,6 @@
   background-size: 1em 1em;
 }
 
-.nav-link {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: -webkit-linear-gradient(top, #efd100 0, #e2a233 38%, #f0c328 60%, #fff1a3 86%, #ffe13e 100%);
-  background-size: 1em 1em;
-  color: #f8b700;
-  display: inline-block;
-  position: relative;
-  text-transform: uppercase;
-
-  z-index: auto;
-  border-left: 1px solid rgba(68, 47, 38, .5);
-  border-right: 1px solid rgba(68, 47, 38, .5);
-}
 
 .navbar-brand {
   -webkit-background-clip: text;
