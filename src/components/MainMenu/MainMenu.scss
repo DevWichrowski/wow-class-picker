@@ -16,6 +16,12 @@
     cursor: not-allowed !important;
     text-transform: uppercase;
   }
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 .bg-dark {
@@ -140,11 +146,13 @@
 }
 
 .activated-nav {
-  -webkit-box-shadow: inset 0px -2px 0px 0px rgba(196,42,15,0.57);
-  -moz-box-shadow: inset 0px -2px 0px 0px rgba(196,42,15,0.57);
-  box-shadow: inset 0px -2px 0px 0px rgba(196,42,15,0.57);
-
-  transition: box-shadow 0.3s;
+  button {
+    -webkit-box-shadow: inset 0px -2px 0px 0px rgba(196, 42, 15, 0.57);
+    -moz-box-shadow: inset 0px -2px 0px 0px rgba(196, 42, 15, 0.57);
+    box-shadow: inset 0px -2px 0px 0px rgba(196, 42, 15, 0.57);
+    transition: box-shadow 0.3s;
+    border-radius: 0;
+  }
 }
 
 .nav-link-disabled {

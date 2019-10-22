@@ -13,21 +13,26 @@ function MainMenu(props) {
     return (
         <div className="main-menu slide-in-top">
             <AppBar position="static" className="main-menu-bar">
-                {console.log('props.location.pathname', props)}
                 <Toolbar>
                     <img src={wowRngLogo} className="wow-rng-logo"/>
-                    <NavLink exact to="/" activeClassName="activated-nav">
-                        <Button className="nav-link">Class generator</Button>
-                    </NavLink>
-                    <NavLink to="advanced-mode" activeClassName="activated-nav">
-                        <Button className="nav-link">Advanced generator</Button>
-                    </NavLink>
-                    <Button className="nav-link-disabled" disabled>Classic generator</Button>
-                    <Button className="nav-link-disabled" disabled>Name generator</Button>
+                    <div className="flex-container">
+                        <div>
+                            <NavLink exact to="/" activeClassName="activated-nav">
+                                <Button className="nav-link">Class generator</Button>
+                            </NavLink>
+                            <NavLink to="advanced-mode" activeClassName="activated-nav">
+                                <Button className="nav-link">Advanced generator</Button>
+                            </NavLink>
+                            <Button className="nav-link-disabled" disabled>Classic generator</Button>
+                            <Button className="nav-link-disabled" disabled>Name generator</Button>
+                        </div>
 
-                    <NavLink to="/about" activeClassName="activated-nav">
-                        <Button className="nav-link">About</Button>
-                    </NavLink>
+                        <div>
+                            <NavLink to="/about" activeClassName="activated-nav">
+                                <Button className="nav-link">About</Button>
+                            </NavLink>
+                        </div>
+                    </div>
                 </Toolbar>
             </AppBar>
         </div>
