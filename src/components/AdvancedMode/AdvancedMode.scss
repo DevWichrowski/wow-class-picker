@@ -38,7 +38,10 @@
   }
 
   .race-icon {
-    height: 300px;
+    //min-width: 350px;
+    width: 300px;
+    max-width: 350px;
+    height: 250px;
     margin-left: 20px;
     margin-right: 20px;
     opacity: 0.6;

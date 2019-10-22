@@ -9,6 +9,8 @@ import connect from "react-redux/es/connect/connect";
 import FactionContainer from "./FactionContainer/FactionContainer";
 import {getFilteredRaces} from "../../store/selectors/races.selector";
 import QuestionMark_icon from '../../assets/QuestionMark_icon.gif'
+import classesGif from "../../assets/gifs/classes-gif.gif";
+import racesGif from "../../assets/gifs/races-gif.gif";
 
 class AdvancedMode extends Component {
     constructor(props) {
@@ -34,8 +36,8 @@ class AdvancedMode extends Component {
 
         const roller = setInterval(() => {
 
-            this.setState({currentClassIcon: this.props.classes[Math.floor(Math.random() * 11 + 1)].icon});
-            this.setState({currentRaceIcon: this.props.filteredRaces[Math.floor(Math.random() * randomRaces)].race_icon});
+            this.setState({currentClassIcon: classesGif});
+            this.setState({currentRaceIcon: racesGif});
             this.setState({intervals: this.state.intervals - 1});
 
             if (this.state.intervals <= 0) {
