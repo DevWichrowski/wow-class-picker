@@ -13,15 +13,19 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        padding-bottom: 5px;
 
         .alliance-row {
             background-image: url("../../../assets/faction_icons/Pane-leather-blue.jpg");
-            width: 50%;
+            margin-right: 50px;
+            width: 100px;
             box-sizing: border-box;
+            border-radius: 50%;
         }
 
         .horde-row {
-            width: 50%;
+            width: 100px;
+            border-radius: 50%;
             box-sizing: border-box;
             background-image: url("../../../assets/faction_icons/Pane-leather-red.jpg");
         }
@@ -46,6 +50,8 @@
             }
             opacity: 1;
             box-shadow: 0 0 5px #f8b700 inset;
+
+            transition: box-shadow 0.5s;
         }
     }
 }
