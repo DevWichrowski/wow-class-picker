@@ -5,25 +5,10 @@
 
     .wow-rng-logo {
       height: 65px;
-      margin-bottom: 5px;
       margin-right: 20px;
-      //width: 100px;
     }
 
-    .nav-link {
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-image: -webkit-linear-gradient(top, #F5F5F5 0, #cbcbcb 38%, #F5F5F5 60%, #9c9c9c 86%, #F5F5F5 100%);
-      background-size: 1em 1em;
-      color: #e5f3ff;
-      display: inline-block;
-      position: relative;
-      text-transform: uppercase;
 
-      z-index: auto;
-      border-left: 1px solid rgba(68, 47, 38, .5);
-      border-right: 1px solid rgba(68, 47, 38, .5);
-    }
   }
 
   .disabled-navlink {
@@ -132,4 +117,52 @@
     flex-direction: row;
     justify-content: space-between;
   }
+}
+
+.nav-link {
+  font-size: 14px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(top, #F5F5F5 0, #cbcbcb 38%, #F5F5F5 60%, #9c9c9c 86%, #F5F5F5 100%);
+  background-size: 1em 1em;
+  color: #e5f3ff;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+
+  z-index: auto;
+  //border-left: 1px solid rgba(68, 47, 38, .5);
+  //border-right: 1px solid rgba(68, 47, 38, .5);
+}
+
+.nav-link:focus {
+  outline: none;
+}
+
+.activated-nav {
+  -webkit-box-shadow: inset 0px -2px 0px 0px rgba(196,42,15,0.57);
+  -moz-box-shadow: inset 0px -2px 0px 0px rgba(196,42,15,0.57);
+  box-shadow: inset 0px -2px 0px 0px rgba(196,42,15,0.57);
+
+  transition: box-shadow 0.3s;
+}
+
+.nav-link-disabled {
+  font-size: 14px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(top, #848484 0, #848484 38%, #848484 60%, #848484 86%, #848484 100%);
+  background-size: 1em 1em;
+  color: #e5f3ff;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+
+  z-index: auto;
+  //border-left: 1px solid rgba(68, 47, 38, .5);
+  //border-right: 1px solid rgba(68, 47, 38, .5);
+}
+
+a:hover {
+  text-decoration: none;
 }
