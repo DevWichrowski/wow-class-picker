@@ -6,12 +6,7 @@ import Melee_icon from '../../../assets/roles_icons/Melee_icon.jpg';
 import Healer_icon from '../../../assets/roles_icons/Healer_icon.jpg';
 import connect from "react-redux/es/connect/connect";
 import {getIsHealer, getIsMeleeDps, getIsRangedDps, getIsTankSelector} from "../../../store/selectors/races.selector";
-import {
-    handleHealer,
-    handleMeleeDps,
-    handleRangedDps,
-    handleTank
-} from "../../../store/actions/racesActions";
+import {handleHealer, handleMeleeDps, handleRangedDps, handleTank} from "../../../store/actions/racesActions";
 
 class RolesContainer extends Component {
 
@@ -23,20 +18,24 @@ class RolesContainer extends Component {
                 </div>
                 <div className="roles-main">
                     <div className="roles">
-                        <div className="role-row" onClick={this.props.handleTank}>
-                            <img className={`role-image ${this.props.isTank ? 'selected' : null}`} src={Tank_icon}
+                        <div className={`role-row ${this.props.isTank ? 'selected' : ''}`}
+                             onClick={this.props.handleTank}>
+                            <img className="role-image" src={Tank_icon}
                                  alt="World of Warcraft tank icon"/>
                         </div>
-                        <div className="role-row" onClick={this.props.handleRangedDps}>
-                            <img className={`role-image ${this.props.isRangedDps ? 'selected' : null}`}
+                        <div className={`role-row ${this.props.isRangedDps ? 'selected' : ''}`}
+                             onClick={this.props.handleRangedDps}>
+                            <img className="role-image"
                                  src={Ranged_icon} alt="World of Warcraft ranged dps icon"/>
                         </div>
-                        <div className="role-row" onClick={this.props.handleMeleeDps}>
-                            <img className={`role-image ${this.props.isMeleeDps ? 'selected' : null}`}
+                        <div className={`role-row ${this.props.isMeleeDps ? 'selected' : ''}`}
+                             onClick={this.props.handleMeleeDps}>
+                            <img className={`role-image`}
                                  src={Melee_icon} alt="World of Warcraft melee dps icon"/>
                         </div>
-                        <div className="role-row" onClick={this.props.handleHealer}>
-                            <img className={`role-image ${this.props.isHealer ? 'selected' : null}`} src={Healer_icon}
+                        <div className={`role-row ${this.props.isHealer ? 'selected' : ''}`}
+                             onClick={this.props.handleHealer}>
+                            <img className={`role-image`} src={Healer_icon}
                                  alt="World of Warcraft healer icon"/>
                         </div>
                     </div>
