@@ -57,11 +57,23 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
     h4 {
-        font-size: 16px;
+        font-size: 4vw;
     }
     .faction-image {
-        height: 50px !important;
+        height: 15vw !important;
+    }
+
+    .faction-container {
+        height: 15vh;
+    }
+
+    .horde-row {
+        width: 15vw !important;
+    }
+
+    .alliance-row {
+        width: 15vw !important;
     }
 }

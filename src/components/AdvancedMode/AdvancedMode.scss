@@ -77,22 +77,38 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .advanced-mode {
     width: 90%;
-    margin-top: 50px;
+    margin: 0 auto;
     overflow: auto;
-    height: calc(100vh - 100px);
+    //height: calc(100vh - 100px);
   }
 
   .faction-role-container {
     width: 90% !important;
+    display: flex;
+    height: 35vh;
+    flex-direction: column !important;
   }
 
   .images-container {
     width: 100% !important;
-    height: 70%;
+    height: 35vh !important;
     position: relative;
+  }
+
+  .images-container-main {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .race-icon {
+      max-width: 50% !important;
+      width: unset !important;
+      margin: 0 !important;
+    }
   }
 
   .races-classes {

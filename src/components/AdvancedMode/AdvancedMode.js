@@ -76,7 +76,6 @@ class AdvancedMode extends Component {
                             null}
                         <ClassIcon image={this.state.currentClassIcon}/>
                     </div>
-
                     <div className="races-classes">
                         <h1 className="text-roller">{this.state.currentRaceName}</h1>
                         <br/>

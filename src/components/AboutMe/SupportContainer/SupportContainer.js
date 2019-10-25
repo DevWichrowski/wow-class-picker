@@ -13,7 +13,7 @@ function SupportContainer() {
                 improve project and also reporting bugs on my mail below:</p>
             <br/>
             <div className="support-button">
-                <a href="mail:to wicherwowuszek@gmail.com">Wicherwowuszek@gmail.com</a>
+                <a href="mail:to wicherwowuszek@gmail.com">wicherwowuszek@gmail.com</a>
             </div>
             <br/>
             {/*<p className="text-roller font-about">If you want you can also give me some money for subscription and*/}

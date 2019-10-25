@@ -82,8 +82,40 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .role-image {
-    height: 40px !important;
+    height: 15vw !important;
+	width: 15vw !important;
+  }
+
+  .roles-main {
+	padding: 10px 0;
+  }
+
+  .roles-container {
+	height: 20vh;
+  }
+
+  .selected {
+	.role-image {
+	  opacity: 1;
+	}
+
+	.hover {
+	  position: absolute;
+	  opacity: 1;
+	  width: 15vw !important;
+	  height: 15vw !important;
+	  top: 0;
+	  box-shadow: 0 0 5px #f8b700 inset;
+	  transition: box-shadow 0.5s;
+	  border-radius: 50%;
+	  margin-left: auto;
+	  margin-right: auto;
+	  left: 0;
+	  right: 0;
+	}
+
+
   }
 }
