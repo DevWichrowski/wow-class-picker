@@ -67,15 +67,21 @@ class MainMenu extends Component {
                                     <Icon className="mobile-menu-icon">menu</Icon>
                                 </Button>
                                 <Menu
-                                    id="simple-menu"
+                                    className="mobile-true-menu"
                                     anchorEl={this.state.anchorEl}
                                     keepMounted
                                     open={Boolean(this.state.anchorEl)}
                                     onClose={this.handleClose}
                                 >
-                                    <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-                                    <MenuItem onClick={this.handleClose}>My account</MenuItem>
-                                    <MenuItem>Logout</MenuItem>
+                                    <NavLink exact to="/" activeClassName="activated-nav">
+                                        <MenuItem onClick={this.handleClose}>Class generator</MenuItem>
+                                    </NavLink>
+                                    <NavLink to="advanced-mode" activeClassName="activated-nav">
+                                        <MenuItem onClick={this.handleClose} className="mobile-text-black">Advanced
+                                            generator</MenuItem>
+                                    </NavLink>
+                                    <MenuItem onClick={this.handleClose} disabled>Classic generator</MenuItem>
+                                    <MenuItem onClick={this.handleClose} disabled>Name generator</MenuItem>
                                 </Menu>
                             </div>
                         }
