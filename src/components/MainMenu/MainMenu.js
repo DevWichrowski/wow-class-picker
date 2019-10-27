@@ -23,7 +23,7 @@ class MainMenu extends Component {
     }
 
     updateDimensions = () => {
-        this.setState({width: window.innerWidth, height: window.innerHeight});
+        this.setState({width: window.outerWidth, height: window.outerHeight});
     };
 
     componentDidMount() {
@@ -45,7 +45,7 @@ class MainMenu extends Component {
                 <AppBar position="static" className="main-menu-bar">
                     <Toolbar>
                         <img src={wowRngLogo} className="wow-rng-logo"/>
-                        {this.state.width >= 900 ? <div className="flex-container">
+                        {window.outerWidth >= 970 ? <div className="flex-container">
                                 <div>
                                     <NavLink exact to="/" activeClassName="activated-nav">
                                         <Button className="nav-link">Class generator</Button>
