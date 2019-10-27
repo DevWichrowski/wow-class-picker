@@ -1,5 +1,6 @@
 import React from 'react';
 import './ClassIcon.scss';
+import "../../styles/animations.scss";
 
 
 const ClassIcon = (props) => {

@@ -125,6 +125,7 @@
   }
 }
 
+
 .nav-link {
   font-size: 14px;
   -webkit-background-clip: text;
@@ -173,4 +174,35 @@
 
 a:hover {
   text-decoration: none;
+}
+
+.mobile-menu {
+  margin-left: 30%;
+
+  a {
+    color: black!important;
+  }
+
+  li {
+    color: black!important;
+  }
+
+  .mobile-text-black {
+    color: black!important;
+  }
+}
+
+.mobile-menu-icon {
+  color: #F5F5F5;
+}
+
+.mobile-true-menu{
+}
+
+.MuiPaper-root{
+  color: black!important;
+
+  a{
+    color: black!important;
+  }
 }

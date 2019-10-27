@@ -7,6 +7,7 @@ import {getClassesSelector} from "../../store/selectors/classes.selector";
 import {getAdvancedModeSelector, getFilteredRaces} from "../../store/selectors/races.selector";
 import QuestionMark from '../../assets/QuestionMark_icon.gif';
 import classesGif from "../../assets/gifs/classes-gif.gif";
+import "../../styles/animations.scss";
 
 class BasicMode extends Component {
     constructor(props) {
@@ -48,7 +49,7 @@ class BasicMode extends Component {
     render() {
         return (
             <div>
-                <div className="basic-mode">
+                <div className="basic-mode slide-in-blurred-top">
                     <ClassIcon image={this.state.currentClassIcon}/>
                     <div className="races-classes">
                         <h2 className="text-roller class-text">{this.state.currentClassName}</h2>

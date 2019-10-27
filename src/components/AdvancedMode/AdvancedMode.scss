@@ -3,7 +3,7 @@
   z-index: 1000;
   width: 80%;
   height: 90%;
-  margin: 100px auto 10px auto;
+  margin: 50px auto 10px auto;
   text-align: center;
   border-radius: 5px;
   padding-top: 25px;
@@ -34,7 +34,7 @@
     width: 80%;
     border-radius: 10px;
     margin: 10px auto;
-    background-color: #211510;
+    background-color: #000000;
   }
 
   .race-icon {
@@ -65,7 +65,7 @@
     justify-content: center;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: #211510;
+    background-color: #000000;
 
     h1 {
       margin: 0;
@@ -77,22 +77,38 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .advanced-mode {
     width: 90%;
-    margin-top: 50px;
+    margin: 0 auto;
     overflow: auto;
-    height: calc(100vh - 100px);
+    //height: calc(100vh - 100px);
   }
 
   .faction-role-container {
     width: 90% !important;
+    display: flex;
+    height: 35vh;
+    flex-direction: column !important;
   }
 
   .images-container {
     width: 100% !important;
-    height: 70%;
+    height: 35vh !important;
     position: relative;
+  }
+
+  .images-container-main {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .race-icon {
+      max-width: 50% !important;
+      width: unset !important;
+      margin: 0 !important;
+    }
   }
 
   .races-classes {

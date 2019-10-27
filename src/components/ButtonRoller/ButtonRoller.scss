@@ -1,8 +1,8 @@
 .button-mode-wow {
   //background: rgba(159, 22, 0, .8);
   border-color: #ea3012;
-  background: #6C0300;
-  border: 1px solid #c77e19;
+  background: #590300;
+  border: 1px solid rgba(43, 43, 43, 0.93);
   position: relative;
   z-index: 1;
   width: 25%;
@@ -27,7 +27,20 @@
 
 @media screen and (max-width: 600px) {
   .button-mode-wow {
-    width: 90% !important;
+    border-color: #ea3012;
+    background: #590300;
+    border: 1px solid rgba(43, 43, 43, 0.93);
+    position: relative;
+    z-index: 1;
+    width: 70% !important;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 4vw;
+    display: block;
+    /* margin: 15px auto; */
+    margin: 20px auto;
+    cursor: pointer;
+    text-align: center;
   }
 
   .roll-but {
