@@ -82,6 +82,9 @@ class MainMenu extends Component {
                                     </NavLink>
                                     <MenuItem onClick={this.handleClose} disabled>Classic generator</MenuItem>
                                     <MenuItem onClick={this.handleClose} disabled>Name generator</MenuItem>
+                                    <NavLink to="about" activeClassName="activated-nav">
+                                        <MenuItem onClick={this.handleClose} className="mobile-text-black">About</MenuItem>
+                                    </NavLink>
                                 </Menu>
                             </div>
                         }

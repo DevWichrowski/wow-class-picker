@@ -1,15 +1,15 @@
 .info-footer {
 
   #current-version {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 5px;
     font-size: 12px;
   }
 
   #privcy-policy {
-    position: absolute;
-    bottom: 5px;
+    position: fixed;
+    bottom: 0px;
     left: 0;
     font-size: 12px;
   }
