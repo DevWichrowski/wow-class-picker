@@ -28,6 +28,7 @@ class MainMenu extends Component {
 
     componentDidMount() {
         window.addEventListener('resize', this.updateDimensions);
+        this.setState({width: window.outerWidth, height: window.outerHeight});
     }
 
     handleClick = event => {
@@ -45,7 +46,7 @@ class MainMenu extends Component {
                 <AppBar position="static" className="main-menu-bar">
                     <Toolbar>
                         <img src={wowRngLogo} className="wow-rng-logo"/>
-                        {window.outerWidth >= 970 ? <div className="flex-container">
+                        {this.state.width >= 970 ? <div className="flex-container">
                                 <div>
                                     <NavLink exact to="/" activeClassName="activated-nav">
                                         <Button className="nav-link">Class generator</Button>
@@ -83,7 +84,8 @@ class MainMenu extends Component {
                                     <MenuItem onClick={this.handleClose} disabled>Classic generator</MenuItem>
                                     <MenuItem onClick={this.handleClose} disabled>Name generator</MenuItem>
                                     <NavLink to="about" activeClassName="activated-nav">
-                                        <MenuItem onClick={this.handleClose} className="mobile-text-black">About</MenuItem>
+                                        <MenuItem onClick={this.handleClose}
+                                                  className="mobile-text-black">About</MenuItem>
                                     </NavLink>
                                 </Menu>
                             </div>
