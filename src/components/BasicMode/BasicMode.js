@@ -8,6 +8,7 @@ import {getAdvancedModeSelector, getFilteredRaces} from "../../store/selectors/r
 import QuestionMark from '../../assets/QuestionMark_icon.gif';
 import classesGif from "../../assets/gifs/classes-gif.gif";
 import "../../styles/animations.scss";
+import {Helmet} from "react-helmet";
 
 class BasicMode extends Component {
     constructor(props) {
@@ -49,6 +50,10 @@ class BasicMode extends Component {
     render() {
         return (
             <div>
+                <Helmet>
+                    <title>Random class picker | WOW RNG</title>
+                    <meta name="description" content="Random class picker, class generator for world of warcraft" />
+                </Helmet>
                 <div className="basic-mode slide-in-blurred-top">
                     <ClassIcon image={this.state.currentClassIcon}/>
                     <div className="races-classes">

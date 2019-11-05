@@ -11,6 +11,7 @@ import {getFilteredRaces} from "../../store/selectors/races.selector";
 import QuestionMark_icon from '../../assets/QuestionMark_icon.gif'
 import classesGif from "../../assets/gifs/classes-gif.gif";
 import racesGif from "../../assets/gifs/races-gif.gif";
+import {Helmet} from "react-helmet";
 
 class AdvancedMode extends Component {
     constructor(props) {
@@ -64,6 +65,10 @@ class AdvancedMode extends Component {
     render() {
         return (
             <div className="advanced-mode">
+                <Helmet>
+                    <title>Advanced class picker | WOW RNG</title>
+                    <meta name="description" content="Advanced class picker, choose your faction and role." />
+                </Helmet>
                 <div className="faction-role-container">
                     <FactionContainer/>
                     <RolesContainer/>
