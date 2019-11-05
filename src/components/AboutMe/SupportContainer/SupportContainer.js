@@ -1,7 +1,7 @@
 import React from 'react';
 import '../SupportContainer/SupportContainer.scss';
 
-function SupportContainer() {
+const SupportContainer = () => {
     return (
         <div className="support-container">
             <h3 className="text-roller">Support</h3>

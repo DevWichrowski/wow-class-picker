@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AboutProject() {
+const AboutProject = () => {
     return (
         <div className="about-container">
             <h3 className="text-roller">Project and Future Updates</h3>
@@ -11,7 +11,8 @@ function AboutProject() {
             </p>
             <br/>
             <br/>
-            <p className="text-roller font-about">It's a improved class generator becouse you can filter by roles etc.. Currently I
+            <p className="text-roller font-about">It's a improved class generator becouse you can filter by roles etc..
+                Currently I
                 working on another improvments like adding better quality images, better UI, specs :) <br/>
             </p>
         </div>

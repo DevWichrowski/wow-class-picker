@@ -5,7 +5,7 @@ import AboutAuthor from "./AboutAuthor/AboutAuthor";
 import AboutProject from "./AboutProject/AboutProject";
 import SupportContainer from "./SupportContainer/SupportContainer";
 
-function AboutMe() {
+const AboutMe = () => {
     return (
         <div className="about-me">
             <Helmet>

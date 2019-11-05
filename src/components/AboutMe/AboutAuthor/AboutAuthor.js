@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AboutAuthor() {
+const AboutAuthor = () => {
     return (
         <div className="about-container">
             <h3 className="text-roller">Author</h3>
