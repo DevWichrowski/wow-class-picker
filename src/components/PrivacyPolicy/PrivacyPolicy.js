@@ -2,12 +2,12 @@ import React from 'react';
 import '../PrivacyPolicy/PrivacyPolicy.scss';
 import {Helmet} from "react-helmet";
 
-function PrivacyPolicy() {
+const PrivacyPolicy = () => {
     return (
         <div className="privacy-policy">
             <Helmet>
                 <title>Privacy policy| WOW RNG</title>
-                <meta name="description" content="Privacy policy wow rng" />
+                <meta name="description" content="Privacy policy wow rng"/>
             </Helmet>
             <h1> Privacy policy and informations</h1>
             <div className="text-policy">
