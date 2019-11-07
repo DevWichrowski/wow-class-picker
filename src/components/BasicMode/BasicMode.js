@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import './BasicMode.scss';
 import ButtonRoller from '../ButtonRoller/ButtonRoller';
 import ClassIcon from '../ClassIcon/ClassIcon';
@@ -10,63 +10,55 @@ import classesGif from "../../assets/gifs/classes-gif.gif";
 import "../../styles/animations.scss";
 import {Helmet} from "react-helmet";
 
-class BasicMode extends Component {
-    constructor(props) {
-        super(props);
+const BasicMode = props => {
 
-        this.state = {
-            intervals: 30,
-            // currentClassIcon: this.props.classes[0].icon,
-            currentClassIcon: QuestionMark,
-            currentClassName: 'Click button'
-        };
-    }
+    const [rollIntervals, setRollIntervals] = useState(30);
+    const [currentClassIcon, setCurrentClassIcon] = useState(QuestionMark);
+    const [currentClassName, setCurrentClassName] = useState('Click button');
 
-    clearState = () => {
-        this.setState({intervals: 30, currentClassName: 'Rolling...'});
+
+    const clearState = () => {
+        setRollIntervals(30);
+        setCurrentClassName('Rolling...');
+        console.log('Cleared intervals', rollIntervals, currentClassName)
     };
 
-    rollIcons = () => {
-        this.clearState();
+    const rollIcons = () => {
+        clearState();
 
         const roller = setInterval(() => {
-            let rolledAnimationNumber = Math.floor(Math.random() * 11 + 1);
+            // let rolledAnimationNumber = Math.floor(Math.random() * 11 + 1);
 
-            this.setState({currentClassIcon: classesGif});
-            this.setState({currentClassName: 'Rolling...'});
-            this.setState({intervals: this.state.intervals - 1});
+            setCurrentClassIcon(classesGif);
+            setCurrentClassName('Rolling...');
+            setRollIntervals(rollIntervals => rollIntervals - 1);
 
-            if (this.state.intervals <= 0) {
+            if (rollIntervals <= 0) {
                 const randomClass = Math.floor(Math.random() * 11 + 1);
                 clearInterval(roller);
-                this.setState({
-                    currentClassName: this.props.classes[randomClass].name,
-                    currentClassIcon: this.props.classes[randomClass].icon
-                });
+                setCurrentClassName(props.classes[randomClass].name);
+                setCurrentClassIcon(props.classes[randomClass].icon)
             }
+            console.log('rollIntervals', rollIntervals);
         }, 100);
     };
-
-    render() {
-        return (
-            <div>
-                <Helmet>
-                    <title>Random class picker | WOW RNG</title>
-                    <meta name="description" content="Random class picker, class generator for world of warcraft" />
-                </Helmet>
-                <div className="basic-mode slide-in-blurred-top">
-                    <ClassIcon image={this.state.currentClassIcon}/>
-                    <div className="races-classes">
-                        <h2 className="text-roller class-text">{this.state.currentClassName}</h2>
-                    </div>
+    return (
+        <div>
+            <Helmet>
+                <title>Random class picker | WOW RNG</title>
+                <meta name="description" content="Random class picker, class generator for world of warcraft"/>
+            </Helmet>
+            <div className="basic-mode slide-in-blurred-top">
+                <ClassIcon image={currentClassIcon}/>
+                <div className="races-classes">
+                    <h2 className="text-roller class-text">{currentClassName}</h2>
                 </div>
-                <ButtonRoller roll={() => this.rollIcons()}/>
             </div>
+            <ButtonRoller roll={() => rollIcons()}/>
+        </div>
+    );
+};
 
-
-        );
-    }
-}
 
 const mapStateToProps = (state) => ({
     classes: getClassesSelector(state),

@@ -16,8 +16,8 @@ const RolesContainer = props => {
                 <h4 className="text-roller">CHOOSE YOUR ROLE</h4>
             </div>
             <div className="roles-main">
-                <div style={{position: 'relative'}} className={`role-row ${this.props.isTank ? 'selected' : ''}`}
-                     onClick={this.props.handleTank}>
+                <div style={{position: 'relative'}} className={`role-row ${props.isTank ? 'selected' : ''}`}
+                     onClick={props.handleTank}>
                     <img className="role-image" src={Tank_icon}
                          alt="World of Warcraft tank icon"/>
                     <div className="hover">
