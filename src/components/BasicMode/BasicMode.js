@@ -49,7 +49,7 @@ const BasicMode = props => {
                 <title>Random class picker | WOW RNG</title>
                 <meta name="description" content="Random class picker, class generator for world of warcraft"/>
             </Helmet>
-            <div className="basic-mode slide-in-blurred-top">
+            <div className="basic-mode">
                 <div className="classic-mode-container">
                     <p className="classic-text" onClick={() => setClassicMode(!classicMode)}>Classic mode</p>
                     {classicMode ?
