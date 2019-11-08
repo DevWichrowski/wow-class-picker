@@ -1,68 +1,109 @@
 .basic-mode {
-    color: white !important;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 60%;
-    overflow: auto;
-    position: relative;
-    margin: 90px auto 10px auto;
-    text-align: center;
-    border-radius: 10px;
-    padding-bottom: 50px;
+  color: white !important;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 60%;
+  overflow: auto;
+  position: relative;
+  margin: 90px auto 10px auto;
+  text-align: center;
+  border-radius: 10px;
+  padding-bottom: 50px;
 
-    .faction-role-container{
-        display: flex;
+  .faction-role-container {
+    display: flex;
+  }
+
+  .classic-mode-container {
+    display: flex;
+    justify-content: center;
+
+    .classic-text {
+      font-size: 14px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: -webkit-linear-gradient(top, #F5F5F5 0, #cbcbcb 38%, #F5F5F5 60%, #9c9c9c 86%, #F5F5F5 100%);
+      background-size: 1em 1em;
+      color: #e5f3ff;
+      display: inline-block;
+      position: relative;
+      text-transform: uppercase;
+
+      z-index: auto;
+      //border-left: 1px solid rgba(68, 47, 38, .5);
+      //border-right: 1px solid rgba(68, 47, 38, .5);
     }
 
-    .race-icon{
-        width: 75px;
-        height: 75px;
-        margin-left: 20px;
-        margin-right: 20px;
-        opacity: 0.6;
-        margin-top: 80px;
+    .disabled-classic {
+      font-size: 14px;
+      color: #ff0011;
+      display: inline-block;
+      position: relative;
+      text-transform: uppercase;
+      margin-left: 1rem;
+      z-index: auto;
     }
 
-    .class-text{
-        font-size: 36px!important;
-        margin-bottom: 20px;
+    .enabled-classic {
+      font-size: 14px;
+      color: #00ff1d;
+      display: inline-block;
+      position: relative;
+      text-transform: uppercase;
+      margin-left: 1rem;
+      z-index: auto;
     }
+  }
+
+  .race-icon {
+    width: 75px;
+    height: 75px;
+    margin-left: 20px;
+    margin-right: 20px;
+    opacity: 0.6;
+    margin-top: 80px;
+  }
+
+  .class-text {
+    font-size: 36px !important;
+    margin-bottom: 20px;
+  }
 
 
-    h1{
-        font-size: 42px;
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .races-classes {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #000000;
+
+    h2 {
+      margin: 0;
+
+      &:first-child {
+        margin-right: 10px;
+      }
     }
-
-    h2{
-        font-size: 20px;
-    }
-
-    .races-classes {
-        width: 100%;
-        padding: 5px;
-        display: flex;
-        position: absolute;
-        bottom: 0;
-        flex-direction: row;
-        justify-content: center;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        background-color: #000000;
-
-        h2 {
-            margin: 0;
-
-            &:first-child {
-                margin-right: 10px;
-            }
-        }
-    }
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .basic-mode {
-        width: 90%;
-        margin: 100px auto;
-        height: 60% !important;
-        padding: 50px 0;
-    }
+  .basic-mode {
+    width: 90%;
+    margin: 100px auto;
+    height: 60% !important;
+    padding: 50px 0;
+  }
 }

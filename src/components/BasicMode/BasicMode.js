@@ -9,12 +9,14 @@ import QuestionMark from '../../assets/QuestionMark_icon.gif';
 import classesGif from "../../assets/gifs/classes-gif.gif";
 import "../../styles/animations.scss";
 import {Helmet} from "react-helmet";
+import Checkbox from "@material-ui/core/Checkbox";
 
 const BasicMode = props => {
 
     const [rollIntervals, setRollIntervals] = useState(30);
     const [currentClassIcon, setCurrentClassIcon] = useState(QuestionMark);
     const [currentClassName, setCurrentClassName] = useState('Click button');
+    const [classicMode, setClassicMode] = useState(false);
 
 
     const clearState = () => {
@@ -49,6 +51,11 @@ const BasicMode = props => {
                 <meta name="description" content="Random class picker, class generator for world of warcraft"/>
             </Helmet>
             <div className="basic-mode slide-in-blurred-top">
+                <div className="classic-mode-container">
+                    <p className="classic-text">Classic mode</p>
+                    {classicMode ? <p className="enabled-classic">Enabled</p> :
+                        <p className="disabled-classic">Disabled</p>}
+                </div>
                 <ClassIcon image={currentClassIcon}/>
                 <div className="races-classes">
                     <h2 className="text-roller class-text">{currentClassName}</h2>
