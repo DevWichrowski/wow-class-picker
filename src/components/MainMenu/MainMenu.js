@@ -54,10 +54,13 @@ class MainMenu extends Component {
                                     <NavLink to="advanced-mode" activeClassName="activated-nav">
                                         <Button className="nav-link">Advanced generator</Button>
                                     </NavLink>
-                                    <Button className="nav-link-disabled" disabled>Classic generator</Button>
                                     <Button className="nav-link-disabled" disabled>Name generator</Button>
                                 </div>
-                                <div>
+                                <div className="about-donate-container">
+                                    <a href="https://www.paypal.com/donate/?token=A59J3N7MHpJZOo-C7in0Fd0oFWXhXaPOcRFUaeCBoow1Pgq0GTPUE2xu-NNhQbu8OPYztG"
+                                       rel="nofollow">
+                                        <Button className="nav-link">Donate</Button>
+                                    </a>
                                     <NavLink to="/about" activeClassName="activated-nav">
                                         <Button className="nav-link">About</Button>
                                     </NavLink>

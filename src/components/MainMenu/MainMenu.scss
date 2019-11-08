@@ -22,6 +22,10 @@
     justify-content: space-between;
     width: 100%;
   }
+
+  .about-donate-container {
+    display: flex;
+  }
 }
 
 .bg-dark {
@@ -180,15 +184,15 @@ a:hover {
   margin-left: 30%;
 
   a {
-    color: black!important;
+    color: black !important;
   }
 
   li {
-    color: black!important;
+    color: black !important;
   }
 
   .mobile-text-black {
-    color: black!important;
+    color: black !important;
   }
 }
 
@@ -196,13 +200,13 @@ a:hover {
   color: #F5F5F5;
 }
 
-.mobile-true-menu{
+.mobile-true-menu {
 }
 
-.MuiPaper-root{
-  color: black!important;
+.MuiPaper-root {
+  color: black !important;
 
-  a{
-    color: black!important;
+  a {
+    color: black !important;
   }
 }
