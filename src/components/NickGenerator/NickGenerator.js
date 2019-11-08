@@ -7,7 +7,27 @@ import QuestionMark from '../../assets/QuestionMark_icon.gif';
 
 const NickGenerator = props => {
 
-    const nicksArr = ['asdasd', 'vcxbcvb', 'qweqwe', 'gfdsgdf', 'qweqwe', 'vdfcvbdf'];
+    const nicksArr = [
+        'Ridbeorth',
+        'Bandojo',
+        'Retmac',
+        'Retthy',
+        'Ridhal',
+        'Arga',
+        'Ceocanar',
+        'Phieneth',
+        'Leear',
+        'Frithrob',
+        'Hamsere',
+        'Nielron',
+        'Cafrith',
+        'Terthryth',
+        'Anferth',
+        'Wilu',
+        'Athony',
+        'Jeffbard',
+        'Ardhal',
+        'Brisig'];
 
     const [rollIntervals, setRollIntervals] = useState(30);
     const [status, setStatus] = useState('Click button');
@@ -58,7 +78,7 @@ const NickGenerator = props => {
                     <h2 className="text-roller class-text">{status}</h2>
                 </div>
             </div>
-            <ButtonRoller roll={() => rollNick} textButton="GENERATE NICK"/>
+            <ButtonRoller roll={() => rollNick()} textButton="GENERATE NICK"/>
         </div>
     );
 };
