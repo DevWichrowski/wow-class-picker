@@ -27,7 +27,7 @@
       display: inline-block;
       position: relative;
       text-transform: uppercase;
-
+      cursor: pointer;
       z-index: auto;
       //border-left: 1px solid rgba(68, 47, 38, .5);
       //border-right: 1px solid rgba(68, 47, 38, .5);
@@ -41,6 +41,7 @@
       text-transform: uppercase;
       margin-left: 1rem;
       z-index: auto;
+      cursor: pointer;
     }
 
     .enabled-classic {
@@ -51,6 +52,7 @@
       text-transform: uppercase;
       margin-left: 1rem;
       z-index: auto;
+      cursor: pointer;
     }
   }
 

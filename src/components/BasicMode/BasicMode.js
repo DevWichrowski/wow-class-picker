@@ -22,7 +22,6 @@ const BasicMode = props => {
     const clearState = () => {
         setRollIntervals(30);
         setCurrentClassName('Rolling...');
-        console.log('Cleared intervals', rollIntervals, currentClassName)
     };
 
     const rollIcons = () => {
@@ -52,9 +51,10 @@ const BasicMode = props => {
             </Helmet>
             <div className="basic-mode slide-in-blurred-top">
                 <div className="classic-mode-container">
-                    <p className="classic-text">Classic mode</p>
-                    {classicMode ? <p className="enabled-classic">Enabled</p> :
-                        <p className="disabled-classic">Disabled</p>}
+                    <p className="classic-text" onClick={() => setClassicMode(!classicMode)}>Classic mode</p>
+                    {classicMode ?
+                        <p className="enabled-classic" onClick={() => setClassicMode(!classicMode)}>Enabled</p> :
+                        <p className="disabled-classic" onClick={() => setClassicMode(!classicMode)}>Disabled</p>}
                 </div>
                 <ClassIcon image={currentClassIcon}/>
                 <div className="races-classes">
