@@ -54,7 +54,10 @@ class MainMenu extends Component {
                                     <NavLink to="advanced-mode" activeClassName="activated-nav">
                                         <Button className="nav-link">Advanced generator</Button>
                                     </NavLink>
-                                    <Button className="nav-link-disabled" disabled>Name generator</Button>
+                                    <NavLink to="nick-generator" activeClassName="activated-nav">
+                                        <Button className="nav-link">Nick generator</Button>
+                                    </NavLink>
+
                                 </div>
                                 <div className="about-donate-container">
                                     <a href="https://www.paypal.com/donate/?token=A59J3N7MHpJZOo-C7in0Fd0oFWXhXaPOcRFUaeCBoow1Pgq0GTPUE2xu-NNhQbu8OPYztG"
@@ -84,7 +87,10 @@ class MainMenu extends Component {
                                         <MenuItem onClick={this.handleClose} className="mobile-text-black">Advanced
                                             generator</MenuItem>
                                     </NavLink>
-                                    <MenuItem onClick={this.handleClose} disabled>Name generator</MenuItem>
+                                    <NavLink to="nick-generator" activeClassName="activated-nav">
+                                        <MenuItem onClick={this.handleClose} className="mobile-text-black">Nick
+                                            generator</MenuItem>
+                                    </NavLink>
                                     <NavLink to="about" activeClassName="activated-nav">
                                         <MenuItem onClick={this.handleClose}
                                                   className="mobile-text-black">About</MenuItem>
