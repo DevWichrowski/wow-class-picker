@@ -22,7 +22,7 @@ function App() {
                 <Route path="/advanced-mode" component={AdvancedMode}/>
                 <Route path="/about" component={AboutMe}/>
                 <Route path="/privacy-policy" component={PrivacyPolicy}/>
-                <Route path="nick-generator" component={NickGenerator}/>
+                <Route path="/nick-generator" component={NickGenerator}/>
                 <InfoFooter/>
             </BrowserRouter>
         </div>

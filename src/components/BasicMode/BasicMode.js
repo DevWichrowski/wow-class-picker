@@ -76,7 +76,7 @@ const BasicMode = props => {
                     <h2 className="text-roller class-text">{currentClassName}</h2>
                 </div>
             </div>
-            <ButtonRoller roll={() => rollIcons()}/>
+            <ButtonRoller roll={() => rollIcons()} textButton="ROLL CLASS"/>
         </div>
     );
 };

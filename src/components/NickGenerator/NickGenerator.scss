@@ -1,0 +1,44 @@
+.nick-generator {
+  color: white !important;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 60%;
+  overflow: auto;
+  position: relative;
+  margin: 90px auto 10px auto;
+  text-align: center;
+  border-radius: 10px;
+
+  .nick-text {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(top, #F5F5F5 0, #cbcbcb 38%, #F5F5F5 60%, #9c9c9c 86%, #F5F5F5 100%);
+    background-size: 1em 1em;
+    color: #f8b700;
+    position: relative;
+    z-index: auto;
+    margin-top: 1rem;
+  }
+
+  .messages-container {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #000000;
+
+    h1 {
+      margin: 0;
+
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+  .nick-container {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+}

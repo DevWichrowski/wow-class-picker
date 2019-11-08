@@ -86,7 +86,7 @@ const AdvancedMode = props => {
                     <h1 className="text-roller"> {currentClassName}</h1>
                 </div>
             </div>
-            <ButtonRoller roll={rollIcons}/>
+            <ButtonRoller roll={rollIcons} textButton="ROLL CLASS"/>
         </div>
     );
 };
