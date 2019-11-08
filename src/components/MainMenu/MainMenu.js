@@ -57,10 +57,14 @@ class MainMenu extends Component {
                                     <Button className="nav-link-disabled" disabled>Name generator</Button>
                                 </div>
                                 <div className="about-donate-container">
-                                    <a href="https://www.paypal.com/donate/?token=A59J3N7MHpJZOo-C7in0Fd0oFWXhXaPOcRFUaeCBoow1Pgq0GTPUE2xu-NNhQbu8OPYztG"
-                                       rel="nofollow">
-                                        <Button className="nav-link">Donate</Button>
-                                    </a>
+                                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                        <input type="hidden" name="cmd" value="_s-xclick"/>
+                                        <input type="hidden" name="hosted_button_id" value="QXAZSELTGRAT2"/>
+                                        <Button name="submit" type="submit"
+                                                title="PayPal - The safer, easier way to pay online!"
+                                                alt="Donate with PayPal button" rel="nofollow"
+                                                className="nav-link">Donate</Button>
+                                    </form>
                                     <NavLink to="/about" activeClassName="activated-nav">
                                         <Button className="nav-link">About</Button>
                                     </NavLink>
