@@ -84,12 +84,16 @@ class MainMenu extends Component {
                                         <MenuItem onClick={this.handleClose} className="mobile-text-black">Advanced
                                             generator</MenuItem>
                                     </NavLink>
-                                    <MenuItem onClick={this.handleClose} disabled>Classic generator</MenuItem>
                                     <MenuItem onClick={this.handleClose} disabled>Name generator</MenuItem>
                                     <NavLink to="about" activeClassName="activated-nav">
                                         <MenuItem onClick={this.handleClose}
                                                   className="mobile-text-black">About</MenuItem>
                                     </NavLink>
+                                    <a href="https://www.paypal.com/donate/?token=A59J3N7MHpJZOo-C7in0Fd0oFWXhXaPOcRFUaeCBoow1Pgq0GTPUE2xu-NNhQbu8OPYztG"
+                                       rel="nofollow">
+                                        <MenuItem onClick={this.handleClose}
+                                                  className="mobile-text-black">Donate</MenuItem>
+                                    </a>
                                 </Menu>
                             </div>
                         }
