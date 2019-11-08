@@ -50,7 +50,7 @@ const NickGenerator = props => {
                 setStartRoll(true);
 
                 if (rollIntervals <= 0) {
-                    const randomNick = Math.floor(Math.random() * nicksArr + 1);
+                    const randomNick = Math.floor(Math.random() * nicksArr.length + 1);
                     clearInterval(roller);
                     setStatus('Click button');
                     setRolledNick(nicksArr[randomNick]);
