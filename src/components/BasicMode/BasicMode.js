@@ -9,7 +9,6 @@ import QuestionMark from '../../assets/QuestionMark_icon.gif';
 import classesGif from "../../assets/gifs/classes-gif.gif";
 import "../../styles/animations.scss";
 import {Helmet} from "react-helmet";
-import Checkbox from "@material-ui/core/Checkbox";
 
 const BasicMode = props => {
 
