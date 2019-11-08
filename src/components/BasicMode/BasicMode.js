@@ -27,19 +27,19 @@ const BasicMode = props => {
         clearState();
 
         const roller = setInterval(() => {
-            // let rolledAnimationNumber = Math.floor(Math.random() * 11 + 1);
+            setRollIntervals(rollIntervals => {
+                setCurrentClassIcon(classesGif);
+                setCurrentClassName('Rolling...');
 
-            setCurrentClassIcon(classesGif);
-            setCurrentClassName('Rolling...');
-            setRollIntervals(rollIntervals => rollIntervals - 1);
+                if (rollIntervals <= 0) {
+                    const randomClass = Math.floor(Math.random() * 11 + 1);
+                    clearInterval(roller);
+                    setCurrentClassName(props.classes[randomClass].name);
+                    setCurrentClassIcon(props.classes[randomClass].icon)
+                }
 
-            if (rollIntervals <= 0) {
-                const randomClass = Math.floor(Math.random() * 11 + 1);
-                clearInterval(roller);
-                setCurrentClassName(props.classes[randomClass].name);
-                setCurrentClassIcon(props.classes[randomClass].icon)
-            }
-            console.log('rollIntervals', rollIntervals);
+                return rollIntervals - 1;
+            });
         }, 100);
     };
     return (
