@@ -7,6 +7,7 @@ import {getClassesSelector} from "../../store/selectors/classes.selector";
 import {getAdvancedModeSelector, getFilteredRaces} from "../../store/selectors/races.selector";
 import QuestionMark from '../../assets/QuestionMark_icon.gif';
 import classesGif from "../../assets/gifs/classes-gif.gif";
+import classicGif from "../../assets/gifs/classic-gif.gif";
 import "../../styles/animations.scss";
 import {Helmet} from "react-helmet";
 
@@ -28,6 +29,21 @@ const BasicMode = props => {
 
         const roller = setInterval(() => {
             setRollIntervals(rollIntervals => {
+
+                if (classicMode) {
+                    setCurrentClassIcon(classicGif);
+                    setCurrentClassName('Rolling...');
+
+                    if (rollIntervals <= 0) {
+                        const classicRandoms = Math.floor(Math.random() * 8 + 1);
+                        clearInterval(roller);
+                        setCurrentClassName(props.classes[classicRandoms].name);
+                        setCurrentClassIcon(props.classes[classicRandoms].icon)
+                    }
+
+                    return rollIntervals - 1;
+                }
+
                 setCurrentClassIcon(classesGif);
                 setCurrentClassName('Rolling...');
 
