@@ -35,27 +35,30 @@ const AdvancedMode = props => {
         const randomClasses = Math.floor(Math.random() * props.filteredRaces[randomRaces].classes.length);
 
         const roller = setInterval(() => {
+            setRollIntervals(rollIntervals => {
+                setCurrentClassIcon(classesGif);
+                setCurrentRaceIcon(racesGif);
+                setRollIntervals(rollIntervals - 1);
 
-            setCurrentClassIcon(classesGif);
-            setCurrentRaceIcon(racesGif);
-            setRollIntervals(rollIntervals - 1);
+                if (rollIntervals <= 0) {
 
-            if (rollIntervals <= 0) {
+                    clearInterval(roller);
 
-                clearInterval(roller);
+                    let filteredRandomClasses = props.filteredRaces[randomRaces].classes[randomClasses];
 
-                let filteredRandomClasses = props.filteredRaces[randomRaces].classes[randomClasses];
+                    if (filteredRandomClasses === undefined) {
+                        rollIcons();
+                        return;
+                    }
 
-                if (filteredRandomClasses === undefined) {
-                    rollIcons();
-                    return;
+                    setCurrentClassName(props.filteredRaces[randomRaces].classes[randomClasses].name);
+                    setCurrentRaceName(props.filteredRaces[randomRaces].name);
+                    setCurrentClassIcon(props.filteredRaces[randomRaces].classes[randomClasses].icon);
+                    setCurrentRaceIcon(props.filteredRaces[randomRaces].race_icon);
                 }
 
-                setCurrentClassName(props.filteredRaces[randomRaces].classes[randomClasses].name);
-                setCurrentRaceName(props.filteredRaces[randomRaces].name);
-                setCurrentClassIcon(props.filteredRaces[randomRaces].classes[randomClasses].icon);
-                setCurrentRaceIcon(props.filteredRaces[randomRaces].race_icon);
-            }
+                return rollIntervals - 1;
+            })
         }, 100);
     };
 
