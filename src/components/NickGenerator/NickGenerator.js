@@ -29,13 +29,13 @@ const NickGenerator = props => {
         'Ardhal',
         'Brisig'];
 
-    const [rollIntervals, setRollIntervals] = useState(30);
+    const [rollIntervals, setRollIntervals] = useState(20);
     const [status, setStatus] = useState('Click button');
     const [startRoll, setStartRoll] = useState(false);
-    const [rolledNick, setRolledNick] = useState('')
+    const [generatedNick, setGeneratedNick] = useState('')
 
     const clearState = () => {
-        setRollIntervals(30);
+        setRollIntervals(20);
         setStatus('Click button');
     };
 
@@ -53,7 +53,7 @@ const NickGenerator = props => {
                     const randomNick = Math.floor(Math.random() * nicksArr.length + 1);
                     clearInterval(roller);
                     setStatus('Click button');
-                    setRolledNick(nicksArr[randomNick]);
+                    setGeneratedNick(nicksArr[randomNick]);
                     console.log('nicksArr[randomNick]', nicksArr[randomNick])
                 }
 
@@ -71,7 +71,7 @@ const NickGenerator = props => {
             <div className="nick-generator">
                 <h4 className="nick-text">Nick generator</h4>
                 <div className="nick-container">
-                    {startRoll ? <h2 className="nick-text">{rolledNick}</h2> : <ClassIcon image={QuestionMark}/>}
+                    {startRoll ? <h2 className="nick-text">{generatedNick}</h2> : <ClassIcon image={QuestionMark}/>}
                 </div>
 
                 <div className="messages-container">
