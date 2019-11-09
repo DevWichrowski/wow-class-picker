@@ -7,13 +7,13 @@ import QuestionMark from '../../assets/QuestionMark_icon.gif';
 import nicknameCollection from "../../utils/nickname-collections";
 
 const NickGenerator = props => {
-    const [rollIntervals, setRollIntervals] = useState(20);
+    const [rollIntervals, setRollIntervals] = useState(10);
     const [status, setStatus] = useState('Click button');
     const [startRoll, setStartRoll] = useState(false);
     const [generatedNick, setGeneratedNick] = useState(null);
 
     const clearState = () => {
-        setRollIntervals(20);
+        setRollIntervals(10);
         setStatus('Click button');
         setGeneratedNick('...');
     };
