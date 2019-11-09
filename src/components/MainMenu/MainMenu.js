@@ -46,7 +46,9 @@ class MainMenu extends Component {
             <div className="main-menu slide-in-top">
                 <AppBar position="static" className="main-menu-bar">
                     <Toolbar>
-                        <img src={wowRngLogo} className="wow-rng-logo"/>
+                        <NavLink exact to="/" activeClassName="activated-nav">
+                            <img src={wowRngLogo} className="wow-rng-logo"/>
+                        </NavLink>
                         {this.state.width >= 970 ? <div className="flex-container">
                                 <div>
                                     <NavLink exact to="/" activeClassName="activated-nav">
@@ -64,8 +66,8 @@ class MainMenu extends Component {
                                 </div>
                                 <div className="about-donate-container">
                                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                                        <input type="hidden" name="cmd" value="_s-xclick" />
-                                        <input type="hidden" name="hosted_button_id" value="HKXVGS2CBDS3G" />
+                                        <input type="hidden" name="cmd" value="_s-xclick"/>
+                                        <input type="hidden" name="hosted_button_id" value="HKXVGS2CBDS3G"/>
                                         <Button name="submit" type="submit"
                                                 title="PayPal - The safer, easier way to pay online!"
                                                 alt="Donate with PayPal button" rel="nofollow"
@@ -94,17 +96,17 @@ class MainMenu extends Component {
                                         <MenuItem onClick={this.handleClose} className="mobile-text-black">Advanced
                                             generator</MenuItem>
                                     </NavLink>
-                                        <NavLink to="nick-generator" activeClassName="activated-nav">
-                                            <MenuItem onClick={this.handleClose} className="mobile-text-black">Nick
-                                                generator</MenuItem>
-                                        </NavLink>
+                                    <NavLink to="nick-generator" activeClassName="activated-nav">
+                                        <MenuItem onClick={this.handleClose} className="mobile-text-black">Nick
+                                            generator</MenuItem>
+                                    </NavLink>
                                     <NavLink to="about" activeClassName="activated-nav">
                                         <MenuItem onClick={this.handleClose}
                                                   className="mobile-text-black">About</MenuItem>
                                     </NavLink>
                                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                                        <input type="hidden" name="cmd" value="_s-xclick" />
-                                        <input type="hidden" name="hosted_button_id" value="HKXVGS2CBDS3G" />
+                                        <input type="hidden" name="cmd" value="_s-xclick"/>
+                                        <input type="hidden" name="hosted_button_id" value="HKXVGS2CBDS3G"/>
                                         <Button name="submit" type="submit"
                                                 title="PayPal - The safer, easier way to pay online!"
                                                 alt="Donate with PayPal button" rel="nofollow"
