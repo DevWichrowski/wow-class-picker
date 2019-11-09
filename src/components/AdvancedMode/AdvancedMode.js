@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import './AdvancedMode.scss';
 import '../../styles/styles.scss';
 import RolesContainer from "./RolesContainer/RolesContainer";
@@ -13,85 +13,83 @@ import classesGif from "../../assets/gifs/classes-gif.gif";
 import racesGif from "../../assets/gifs/races-gif.gif";
 import {Helmet} from "react-helmet";
 
-class AdvancedMode extends Component {
-    constructor(props) {
-        super(props);
 
-        this.state = {
-            intervals: 25,
-            currentClassIcon: QuestionMark_icon,
-            currentRaceIcon: null,
-            currentRaceName: 'Click button below',
-            currentClassName: '',
-        };
-    }
+const AdvancedMode = props => {
 
-    clearState = () => {
-        this.setState({intervals: 25, currentRaceName: 'Rolling...', currentClassName: null});
+
+    const [rollIntervals, setRollIntervals] = useState(25);
+    const [currentClassIcon, setCurrentClassIcon] = useState(QuestionMark_icon);
+    const [currentRaceIcon, setCurrentRaceIcon] = useState(null);
+    const [currentRaceName, setCurrentRaceName] = useState('Click button below');
+    const [currentClassName, setCurrentClassName] = useState('');
+
+    const clearState = () => {
+        setRollIntervals(25);
+        setCurrentRaceName('Rolling...');
+        setCurrentClassName(null)
     };
 
-    rollIcons = () => {
-        this.clearState();
-        const randomRaces = Math.floor(Math.random() * this.props.filteredRaces.length);
-        const randomClasses = Math.floor(Math.random() * this.props.filteredRaces[randomRaces].classes.length);
+    const rollIcons = () => {
+        clearState();
+        const randomRaces = Math.floor(Math.random() * props.filteredRaces.length);
+        const randomClasses = Math.floor(Math.random() * props.filteredRaces[randomRaces].classes.length);
 
         const roller = setInterval(() => {
+            setRollIntervals(rollIntervals => {
+                setCurrentClassIcon(classesGif);
+                setCurrentRaceIcon(racesGif);
+                setRollIntervals(rollIntervals - 1);
 
-            this.setState({currentClassIcon: classesGif});
-            this.setState({currentRaceIcon: racesGif});
-            this.setState({intervals: this.state.intervals - 1});
+                if (rollIntervals <= 0) {
 
-            if (this.state.intervals <= 0) {
+                    clearInterval(roller);
 
-                clearInterval(roller);
+                    let filteredRandomClasses = props.filteredRaces[randomRaces].classes[randomClasses];
 
-                let filteredRandomClasses = this.props.filteredRaces[randomRaces].classes[randomClasses];
+                    if (filteredRandomClasses === undefined) {
+                        rollIcons();
+                        return;
+                    }
 
-                if (filteredRandomClasses === undefined) {
-                    this.rollIcons();
-                    return;
+                    setCurrentClassName(props.filteredRaces[randomRaces].classes[randomClasses].name);
+                    setCurrentRaceName(props.filteredRaces[randomRaces].name);
+                    setCurrentClassIcon(props.filteredRaces[randomRaces].classes[randomClasses].icon);
+                    setCurrentRaceIcon(props.filteredRaces[randomRaces].race_icon);
                 }
 
-                this.setState({
-                    currentClassName: this.props.filteredRaces[randomRaces].classes[randomClasses].name,
-                    currentRaceName: this.props.filteredRaces[randomRaces].name,
-                    currentClassIcon: this.props.filteredRaces[randomRaces].classes[randomClasses].icon,
-                    currentRaceIcon: this.props.filteredRaces[randomRaces].race_icon
-                });
-            }
+                return rollIntervals - 1;
+            })
         }, 100);
     };
 
-    render() {
-        return (
-            <div className="advanced-mode">
-                <Helmet>
-                    <title>Advanced class picker | WOW RNG</title>
-                    <meta name="description" content="Advanced class picker, choose your faction and role." />
-                </Helmet>
-                <div className="faction-role-container">
-                    <FactionContainer/>
-                    <RolesContainer/>
-                </div>
-                <div className="images-container">
-                    <div className="images-container-main">
-                        {this.state.currentRaceIcon != null ?
-                            <img className="race-icon" src={this.state.currentRaceIcon}
-                                 alt="World of Warcraft Race icon"/> :
-                            null}
-                        <ClassIcon image={this.state.currentClassIcon}/>
-                    </div>
-                    <div className="races-classes">
-                        <h1 className="text-roller">{this.state.currentRaceName}</h1>
-                        <br/>
-                        <h1 className="text-roller"> {this.state.currentClassName}</h1>
-                    </div>
-                </div>
-                <ButtonRoller roll={this.rollIcons}/>
+    return (
+        <div className="advanced-mode">
+            <Helmet>
+                <title>Advanced class picker | WOW RNG</title>
+                <meta name="description" content="Advanced class picker, choose your faction and role."/>
+            </Helmet>
+            <div className="faction-role-container">
+                <FactionContainer/>
+                <RolesContainer/>
             </div>
-        );
-    }
-}
+            <div className="images-container">
+                <div className="images-container-main">
+                    {currentRaceIcon != null ?
+                        <img className="race-icon" src={currentRaceIcon}
+                             alt="World of Warcraft Race icon"/> :
+                        null}
+                    <ClassIcon image={currentClassIcon}/>
+                </div>
+                <div className="races-classes">
+                    <h1 className="text-roller">{currentRaceName}</h1>
+                    <br/>
+                    <h1 className="text-roller"> {currentClassName}</h1>
+                </div>
+            </div>
+            <ButtonRoller roll={rollIcons} textButton="ROLL CLASS"/>
+        </div>
+    );
+};
 
 const mapStateToProps = (state) => ({
     classes: getClassesSelector(state),

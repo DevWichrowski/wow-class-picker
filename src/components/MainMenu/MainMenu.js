@@ -10,6 +10,7 @@ import {NavLink} from "react-router-dom";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Icon from "@material-ui/core/Icon";
+import Badge from "@material-ui/core/Badge";
 
 class MainMenu extends Component {
     constructor(props) {
@@ -54,7 +55,12 @@ class MainMenu extends Component {
                                     <NavLink to="advanced-mode" activeClassName="activated-nav">
                                         <Button className="nav-link">Advanced generator</Button>
                                     </NavLink>
-                                    <Button className="nav-link-disabled" disabled>Name generator</Button>
+                                    <Badge color="secondary" badgeContent={'New'}>
+                                        <NavLink to="nick-generator" activeClassName="activated-nav">
+                                            <Button className="nav-link">Nick generator</Button>
+                                        </NavLink>
+                                    </Badge>
+
                                 </div>
                                 <div className="about-donate-container">
                                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -88,7 +94,10 @@ class MainMenu extends Component {
                                         <MenuItem onClick={this.handleClose} className="mobile-text-black">Advanced
                                             generator</MenuItem>
                                     </NavLink>
-                                    <MenuItem onClick={this.handleClose} disabled>Name generator</MenuItem>
+                                        <NavLink to="nick-generator" activeClassName="activated-nav">
+                                            <MenuItem onClick={this.handleClose} className="mobile-text-black">Nick
+                                                generator</MenuItem>
+                                        </NavLink>
                                     <NavLink to="about" activeClassName="activated-nav">
                                         <MenuItem onClick={this.handleClose}
                                                   className="mobile-text-black">About</MenuItem>

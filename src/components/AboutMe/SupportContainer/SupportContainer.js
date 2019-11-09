@@ -4,22 +4,15 @@ import '../SupportContainer/SupportContainer.scss';
 const SupportContainer = () => {
     return (
         <div className="support-container">
-            <h3 className="text-roller">Support</h3>
+            <h3 className="text-roller">Contact</h3>
             <hr/>
-            {/*<p className="text-roller font-about">And what with supporting me?</p>*/}
-            {/*<br />*/}
-            {/*<p className="text-roller font-about">I will work on project alone, so it will definitely take some time.</p>*/}
-            {/*<p className="text-roller font-about">You can help me giving additional ideas and advices about how to*/}
-            {/*    improve project and also reporting bugs on my mail below:</p>*/}
-            {/*<br/>*/}
-            {/*<div className="support-button">*/}
-            {/*    <a href="mail:to wicherwowuszek@gmail.com">wicherwowuszek@gmail.com</a>*/}
-            {/*</div>*/}
-            {/*<br/>*/}
+            <div className="support-button">
+                <a href="mailto:thewowrng@gmail.com">THEWOWRNG@GMAIL.COM</a>
+            </div>
+            <br/>
             <p className="text-roller font-about">If you want to support me with with this and other project:</p>
             <br/>
             <br/>
-            {/*<div className="support-button">*/}
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                 <input type="hidden" name="cmd" value="_s-xclick" />
                 <input type="hidden" name="hosted_button_id" value="HKXVGS2CBDS3G" />
