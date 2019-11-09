@@ -37,6 +37,7 @@ const NickGenerator = props => {
     const clearState = () => {
         setRollIntervals(20);
         setStatus('Click button');
+        setGeneratedNick(null);
     };
 
     const rollNick = () => {
@@ -45,8 +46,7 @@ const NickGenerator = props => {
         const roller = setInterval(() => {
             setRollIntervals(rollIntervals => {
 
-                setStatus('Rolling...');
-                // setRolledNick('...');
+                setStatus('Generating...');
                 setStartRoll(true);
 
                 if (rollIntervals <= 0) {
@@ -71,7 +71,8 @@ const NickGenerator = props => {
             <div className="nick-generator">
                 <h4 className="nick-text">Nick generator</h4>
                 <div className="nick-container">
-                    {startRoll ? <h2 className="nick-text">{generatedNick}</h2> : <ClassIcon image={QuestionMark}/>}
+                    {startRoll ? <h2 className="nick-text-generated">{generatedNick}</h2> :
+                        <ClassIcon image={QuestionMark}/>}
                 </div>
 
                 <div className="messages-container">

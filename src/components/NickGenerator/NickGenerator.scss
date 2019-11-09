@@ -19,6 +19,25 @@
     margin-top: 1rem;
   }
 
+  .nick-text-generated{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(top, #F5F5F5 0, #cbcbcb 38%, #F5F5F5 60%, #9c9c9c 86%, #F5F5F5 100%);
+    background-size: 1em 1em;
+    color: #f8b700;
+    position: relative;
+    z-index: auto;
+    margin-top: 1rem;
+    font-size: 4rem;
+  }
+  .question-mark-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px !important;
+    max-height: 200px !important;
+  }
+
   .messages-container {
     width: 100%;
     padding: 5px;
@@ -37,8 +56,13 @@
       }
     }
   }
+
   .nick-container {
     margin-top: 5rem;
     margin-bottom: 5rem;
+    min-height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
