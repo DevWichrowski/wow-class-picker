@@ -4,40 +4,18 @@ import "./NickGenerator.scss"
 import ButtonRoller from "../ButtonRoller/ButtonRoller";
 import ClassIcon from "../ClassIcon/ClassIcon";
 import QuestionMark from '../../assets/QuestionMark_icon.gif';
+import nicknameCollection from "../../utils/nickname-collections";
 
 const NickGenerator = props => {
-
-    const nicksArr = [
-        'Ridbeorth',
-        'Bandojo',
-        'Retmac',
-        'Retthy',
-        'Ridhal',
-        'Arga',
-        'Ceocanar',
-        'Phieneth',
-        'Leear',
-        'Frithrob',
-        'Hamsere',
-        'Nielron',
-        'Cafrith',
-        'Terthryth',
-        'Anferth',
-        'Wilu',
-        'Athony',
-        'Jeffbard',
-        'Ardhal',
-        'Brisig'];
-
     const [rollIntervals, setRollIntervals] = useState(20);
     const [status, setStatus] = useState('Click button');
     const [startRoll, setStartRoll] = useState(false);
-    const [generatedNick, setGeneratedNick] = useState('')
+    const [generatedNick, setGeneratedNick] = useState(null);
 
     const clearState = () => {
         setRollIntervals(20);
         setStatus('Click button');
-        setGeneratedNick(null);
+        setGeneratedNick('...');
     };
 
     const rollNick = () => {
@@ -50,11 +28,11 @@ const NickGenerator = props => {
                 setStartRoll(true);
 
                 if (rollIntervals <= 0) {
-                    const randomNick = Math.floor(Math.random() * nicksArr.length + 1);
+                    const randomNick = Math.floor(Math.random() * nicknameCollection.length + 1);
                     clearInterval(roller);
                     setStatus('Click button');
-                    setGeneratedNick(nicksArr[randomNick]);
-                    console.log('nicksArr[randomNick]', nicksArr[randomNick])
+                    setGeneratedNick(nicknameCollection[randomNick]);
+                    console.log('nicksArr[randomNick]', nicknameCollection[randomNick])
                 }
 
                 return rollIntervals - 1;
