@@ -58,8 +58,8 @@ class MainMenu extends Component {
                                 </div>
                                 <div className="about-donate-container">
                                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                                        <input type="hidden" name="cmd" value="_s-xclick"/>
-                                        <input type="hidden" name="hosted_button_id" value="QXAZSELTGRAT2"/>
+                                        <input type="hidden" name="cmd" value="_s-xclick" />
+                                        <input type="hidden" name="hosted_button_id" value="HKXVGS2CBDS3G" />
                                         <Button name="submit" type="submit"
                                                 title="PayPal - The safer, easier way to pay online!"
                                                 alt="Donate with PayPal button" rel="nofollow"
@@ -93,9 +93,9 @@ class MainMenu extends Component {
                                         <MenuItem onClick={this.handleClose}
                                                   className="mobile-text-black">About</MenuItem>
                                     </NavLink>
-                                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" className="mobile-text-black">
-                                        <input type="hidden" name="cmd" value="_s-xclick"/>
-                                        <input type="hidden" name="hosted_button_id" value="QXAZSELTGRAT2"/>
+                                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                        <input type="hidden" name="cmd" value="_s-xclick" />
+                                        <input type="hidden" name="hosted_button_id" value="HKXVGS2CBDS3G" />
                                         <Button name="submit" type="submit"
                                                 title="PayPal - The safer, easier way to pay online!"
                                                 alt="Donate with PayPal button" rel="nofollow"
