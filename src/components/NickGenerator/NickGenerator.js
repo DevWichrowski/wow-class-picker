@@ -32,7 +32,6 @@ const NickGenerator = props => {
                     clearInterval(roller);
                     setStatus('Click button');
                     setGeneratedNick(nicknameCollection[randomNick]);
-                    console.log('nicksArr[randomNick]', nicknameCollection[randomNick])
                 }
 
                 return rollIntervals - 1;
