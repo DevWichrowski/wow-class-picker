@@ -3,7 +3,7 @@ import './BasicMode.scss';
 import ButtonRoller from '../ButtonRoller/ButtonRoller';
 import ClassIcon from '../ClassIcon/ClassIcon';
 import {connect} from 'react-redux';
-import {getClassesSelector} from "../../store/selectors/classes.selector";
+import {getClassesSelector, getClassicClassesSelector} from "../../store/selectors/classes.selector";
 import {getAdvancedModeSelector, getFilteredRaces} from "../../store/selectors/races.selector";
 import QuestionMark from '../../assets/QuestionMark_icon.gif';
 import classesGif from "../../assets/gifs/classes-gif.gif";
@@ -37,8 +37,8 @@ const BasicMode = props => {
                     if (rollIntervals <= 0) {
                         const classicRandoms = Math.floor(Math.random() * 8 + 1);
                         clearInterval(roller);
-                        setCurrentClassName(props.classes[classicRandoms].name);
-                        setCurrentClassIcon(props.classes[classicRandoms].icon)
+                        setCurrentClassName(props.classicClasses[classicRandoms].name);
+                        setCurrentClassIcon(props.classicClasses[classicRandoms].icon)
                     }
 
                     return rollIntervals - 1;
@@ -62,7 +62,8 @@ const BasicMode = props => {
         <div>
             <Helmet>
                 <title>Random class picker | WOW RNG</title>
-                <meta name="description" content="Random class picker, class generator for world of warcraft, wow classic"/>
+                <meta name="description"
+                      content="Random class picker, class generator for world of warcraft, wow classic"/>
             </Helmet>
             <div className="basic-mode">
                 <div className="classic-mode-container">
@@ -84,6 +85,7 @@ const BasicMode = props => {
 
 const mapStateToProps = (state) => ({
     classes: getClassesSelector(state),
+    classicClasses: getClassicClassesSelector(state),
     advancedMode: getAdvancedModeSelector(state),
     filteredRaces: getFilteredRaces(state),
 });
